@@ -1,0 +1,73 @@
+{
+ "id": "kasa-biletowa-closed",
+ "family": "kasa-biletowa",
+ "image": {
+  "w": 268,
+  "h": 190
+ },
+ "anchor": {
+  "x": 134.0,
+  "y": 190
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 105,
+    "y": 115
+   },
+   "anchor": {
+    "x": 134.5,
+    "y": 173
+   },
+   "doorway": {
+    "x": 110,
+    "y": 118,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 115,
+    "y": 118,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 110,
+  "y": 118,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "kasa-biletowa-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "kasa-biletowa-open"
+  }
+ ],
+ "variantGroup": "kasa-biletowa",
+ "metric": {
+  "width_m": 11.17,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.624 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "dom-panele-closed",
+ "family": "dom-panele",
+ "image": {
+  "w": 232,
+  "h": 297
+ },
+ "anchor": {
+  "x": 116.0,
+  "y": 297
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 143,
+    "y": 215
+   },
+   "anchor": {
+    "x": 172.5,
+    "y": 273
+   },
+   "doorway": {
+    "x": 148,
+    "y": 218,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 153,
+    "y": 218,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 148,
+  "y": 218,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "dom-panele-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "dom-panele-open"
+  }
+ ],
+ "variantGroup": "dom-panele",
+ "metric": {
+  "width_m": 9.67,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.725 z oryginalu ChatGPT"
+}

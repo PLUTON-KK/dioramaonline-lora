@@ -1,0 +1,73 @@
+{
+ "id": "sklep-blacha-closed",
+ "family": "sklep-blacha",
+ "image": {
+  "w": 348,
+  "h": 207
+ },
+ "anchor": {
+  "x": 174.0,
+  "y": 207
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 143,
+    "y": 131
+   },
+   "anchor": {
+    "x": 172.5,
+    "y": 189
+   },
+   "doorway": {
+    "x": 148,
+    "y": 134,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 153,
+    "y": 134,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 148,
+  "y": 134,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "sklep-blacha-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "sklep-blacha-open"
+  }
+ ],
+ "variantGroup": "sklep-blacha",
+ "metric": {
+  "width_m": 14.5,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.617 z oryginalu ChatGPT"
+}

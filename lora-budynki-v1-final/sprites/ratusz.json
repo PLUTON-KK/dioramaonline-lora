@@ -1,0 +1,73 @@
+{
+ "id": "ratusz-closed",
+ "family": "ratusz",
+ "image": {
+  "w": 457,
+  "h": 276
+ },
+ "anchor": {
+  "x": 228.5,
+  "y": 276
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 197,
+    "y": 197
+   },
+   "anchor": {
+    "x": 226.5,
+    "y": 255
+   },
+   "doorway": {
+    "x": 202,
+    "y": 200,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 207,
+    "y": 200,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 202,
+  "y": 200,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "ratusz-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "ratusz-open"
+  }
+ ],
+ "variantGroup": "ratusz",
+ "metric": {
+  "width_m": 19.04,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.630 z oryginalu ChatGPT"
+}

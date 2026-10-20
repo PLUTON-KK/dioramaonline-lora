@@ -1,0 +1,73 @@
+{
+ "id": "pavilion-6n-closed",
+ "family": "pavilion-6n",
+ "image": {
+  "w": 350,
+  "h": 177
+ },
+ "anchor": {
+  "x": 175.0,
+  "y": 177
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 144,
+    "y": 105
+   },
+   "anchor": {
+    "x": 173.5,
+    "y": 163
+   },
+   "doorway": {
+    "x": 149,
+    "y": 108,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 154,
+    "y": 108,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 149,
+  "y": 108,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "pavilion-6n-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "pavilion-6n-open"
+  }
+ ],
+ "variantGroup": "pavilion-6n",
+ "metric": {
+  "width_m": 14.58,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.492 z oryginalu ChatGPT"
+}

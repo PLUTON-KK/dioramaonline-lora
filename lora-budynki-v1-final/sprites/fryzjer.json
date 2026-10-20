@@ -1,0 +1,73 @@
+{
+ "id": "fryzjer-closed",
+ "family": "fryzjer",
+ "image": {
+  "w": 228,
+  "h": 194
+ },
+ "anchor": {
+  "x": 114.0,
+  "y": 194
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 37,
+    "y": 117
+   },
+   "anchor": {
+    "x": 66.5,
+    "y": 175
+   },
+   "doorway": {
+    "x": 42,
+    "y": 120,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 47,
+    "y": 120,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 42,
+  "y": 120,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "fryzjer-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "fryzjer-open"
+  }
+ ],
+ "variantGroup": "fryzjer",
+ "metric": {
+  "width_m": 9.5,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.611 z oryginalu ChatGPT"
+}

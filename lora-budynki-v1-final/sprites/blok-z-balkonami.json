@@ -1,0 +1,73 @@
+{
+ "id": "blok-z-balkonami-closed",
+ "family": "blok-z-balkonami",
+ "image": {
+  "w": 340,
+  "h": 329
+ },
+ "anchor": {
+  "x": 170.0,
+  "y": 329
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 140,
+    "y": 257
+   },
+   "anchor": {
+    "x": 169.5,
+    "y": 315
+   },
+   "doorway": {
+    "x": 145,
+    "y": 260,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 150,
+    "y": 260,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 145,
+  "y": 260,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "blok-z-balkonami-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "blok-z-balkonami-open"
+  }
+ ],
+ "variantGroup": "blok-z-balkonami",
+ "metric": {
+  "width_m": 14.17,
+  "depth_m": 9
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.580 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "dom-rodzinny-closed",
+ "family": "dom-rodzinny",
+ "image": {
+  "w": 237,
+  "h": 229
+ },
+ "anchor": {
+  "x": 118.5,
+  "y": 229
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 139,
+    "y": 155
+   },
+   "anchor": {
+    "x": 168.5,
+    "y": 213
+   },
+   "doorway": {
+    "x": 144,
+    "y": 158,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 149,
+    "y": 158,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 144,
+  "y": 158,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "dom-rodzinny-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "dom-rodzinny-open"
+  }
+ ],
+ "variantGroup": "dom-rodzinny",
+ "metric": {
+  "width_m": 9.88,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.569 z oryginalu ChatGPT"
+}

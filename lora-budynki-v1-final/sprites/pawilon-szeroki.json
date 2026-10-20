@@ -1,0 +1,73 @@
+{
+ "id": "pawilon-szeroki-closed",
+ "family": "pawilon-szeroki",
+ "image": {
+  "w": 323,
+  "h": 183
+ },
+ "anchor": {
+  "x": 161.5,
+  "y": 183
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 132,
+    "y": 109
+   },
+   "anchor": {
+    "x": 161.5,
+    "y": 167
+   },
+   "doorway": {
+    "x": 137,
+    "y": 112,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 142,
+    "y": 112,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 137,
+  "y": 112,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "pawilon-szeroki-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "pawilon-szeroki-open"
+  }
+ ],
+ "variantGroup": "pawilon-szeroki",
+ "metric": {
+  "width_m": 13.46,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.558 z oryginalu ChatGPT"
+}

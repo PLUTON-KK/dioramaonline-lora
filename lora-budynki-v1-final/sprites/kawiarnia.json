@@ -1,0 +1,73 @@
+{
+ "id": "kawiarnia-closed",
+ "family": "kawiarnia",
+ "image": {
+  "w": 256,
+  "h": 207
+ },
+ "anchor": {
+  "x": 128.0,
+  "y": 207
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 156,
+    "y": 124
+   },
+   "anchor": {
+    "x": 185.5,
+    "y": 182
+   },
+   "doorway": {
+    "x": 161,
+    "y": 127,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 166,
+    "y": 127,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 161,
+  "y": 127,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "kawiarnia-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "kawiarnia-open"
+  }
+ ],
+ "variantGroup": "kawiarnia",
+ "metric": {
+  "width_m": 10.67,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.652 z oryginalu ChatGPT"
+}

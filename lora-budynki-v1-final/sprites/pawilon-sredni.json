@@ -1,0 +1,73 @@
+{
+ "id": "pawilon-sredni-closed",
+ "family": "pawilon-sredni",
+ "image": {
+  "w": 242,
+  "h": 181
+ },
+ "anchor": {
+  "x": 121.0,
+  "y": 181
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 90,
+    "y": 108
+   },
+   "anchor": {
+    "x": 119.5,
+    "y": 166
+   },
+   "doorway": {
+    "x": 95,
+    "y": 111,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 100,
+    "y": 111,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 95,
+  "y": 111,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "pawilon-sredni-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "pawilon-sredni-open"
+  }
+ ],
+ "variantGroup": "pawilon-sredni",
+ "metric": {
+  "width_m": 10.08,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.552 z oryginalu ChatGPT"
+}

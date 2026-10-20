@@ -1,0 +1,73 @@
+{
+ "id": "szkola-closed",
+ "family": "szkola",
+ "image": {
+  "w": 446,
+  "h": 282
+ },
+ "anchor": {
+  "x": 223.0,
+  "y": 282
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 185,
+    "y": 204
+   },
+   "anchor": {
+    "x": 214.5,
+    "y": 262
+   },
+   "doorway": {
+    "x": 190,
+    "y": 207,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 195,
+    "y": 207,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 190,
+  "y": 207,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "szkola-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "szkola-open"
+  }
+ ],
+ "variantGroup": "szkola",
+ "metric": {
+  "width_m": 18.58,
+  "depth_m": 10
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.542 z oryginalu ChatGPT"
+}

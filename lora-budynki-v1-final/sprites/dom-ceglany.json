@@ -1,0 +1,73 @@
+{
+ "id": "dom-ceglany-closed",
+ "family": "dom-ceglany",
+ "image": {
+  "w": 302,
+  "h": 238
+ },
+ "anchor": {
+  "x": 151.0,
+  "y": 238
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 121,
+    "y": 159
+   },
+   "anchor": {
+    "x": 150.5,
+    "y": 217
+   },
+   "doorway": {
+    "x": 126,
+    "y": 162,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 131,
+    "y": 162,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 126,
+  "y": 162,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "dom-ceglany-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "dom-ceglany-open"
+  }
+ ],
+ "variantGroup": "dom-ceglany",
+ "metric": {
+  "width_m": 12.58,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.464 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "restauracja-taras-closed",
+ "family": "restauracja-taras",
+ "image": {
+  "w": 301,
+  "h": 221
+ },
+ "anchor": {
+  "x": 150.5,
+  "y": 221
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 121,
+    "y": 141
+   },
+   "anchor": {
+    "x": 150.5,
+    "y": 199
+   },
+   "doorway": {
+    "x": 126,
+    "y": 144,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 131,
+    "y": 144,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 126,
+  "y": 144,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "restauracja-taras-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "restauracja-taras-open"
+  }
+ ],
+ "variantGroup": "restauracja-taras",
+ "metric": {
+  "width_m": 12.54,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.674 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "sklep-narozny-closed",
+ "family": "sklep-narozny",
+ "image": {
+  "w": 265,
+  "h": 199
+ },
+ "anchor": {
+  "x": 132.5,
+  "y": 199
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 40,
+    "y": 117
+   },
+   "anchor": {
+    "x": 69.5,
+    "y": 175
+   },
+   "doorway": {
+    "x": 45,
+    "y": 120,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 50,
+    "y": 120,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 45,
+  "y": 120,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "sklep-narozny-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "sklep-narozny-open"
+  }
+ ],
+ "variantGroup": "sklep-narozny",
+ "metric": {
+  "width_m": 11.04,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.652 z oryginalu ChatGPT"
+}

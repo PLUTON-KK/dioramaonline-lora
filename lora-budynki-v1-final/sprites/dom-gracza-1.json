@@ -1,0 +1,73 @@
+{
+ "id": "dom-gracza-1-closed",
+ "family": "dom-gracza-1",
+ "image": {
+  "w": 289,
+  "h": 174
+ },
+ "anchor": {
+  "x": 144.5,
+  "y": 174
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 117,
+    "y": 100
+   },
+   "anchor": {
+    "x": 146.5,
+    "y": 158
+   },
+   "doorway": {
+    "x": 122,
+    "y": 103,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 127,
+    "y": 103,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 122,
+  "y": 103,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "dom-gracza-1-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "dom-gracza-1-open"
+  }
+ ],
+ "variantGroup": "dom-gracza-1",
+ "metric": {
+  "width_m": 12.04,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.574 z oryginalu ChatGPT"
+}

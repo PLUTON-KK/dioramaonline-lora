@@ -1,0 +1,73 @@
+{
+ "id": "biurowiec-closed",
+ "family": "biurowiec",
+ "image": {
+  "w": 319,
+  "h": 265
+ },
+ "anchor": {
+  "x": 159.5,
+  "y": 265
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 130,
+    "y": 188
+   },
+   "anchor": {
+    "x": 159.5,
+    "y": 246
+   },
+   "doorway": {
+    "x": 135,
+    "y": 191,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 140,
+    "y": 191,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 135,
+  "y": 191,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "biurowiec-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "biurowiec-open"
+  }
+ ],
+ "variantGroup": "biurowiec",
+ "metric": {
+  "width_m": 13.29,
+  "depth_m": 10
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.542 z oryginalu ChatGPT"
+}
