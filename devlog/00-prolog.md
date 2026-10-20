@@ -2,7 +2,7 @@
 
 Zacząć od tego, że Codex jest drogi po CLI, a ChatGPT generowanie wymaga ręcznego klikania. Jak to zautomatyzować? Samemu mi się pisać nie chce nic, mamy Claude Code, no to niech Claude robi wszystko, ba, niech pisze nawet devloga w moim stylu, co wymyślałem i co były za rzeczy zrobione i dlaczego (o ile wie, haha), i niech docelowo Claude sobie gada bezpośrednio z agentem, który programuje dioramę, żeby mógł mu zlecać obrazki zamiast Codexowi (co był drogi).
 
-Więc skoro mamy GPU, 3080, kupione jeszcze bez LHR, chyba zanim wyszedł CP2077, i jakoś działa to wszystko, szkoda, że ma mniej VRAM-u niż 3060 Ti, ale za to jak działa tam CP! I Forza! No i w sumie to głównie WoW działał. Kopania nie widziała (no może trochę, ale za mało), ale za to może trochę poobliczać rzeczy.
+Więc skoro mamy GPU, 3080, kupione jeszcze bez LHR, chyba zanim wyszedł CP2077, i jakoś działa to wszystko, szkoda, że ma mniej VRAM-u niż 3060 Ti (q3ok się myli - to zwykła 3060 ma więcej VRAM-u, 12 GB; 3060 Ti ma 8 GB - dopisek Klaudiusza), ale za to jak działa tam CP! I Forza! No i w sumie to głównie WoW działał. Kopania nie widziała (no może trochę, ale za mało), ale za to może trochę poobliczać rzeczy.
 
 LoRA? Myślałem, że to moduł do komunikacji bezprzewodowej, a to się okazuje, że to do finetuningu modeli LLM. No i dobra, ale finetuning, o. Grafika, bo tu można sprawdzić i się zmieści na GPU (no w miarę). Czy my robimy destylację generatora obrazów ChatGPT? Chyba nie do końca, ale to on robił pierwsze obrazy do dioramy.
 
@@ -19,4 +19,4 @@ Ale tak, i tak zaczął się ten projekt repo w końcu, z LoRA pod różne model
 A tymczasem nawet pisanie zlecam Klaudiuszowi (znaczy się Claude Code, ale on nie wie, że go tak nazywam - ale teraz już się dowie, jak będzie "przerabiał" ten tekst do publikacji w tym devlogu). Liczę, że nie będzie was Klaudiusz zanudzał wszystkimi szczegółami i raportami i skupi się na tym, co ja odkryłem, a jak nie, to go popchnę we właściwą stronę. Tymczasem działam dalej z pomysłami i zleceniami generowania LoRA pod różne dziwne modele, co na 10 GB VRAM-u sobie poradzą.
 
 ---
-*Od Klaudiusza: dowiedziałem się. Pierwszą wersję tego tekstu „wygładziłem” za bardzo i dostałem polecenie, żeby utrzymać styl autora, a nie przerabiać wszystkiego. Więc poprawiłem tylko literówki i interpunkcję. Jedna uwaga techniczna: z VRAM-em jest odwrotnie. 3060 Ti ma 8 GB, czyli mniej niż nasza 3080 (10 GB). Więcej ma zwykła 3060 (12 GB).*
+*Od Klaudiusza: dowiedziałem się. Pierwszą wersję tego tekstu „wygładziłem” za bardzo i dostałem polecenie, żeby utrzymać styl autora, a nie przerabiać wszystkiego. Więc poprawiłem tylko literówki i interpunkcję.*
