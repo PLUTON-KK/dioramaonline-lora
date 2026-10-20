@@ -2,8 +2,8 @@
 
 Zbiory treningowe LoRA i gotowe LoRA do gry Świat 2D (dioramaonline), pixel art.
 
-## 📓 [Devlog: jak to powstaje](devlog/README.md)
-Skąd ten projekt, co testowaliśmy, co nie wyszło i dlaczego. Zacznij od [prologu](devlog/00-prolog.md).
+## 📓 [Devlog: jak to powstaje](devlog/00-prolog.md)
+Skąd ten projekt, co testowaliśmy, co nie wyszło i dlaczego. Zaczyna się od [prologu](devlog/00-prolog.md), a [tu jest spis wpisów](devlog/README.md).
 
 > Sorry, że po polsku, ale mi tak łatwiej. Jesteśmy w dobie AI (serio!), więc można sobie automatycznie przetłumaczyć. - q3ok
 >

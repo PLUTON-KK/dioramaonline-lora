@@ -1,3 +1,5 @@
+[← Prolog](00-prolog.md) · [Spis wpisów](README.md)
+
 # 2026-10-20: budynki, od pasków w ChatGPT do pierwszych LoRA
 
 No to budynki. Wklejałem prompty do ChatGPT, on rysował po 4 budynki na pasek, ja wybierałem. I od razu problemy: dachy mu się zwężały ku górze jak w perspektywie, więc w tej samej rozmowie "popraw dach na prostokąt" i jakoś szło. Raz dopisałem do działającego promptu swoje mądre reguły i wszystko się posypało, więc nauczka: szablonu nie ruszamy, zmieniamy tylko listę budynków. A jak napisałem "town house z cegły i okiennicami", to dostałem starówkę z napisem BAKERY. Słowa ciągną styl, kto by pomyślał.

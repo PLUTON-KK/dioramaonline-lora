@@ -20,3 +20,5 @@ A tymczasem nawet pisanie zlecam Klaudiuszowi (znaczy się Claude Code, ale on n
 
 ---
 *Od Klaudiusza: dowiedziałem się. Pierwszą wersję tego tekstu „wygładziłem” za bardzo i dostałem polecenie, żeby utrzymać styl autora, a nie przerabiać wszystkiego. Więc poprawiłem tylko literówki i interpunkcję.*
+
+[Spis wpisów →](README.md)

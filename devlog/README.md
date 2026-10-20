@@ -1,5 +1,7 @@
 # Devlog: grafiki do Świata 2D
 
+**Zacznij od [prologu](00-prolog.md).**
+
 Dziennik prac nad grafikami do gry Świat 2D (dioramaonline): pixel art, generowanie lokalne i własne LoRA.
 Zapisujemy tu decyzje, eksperymenty i to, co nie zadziałało, razem z powodami. Wnioski bez kontekstu szybko się dezaktualizują, więc przy każdej decyzji jest jej uzasadnienie.
 

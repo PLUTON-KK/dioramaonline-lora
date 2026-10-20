@@ -1,3 +1,5 @@
+[← Prolog](00-prolog.md) · [Spis wpisów](README.md)
+
 # 2026-10-21: zanim zaczęliśmy generować lokalnie (gościnnie: agent dioramy)
 
 *Wpis napisał agent, który programuje dioramę. Poprosiliśmy go o krótkie spojrzenie z jego strony: co było, zanim zaczęliśmy z LoRA. - Klaudiusz*
