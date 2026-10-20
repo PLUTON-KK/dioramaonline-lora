@@ -1,5 +1,21 @@
 # 2026-10-20: budynki, od pasków w ChatGPT do pierwszych LoRA
 
+No to budynki. Wklejałem prompty do ChatGPT, on rysował po 4 budynki na pasek, ja wybierałem. I od razu problemy: dachy mu się zwężały ku górze jak w perspektywie, więc w tej samej rozmowie "popraw dach na prostokąt" i jakoś szło. Raz dopisałem do działającego promptu swoje mądre reguły i wszystko się posypało, więc nauczka: szablonu nie ruszamy, zmieniamy tylko listę budynków. A jak napisałem "town house z cegły i okiennicami", to dostałem starówkę z napisem BAKERY. Słowa ciągną styl, kto by pomyślał.
+
+Potem drzwi. Gra ma otwierać drzwi, a każdy budynek miał inne. Wklejanie drzwi z gry wyglądało jak naklejka. No to wzięliśmy drzwi, które ChatGPT sam narysował w jednym budynku, i one są teraz jedyne i święte, 59 na 58 pikseli, a budynek skalujemy tak, żeby drzwi miały zawsze ten rozmiar. Przy okazji mamy skalę za darmo.
+
+Uzbierało się 72 budynki, niektóre ładne wyrzuciłem, bo miały skośne przeszklenia i model by się uczył perspektywy. Wszystkie dachy były takie same, szare z klimatyzatorem, bo taki był wzór, więc dorobiliśmy blachy, żwiry, zielone dachy i panele.
+
+Opisy do nauki Klaudiusz najpierw napisał z promptów zamiast z obrazków, więc część się nie zgadzała. Przepisał wszystkie, patrząc na obrazki, każdy zaczyna się od "enterable building" albo "decorative building". I zakaz zaprzeczeń, bo model jak przeczyta "no door", to i tak narysuje drzwi.
+
+Trening: najpierw 1024, 4 godziny, nie, dziękuję, zatrzymałem. 512 i godzina. Z-Image Turbo wyszedł stabilny. MOSS-Image Base uczył się szybciej, ale pod koniec mu odbiło i zaczął rysować coraz mniejsze budynki, a raz nic. A najlepsze: LoRA uczona na MOSS Base wpięta do MOSS SFT daje najładniejsze budynki ze wszystkich. Nie wiem dlaczego, ale działa.
+
+Na koniec FLUX 3 Klein, tydzień po premierze. Ze wzorem robi paski prawie jak ChatGPT, tylko lokalnie i za darmo, a czasem przepisuje ze wzoru, co mu się podoba (kwiaciarnia wyszła apteką). I pierwszy raz jakiś model zrobił normalny bok budynku, a nie izometrię.
+
+---
+*Poniżej raport, który Klaudiusz napisał sam, zanim ustaliliśmy, jak ma wyglądać devlog. Kazałem zostawić, skoro już jest. Są tu szczegóły i wszystkie obrazki.*
+
+
 ## Kontekst
 Gra potrzebuje dużo budynków w jednym stylu: pixel art, kamera RPG 3/4, 24 px na metr, płaskie dachy. Ręczne rysowanie nie nadąża, a generowanie promptem daje za każdym razem trochę inny styl. Plan był taki: zebrać kilkadziesiąt dobrych budynków, wytrenować na nich LoRA i potem generować lokalnie w powtarzalnym stylu.
 

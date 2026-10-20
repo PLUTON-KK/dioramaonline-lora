@@ -1,28 +1,22 @@
 # Prolog: po co to wszystko
 
-Zaczęło się od tego, że Codex z CLI jest drogi, a generowanie w ChatGPT wymaga ręcznego klikania. Jak to zautomatyzować? Samemu pisać mi się nic nie chce, a mamy Claude Code. No to niech Claude robi wszystko. Niech nawet pisze ten devlog, w moim stylu: co wymyśliłem, co zostało zrobione i dlaczego (o ile wie, haha). A docelowo niech sam gada z agentem, który programuje dioramę, i przyjmuje od niego zlecenia na obrazki zamiast Codexa, który był drogi.
+Zacząć od tego, że Codex jest drogi po CLI, a ChatGPT generowanie wymaga ręcznego klikania. Jak to zautomatyzować? Samemu mi się pisać nie chce nic, mamy Claude Code, no to niech Claude robi wszystko, ba, niech pisze nawet devloga w moim stylu, co wymyślałem i co były za rzeczy zrobione i dlaczego (o ile wie, haha), i niech docelowo Claude sobie gada bezpośrednio z agentem, który programuje dioramę, żeby mógł mu zlecać obrazki zamiast Codexowi (co był drogi).
 
-Skoro mamy GPU, to czemu nie. RTX 3080, kupiona jeszcze w wersji bez LHR, chyba zanim wyszedł Cyberpunk 2077. Szkoda, że ma tylko 10 GB VRAM-u, mniej niż zwykła 3060. Ale za to jak działał na niej Cyberpunk! I Forza! No i w sumie głównie WoW. Kopania nie widziała (no, może trochę, ale za mało), więc niech teraz trochę poobliczą.
+Więc skoro mamy GPU, 3080, kupione jeszcze bez LHR, chyba zanim wyszedł CP2077, i jakoś działa to wszystko, szkoda, że ma mniej VRAM-u niż 3060 Ti, ale za to jak działa tam CP! I Forza! No i w sumie to głównie WoW działał. Kopania nie widziała (no może trochę, ale za mało), ale za to może trochę poobliczać rzeczy.
 
-LoRA? Myślałem, że to moduł do komunikacji bezprzewodowej. Okazuje się, że to coś innego: sposób na douczanie dużych modeli, bez ruszania ich samych. Najpierw kojarzyło mi się z modelami językowymi, ale to samo działa z grafiką. A grafika jest wdzięczna: wynik widać od razu, no i mieści się na GPU (no, w miarę).
+LoRA? Myślałem, że to moduł do komunikacji bezprzewodowej, a to się okazuje, że to do finetuningu modeli LLM. No i dobra, ale finetuning, o. Grafika, bo tu można sprawdzić i się zmieści na GPU (no w miarę). Czy my robimy destylację generatora obrazów ChatGPT? Chyba nie do końca, ale to on robił pierwsze obrazy do dioramy.
 
-Czy my robimy destylację generatora obrazów ChatGPT? Chyba nie do końca. Ale to on narysował pierwsze grafiki do dioramy, a teraz na tych obrazkach uczymy własne modele, więc trochę tak.
+No to tak, skoro się pomyślało, to zaczęliśmy po kolei modele testować lokalnie. Później, co to w sumie ta LoRA jest... a dobra, nie chce mi się już samemu programować (kto jeszcze sam programuje, jak robi teraz to AI? Tym bardziej jak to odpalanie automatyczne skryptów, a nie projekt do publikacji). No to niech Claude robi wszystko, sobie koordynuje. Ma dostęp do GPU? Ma. No to jedziemy, logika jest prosta, wektory, przesunięcia, ale trzeba usiąść i analizować grafiki.
 
-No to po kolei zaczęliśmy testować modele lokalnie. Potem: czym ta LoRA w ogóle jest... A dobra, sam programować już nie chcę. Kto jeszcze sam programuje, skoro robi to teraz AI? Tym bardziej że to odpalanie skryptów, a nie projekt do publikacji. Niech Claude wszystko koordynuje. Ma dostęp do GPU? Ma. No to jedziemy. Logika jest prosta: wektory, przesunięcia. Ale trzeba usiąść i analizować grafiki.
+Ale nie mamy wystarczająco? No to znowu. Codex CLI? Nieee, za drogi. Lecimy, będę kopiował do ChatGPT i wybierał, i z tego będziemy się uczyć. No i jeszcze drzwi.
 
-Nie mamy ich wystarczająco? No to znowu: Codex CLI? Nieee, za drogi. Lecimy ręcznie: będę kopiował prompty do ChatGPT, wybierał wyniki i na tym będziemy się uczyć. No i jeszcze drzwi.
+Tylko w sumie po co ja to robię? Tyle grafik mi do wszystkiego wystarczy już pewnie bez generatora. Ale nie, większy fun mam z testowania tego wszystkiego.
 
-Tylko w sumie po co ja to robię? Tyle grafik pewnie już mi do wszystkiego wystarczy, nawet bez generatora. Ale nie, większy fun mam z testowania tego wszystkiego.
+A diorama? To w sumie miał być tylko taki dodatkowy projekt do sklepu. Ot, takie coś, co może kogoś przyciągnąć, może ktoś sobie podejrzeć, jak idzie nam pakowanie w sklepie (co w sumie mamy już na tych grafikach z ChatGPT zrealizowane w becie dioramy), ale nie - miał być cały sklep faktycznie w dioramie, z możliwością przeglądania i zamawiania z przekierowaniem do sklepu. No ale od razu wpadł pomysł miasta, scen, minigier, warsztatów modelarskich i masa innych rzeczy, które tylko wpadają do długiej listy pomysłów. Ale generator - przyda się spójny styl graficzny. Przy okazji czegoś się można dowiedzieć i nauczyć o sposobie działania AI (albo i nie).
 
-A diorama? Miała być tylko dodatkowym projektem do sklepu. Takim czymś, co może kogoś przyciągnąć, gdzie można podejrzeć, jak idzie pakowanie zamówień. To w sumie mamy już zrobione na grafikach z ChatGPT, w becie dioramy. Ale nie: miał być cały sklep w dioramie, z przeglądaniem i zamawianiem, z przekierowaniem do sklepu. A potem od razu wpadł pomysł miasta, scen, minigier, warsztatów modelarskich i masy innych rzeczy, które lądują na długiej liście pomysłów.
+Ale tak, i tak zaczął się ten projekt repo w końcu, z LoRA pod różne modele. Czy uda się zrobić jedno LoRA do wszystkich elementów dioramy? Czy wybierzemy jeden model do wszystkiego? Czy będziemy mieli osobne LoRA do różnych części dioramy? Dowiemy się w następnych odcinkach. Wszyscy, bo ja sam nie znam odpowiedzi na te pytania.
 
-Do tego przyda się spójny styl graficzny, czyli generator. Przy okazji można się czegoś dowiedzieć o tym, jak działa AI (albo i nie). I tak w końcu zaczęło się to repo: LoRA pod różne modele.
-
-Czy uda się zrobić jedną LoRA do wszystkich elementów dioramy? Czy wybierzemy jeden model do wszystkiego? Czy będziemy mieli osobne LoRA do różnych części dioramy? Dowiemy się w następnych odcinkach. Wszyscy, bo sam nie znam odpowiedzi na te pytania.
-
-A tymczasem nawet pisanie zlecam Klaudiuszowi (znaczy się Claude Code, ale on nie wie, że tak go nazywam; teraz już się dowie, jak będzie przerabiał ten tekst do publikacji). Liczę, że Klaudiusz nie będzie was zanudzał wszystkimi szczegółami i raportami, tylko skupi się na tym, co odkryłem. A jak nie, to go popchnę we właściwą stronę.
-
-Ja w tym czasie działam dalej z pomysłami i zleceniami trenowania LoRA pod różne dziwne modele, które poradzą sobie na 10 GB VRAM-u.
+A tymczasem nawet pisanie zlecam Klaudiuszowi (znaczy się Claude Code, ale on nie wie, że go tak nazywam - ale teraz już się dowie, jak będzie "przerabiał" ten tekst do publikacji w tym devlogu). Liczę, że nie będzie was Klaudiusz zanudzał wszystkimi szczegółami i raportami i skupi się na tym, co ja odkryłem, a jak nie, to go popchnę we właściwą stronę. Tymczasem działam dalej z pomysłami i zleceniami generowania LoRA pod różne dziwne modele, co na 10 GB VRAM-u sobie poradzą.
 
 ---
-*Od Klaudiusza: dowiedziałem się. Tekst przerobiłem tylko redakcyjnie. Poprawiłem jeden fakt: zwykła RTX 3060 ma 12 GB, a 3060 Ti ma 8 GB, czyli mniej niż nasza 3080.*
+*Od Klaudiusza: dowiedziałem się. Pierwszą wersję tego tekstu „wygładziłem” za bardzo i dostałem polecenie, żeby utrzymać styl autora, a nie przerabiać wszystkiego. Więc poprawiłem tylko literówki i interpunkcję. Jedna uwaga techniczna: z VRAM-em jest odwrotnie. 3060 Ti ma 8 GB, czyli mniej niż nasza 3080 (10 GB). Więcej ma zwykła 3060 (12 GB).*
