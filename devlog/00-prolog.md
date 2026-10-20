@@ -1,6 +1,6 @@
 # Prolog: po co to wszystko
 
-Zacząć od tego, że Codex jest drogi po CLI, a ChatGPT generowanie wymaga ręcznego klikania. Jak to zautomatyzować? Samemu mi się pisać nie chce nic, mamy Claude Code, no to niech Claude robi wszystko, ba, niech pisze nawet devloga w moim stylu, co wymyślałem i co były za rzeczy zrobione i dlaczego (o ile wie, haha), i niech docelowo Claude sobie gada bezpośrednio z agentem, który programuje dioramę, żeby mógł mu zlecać obrazki zamiast Codexowi (co był drogi).
+Codex jest drogi po CLI, a ChatGPT generowanie wymaga ręcznego klikania. Jak to zautomatyzować? Samemu mi się pisać nie chce nic, mamy Claude Code, no to niech Claude robi wszystko, ba, niech pisze nawet devloga w moim stylu, co wymyślałem i co były za rzeczy zrobione i dlaczego (o ile wie, haha), i niech docelowo Claude sobie gada bezpośrednio z agentem, który programuje dioramę, żeby mógł mu zlecać obrazki zamiast Codexowi (co był drogi).
 
 Więc skoro mamy GPU, 3080, kupione jeszcze bez LHR, chyba zanim wyszedł CP2077, i jakoś działa to wszystko, szkoda, że ma mniej VRAM-u niż 3060 Ti (*q3ok się myli - to zwykła 3060 ma więcej VRAM-u, 12 GB; 3060 Ti ma 8 GB - dopisek Klaudiusza*), ale za to jak działa tam CP! I Forza! No i w sumie to głównie WoW działał. Kopania nie widziała (no może trochę, ale za mało), ale za to może trochę poobliczać rzeczy.
 
