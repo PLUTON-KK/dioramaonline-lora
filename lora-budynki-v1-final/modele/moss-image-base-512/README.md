@@ -1,0 +1,16 @@
+# LoRA: MOSS-Image, budynki v1 final, 512
+
+Wytrenowana na **MOSS-Image Base** (int8 convrot), zbior `../../train_512` (72 budynki), ai-toolkit, rank 16, lr 1e-4, 2000 krokow, 48 min na RTX 3080 10 GB (2026-10-20).
+
+| plik | krok | zalecane uzycie |
+|---|---|---|
+| `swiat2d_moss_base_budynki_v1final_512_000002000.safetensors` | 2000 | **na MOSS-Image SFT** - najlepszy wynik: prosty front, prostokatne dachy, dobra skala, duzo detali |
+| `swiat2d_moss_base_budynki_v1final_512_000001500.safetensors` | 1500 | **na MOSS-Image Base** (na Base krok 2000 jest przeuczony: male budynki, puste obrazy); na SFT lekko zwezajace sie dachy |
+
+## Uzycie (ComfyUI)
+UNETLoader `moss_image_sft_int8_convrot.safetensors` (albo base) -> LoraLoaderModelOnly sila 1.0; CLIPLoader `qwen3.5_9b_int8_convrot.safetensors` typ `moss_image`; VAE `flux2-vae`; KSampler euler/simple, 30 krokow, cfg 4, 512x512.
+Prompt wg schematu opisow zbioru (`swiat2d style, enterable building, ...`). ComfyUI wczytuje te LoRA bez ostrzezen o kluczach.
+
+## Podglady
+`podglady/`: porownanie z Z-Image (JPG z treningu), SFT bez LoRA vs z LoRA, SFT z LoRA 1500 vs 2000 (PNG z ComfyUI).
+Prompt budki z lodami zawiera zaprzeczenie ("no visible door") - ten test nie jest miarodajny.
