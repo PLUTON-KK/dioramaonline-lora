@@ -6,7 +6,7 @@ Zaakceptowany przez wlasciciela 2026-10-20: 72 obrazow (25 dekoracyjny, 47 wejsc
 ## Zawartosc
 | folder / plik | co to jest |
 |---|---|
-| `train_512/` | to samo w 512x512: sprite x1 (natywne piksele gry, 1 m = 24 px), dol na linii y=492, te same opisy. Do treningu w rozdzielczosci 512 (szybciej, ~1 s/krok na RTX 3080 vs ~7,5 s w 1024) |
+| `train_512/` | to samo w 512x512: sprite x1 (natywne piksele gry, 1 m = 24 px), dol na linii y=492, te same opisy. Do treningu w rozdzielczosci 512 (szybciej: zmierzone ~1,75 s/krok na RTX 3080, 2000 krokow = 59 min; w 1024 ~7,5 s/krok) |
 | `train_1024/` | gotowe do treningu: `<nazwa>.png` (1024x1024) + `<nazwa>.txt` (opis). Format kohya / ai-toolkit / KohakuMossTrainer (folder obrazow z opisami) |
 | `sprites/` | zrodlo prawdy w formacie gry: 24 px = 1 m, paleta swiata (64 kolory), przezroczyste tlo. Wejsciowe takze `<nazwa>-open.png` i `<nazwa>.json` (drzwi dla gry) |
 | `metadata.jsonl` | jedna linia na budynek: typ, rozmiar w px i m, pozycja drzwi, opis |
