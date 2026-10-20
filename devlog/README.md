@@ -6,6 +6,7 @@ Zapisujemy tu decyzje, eksperymenty i to, co nie zadziałało, razem z powodami.
 - [ZASADY.md](ZASADY.md): obowiązujące reguły zbiorów i promptów. Krótko i zawsze aktualnie.
 - [Prolog: po co to wszystko](00-prolog.md)
 - Wpisy, od najnowszego:
+  - [2026-10-21: zanim zaczęliśmy generować lokalnie (gościnnie: agent dioramy)](2026-10-21-diorama-zanim-zaczelismy.md)
   - [2026-10-20: budynki, od pasków w ChatGPT do pierwszych LoRA](2026-10-20-budynki-lora.md)
 
 ## Konwencje
