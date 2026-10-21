@@ -71,8 +71,15 @@ md, r2 = raport("v1v2", wiersze_v1v2(), "2026-10-21_lora-v1_prompty-v2",
     "- Te same LoRA v1, seedy i ustawienia co w [porównaniu na promptach v1](../2026-10-21_lora-v1_prompty-v1/); zmieniony tylko tekst promptów ([prompty v2](../../testy/prompty_v2.json): rozmiar w metrach, drzwi stacji karetek na froncie, budka bez zaprzeczenia).\n"
     "- Obrazy: RunPod (ai-toolkit, bf16, LoRA wczytana, bez uczenia); FLUX 3 i FLUX.2 Klein w wersji destylowanej – ComfyUI na RTX 3080 (ai-toolkit ich nie wczytuje).\n"
     "- LoRA v1 nie widziała w opisach rozmiarów w metrach – to test samych promptów, nie zbioru v2.", False)
-v1 = {r["model"] + r["war"].split(", ")[-1]: r["pkt"] for r in r1}
-md += ["", "## Zmiana względem promptów v1", "", f"Suma punktów 17 wspólnych wierszy: prompty v1 {sum(v1.get(r['model'] + r['war'].split(', ')[-1], 0) for r in r2)}, prompty v2 {sum(r['pkt'] for r in r2)}.",
-       "Porównanie wiersz do wiersza nie zawsze jest 1:1: część wierszy v1 generowana w ComfyUI (int8), w v2 na RunPod (bf16).", "", "Pliki: [`oceny.csv`](oceny.csv)."]
+MAP = {"zimageturbo_512": "swiat2d_zimage_budynki_v1final_512", "zimageturbo_1024": "swiat2d_zimage_budynki_v1final_1024_bf16", "zimagebase_512": "swiat2d_zimagebase_budynki_v1final_512",
+       "mossbase_512": "swiat2d_moss_base_budynki_v1final_512", "mosssft_512": "zestawienie_moss_sft_lora_base512", "mossbase_1024": "swiat2d_moss_budynki_v1final_1024_bf16",
+       "mosssft_1024": "zestawienie_moss_sft_lora_base1024", "flux3base_512": "swiat2d_flux3_base_budynki_v1final_512", "flux3destylat_512": "zestawienie_flux3_destylat_lora_base512",
+       "flux3base_1024": "swiat2d_flux3_budynki_v1final_1024_bf16", "flux3destylat_1024": "zestawienie_flux3_destylat_lora_base1024", "klein4bbase_512": "swiat2d_klein4b_budynki_v1final_512",
+       "klein4bdestylat_512": "zestawienie_klein4b_destylat_lora_base512", "qwenimage2512_512": "swiat2d_qwenimage2512_budynki_v1final_512",
+       "qwenedit2511_512": "swiat2d_qwenedit2511_budynki_v1final_512", "krea2raw_512": "swiat2d_krea2raw_budynki_v1final_512", "krea2turbo_512": "zestawienie_krea2turbo_lora_raw512"}
+v1 = {r["w"]: r["pkt"] for r in r1}
+md += ["", "## Zmiana względem promptów v1", "", f"Suma punktów 17 wspólnych wierszy: prompty v1 {sum(v1[MAP[r['w']]] for r in r2)}, prompty v2 {sum(r['pkt'] for r in r2)}.",
+       "Porównanie wiersz do wiersza nie zawsze jest 1:1: część wierszy v1 generowana w ComfyUI (int8), w v2 na RunPod (bf16).", "",
+       "| model | LoRA, rozdzielczość | prompty v1 | prompty v2 | zmiana |", "|---|---|---|---|---|"] + [f"| {r['model']} | {r['war']} | {v1[MAP[r['w']]]} | {r['pkt']} | {r['pkt'] - v1[MAP[r['w']]]:+d} |" for r in r2] + ["", "Pliki: [`oceny.csv`](oceny.csv)."]
 open(f"{REPO}/2026-10-21_lora-v1_prompty-v2/README.md", "w", encoding="utf-8", newline="\n").write("\n".join(md) + "\n")
 print("ok", len(r1), len(r2))

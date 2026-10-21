@@ -47,7 +47,27 @@ Oceny właściciela: każdy z 10 budynków testowych w każdym wierszu oznaczony
 
 ## Zmiana względem promptów v1
 
-Suma punktów 17 wspólnych wierszy: prompty v1 146, prompty v2 139.
+Suma punktów 17 wspólnych wierszy: prompty v1 165, prompty v2 139.
 Porównanie wiersz do wiersza nie zawsze jest 1:1: część wierszy v1 generowana w ComfyUI (int8), w v2 na RunPod (bf16).
+
+| model | LoRA, rozdzielczość | prompty v1 | prompty v2 | zmiana |
+|---|---|---|---|---|
+| Qwen-Image 2512 | budynki v1, 512 px | 6 | 13 | +7 |
+| Z-Image Turbo | budynki v1, 512 px | 15 | 12 | -3 |
+| Krea 2 Turbo | budynki v1 (z Raw), 512 px | 15 | 12 | -3 |
+| MOSS-Image SFT | budynki v1 (z Base), 512 px | 12 | 11 | -1 |
+| MOSS-Image Base | budynki v1, 1024 px | 12 | 11 | -1 |
+| FLUX 3 Klein base | budynki v1, 512 px | 9 | 11 | +2 |
+| MOSS-Image SFT | budynki v1 (z Base), 1024 px | 15 | 10 | -5 |
+| FLUX 3 Klein (destylat) | budynki v1 (z base), 1024 px | 5 | 9 | +4 |
+| Qwen-Image-Edit 2511 | budynki v1, 512 px | 9 | 9 | +0 |
+| FLUX 3 Klein (destylat) | budynki v1 (z base), 512 px | 12 | 9 | -3 |
+| Krea 2 Raw | budynki v1, 512 px | 14 | 9 | -5 |
+| FLUX 3 Klein base | budynki v1, 1024 px | 7 | 7 | +0 |
+| FLUX.2 Klein 4B (destylat) | budynki v1 (z base), 512 px | 3 | 6 | +3 |
+| Z-Image Turbo | budynki v1, 1024 px | 11 | 5 | -6 |
+| FLUX.2 Klein 4B base | budynki v1, 512 px | 4 | 4 | +0 |
+| MOSS-Image Base | budynki v1, 512 px | 6 | 1 | -5 |
+| Z-Image Base | budynki v1, 512 px | 10 | 0 | -10 |
 
 Pliki: [`oceny.csv`](oceny.csv).
