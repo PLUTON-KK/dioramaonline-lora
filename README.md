@@ -23,3 +23,4 @@ Każdy zbiór ma `train_512/` i `train_1024/` (PNG + TXT, gotowe do ai-toolkit /
 |---|---|---|
 | budynki v1 final, 512 | Z-Image Turbo | [`lora-budynki-v1-final/modele/zimage-turbo-512`](lora-budynki-v1-final/modele/zimage-turbo-512/) |
 | budynki v1 final, 512 | MOSS-Image (trening na Base, najlepsza na SFT) | [`lora-budynki-v1-final/modele/moss-image-base-512`](lora-budynki-v1-final/modele/moss-image-base-512/) |
+| budynki v1 final, 512 | FLUX 3 Image Klein (trening na base, najlepsza na destylacie; licencja FLUX Kommunity) | [`lora-budynki-v1-final/modele/flux3-klein-base-512`](lora-budynki-v1-final/modele/flux3-klein-base-512/) |
