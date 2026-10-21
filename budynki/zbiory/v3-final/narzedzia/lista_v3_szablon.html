@@ -1,0 +1,75 @@
+<title>Zbiór budynków v3</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f2f0e8;--panel:#fffdf6;--fg:#23261f;--mut:#6a6e60;--line:#d8d3c3;--acc:#2f7a4c;--odrz:#b8432e;--odrzbg:#f6e1da;--nowy:#2c5f8a;
+  font-family:"Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1e19;--panel:#252a23;--fg:#ecebe3;--mut:#a2a695;--line:#3a4036;--acc:#5fc287;--odrz:#e2765c;--odrzbg:#3a2621;--nowy:#7fb4e0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1e19;--panel:#252a23;--fg:#ecebe3;--mut:#a2a695;--line:#3a4036;--acc:#5fc287;--odrz:#e2765c;--odrzbg:#3a2621;--nowy:#7fb4e0;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px 60px}
+.wrap{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+h1{font-size:20px;margin:0;text-wrap:balance}
+.mut{color:var(--mut);font-size:13px}
+.pasek{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid var(--line)}
+.pasek select,.pasek label{font:inherit;font-size:14px}
+.pasek select{border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:8px;padding:6px 10px}
+.poz{display:grid;grid-template-columns:minmax(0,256px) minmax(0,1fr);gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;align-items:start}
+@media (max-width:640px){.poz{grid-template-columns:1fr}}
+.poz img{width:100%;max-width:256px;aspect-ratio:1;display:block;border-radius:6px;image-rendering:pixelated;cursor:zoom-in}
+.poz.odrz{background:var(--odrzbg);border-color:var(--odrz)}
+.poz.odrz img{opacity:.45}
+.info{display:flex;flex-direction:column;gap:6px;min-width:0}
+.naz{font-weight:700;font-size:16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:2px 6px;border-radius:5px;border:1px solid var(--line);color:var(--mut)}
+.tag.nowy{color:var(--nowy);border-color:var(--nowy)}
+.cap{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;line-height:1.5;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px;overflow-wrap:anywhere}
+.btn{font:inherit;font-size:14px;align-self:flex-start;border:1px solid var(--odrz);color:var(--odrz);background:transparent;border-radius:8px;padding:6px 12px;cursor:pointer}
+.poz.odrz .btn{border-color:var(--acc);color:var(--acc)}
+.duzy{position:fixed;inset:0;background:rgba(10,10,10,.85);display:grid;place-items:center;z-index:20;padding:16px}
+.duzy img{width:min(92vw,86vh,512px);image-rendering:pixelated;border-radius:8px}
+</style>
+<div class="wrap">
+  <h1>Zbiór treningowy budynków v3 · końcowa lista</h1>
+  <div class="mut">512 px, format v2 (ciasny kadr 88%, rozmiar w metrach w opisie, kanoniczne drzwi w budynkach wejściowych). 72 budynki z v2-final + nowe obiekty wybrane w etapie 1. Pod obrazkiem dokładnie ten opis, który pójdzie do treningu. Przycisk „Nie do v3” wyklucza pozycję (klik ponownie = przywróć). Obraz: klik = powiększenie 512 px.</div>
+  <div class="pasek">
+    <select id="fZr"><option value="">wszystkie</option><option value="v2">tylko z v2-final</option><option value="nowe">tylko nowe</option></select>
+    <select id="fTyp"><option value="">wejściowe + dekoracyjne</option><option value="wejsciowy">wejściowe</option><option value="dekoracyjny">dekoracyjne</option></select>
+    <label><input type="checkbox" id="fUkryj"> ukryj wykluczone</label>
+    <span class="mut" id="licz"></span><span class="mut" id="status"></span>
+  </div>
+  <div id="lista" style="display:flex;flex-direction:column;gap:10px"></div>
+</div>
+<script>
+const DANE = /*DANE*/null;
+const $ = s => document.querySelector(s);
+let db = null, odrz = {};
+const esc = t => t.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+function rysuj() {
+  const zr = $("#fZr").value, ty = $("#fTyp").value, uk = $("#fUkryj").checked;
+  $("#lista").innerHTML = DANE.map((p, i) => {
+    if (zr === "v2" && p.nowy || zr === "nowe" && !p.nowy || ty && p.typ !== ty || uk && odrz[p.nazwa]) return "";
+    return `<div class="poz${odrz[p.nazwa] ? " odrz" : ""}" data-n="${p.nazwa}"><img src="${p.src}" alt="${p.nazwa}" data-i="${i}">
+      <div class="info"><div class="naz">${p.nazwa} <span class="tag${p.nowy ? " nowy" : ""}">${p.nowy ? "nowy" : "v2-final"}</span><span class="tag">${p.typ === "wejsciowy" ? "wejściowy" : "dekoracyjny"}</span><span class="mut">${p.szer} × ${p.wys} m${p.zrodlo ? " · " + p.zrodlo : ""}</span></div>
+      <div class="cap">${esc(p.caption)}</div><button class="btn">${odrz[p.nazwa] ? "Przywróć do v3" : "Nie do v3"}</button></div></div>`;
+  }).join("");
+  const n = DANE.length, o = DANE.filter(p => odrz[p.nazwa]).length;
+  $("#licz").textContent = `w v3: ${n - o} z ${n} (wykluczone ${o}; nowe w v3: ${DANE.filter(p => p.nowy && !odrz[p.nazwa]).length})`;
+}
+$("#lista").addEventListener("click", async e => {
+  const im = e.target.closest("img");
+  if (im) { const d = document.createElement("div"); d.className = "duzy"; d.innerHTML = `<img src="${DANE[+im.dataset.i].src}" alt="">`; d.onclick = () => d.remove(); document.body.append(d); return; }
+  const b = e.target.closest(".btn"); if (!b) return;
+  const n = b.closest(".poz").dataset.n, nowa = !odrz[n]; odrz[n] = nowa; rysuj();
+  if (!db) { $("#status").textContent = "Brak zapisu – baza niedostępna."; return; }
+  try { await db.doc("v3/" + n).set({ odrzucony: nowa, czas: new Date().toISOString() }); $("#status").textContent = "Zapisano"; }
+  catch (err) { $("#status").textContent = "Błąd zapisu: " + (err.code || err.message); }
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.querySelectorAll(".duzy").forEach(d => d.remove()); });
+["#fZr", "#fTyp", "#fUkryj"].forEach(s => $(s).addEventListener("change", rysuj));
+rysuj();
+(async () => {
+  try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { $("#status").textContent = "Baza niedostępna – wykluczenia nie zostaną zapisane."; return; }
+  $("#status").textContent = "Połączono z bazą.";
+  db.collection("v3").onSnapshot(s => { odrz = {}; for (const d of s.docs) odrz[d.id] = !!(d.data() || {}).odrzucony; rysuj(); }, e => { $("#status").textContent = "Błąd bazy: " + e.code; });
+})();
+</script>

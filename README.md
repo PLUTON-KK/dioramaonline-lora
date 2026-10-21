@@ -30,7 +30,7 @@ Pliki LoRA (`.safetensors`) leżą na Hugging Face: **[q3ok/dioramaonline-lora-m
 
 | temat | zbiory | LoRA | porównania | status |
 |---|---|---|---|---|
-| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2-final](budynki/zbiory/v2-final/) (te same 72, ciasny kadr, zamrożony) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024), [7 LoRA v2](budynki/modele/v2/) (512) | [budynki/porownania](budynki/porownania/), skrót: [BADANIA.md](budynki/BADANIA.md) | v1 i v2 wytrenowane i ocenione |
+| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2-final](budynki/zbiory/v2-final/) (te same 72, ciasny kadr, zamrożony), [v3-final](budynki/zbiory/v3-final/) (88: 58 z v2 + 30 nowych, 512) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024), [7 LoRA v2](budynki/modele/v2/) (512) | [budynki/porownania](budynki/porownania/), skrót: [BADANIA.md](budynki/BADANIA.md) | v1 i v2 wytrenowane i ocenione, v3 zbiór gotowy |
 | natura | – | – | – | plan |
 | produkty (zdjęcie produktu → diorama) | – | – | – | później, modele z edycją obrazu (tabela niżej) |
 

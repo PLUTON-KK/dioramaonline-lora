@@ -8,6 +8,7 @@ Obrazy zbioru wygenerował ChatGPT, a my przerobiliśmy je na format gry (kadr, 
 ## Stan (2026-10-21)
 - **Zbiór v1-final** (72 budynki, skala gry w obrazie): wytrenowane 11 LoRA na 8 modelach bazowych → [`modele/v1/`](modele/v1/).
 - **Zbiór v2-final** (zamrożony 2026-10-21; te same budynki, ciasny kadr, rozmiar w metrach w opisie, poprawione opisy) → [`zbiory/v2-final/`](zbiory/v2-final/), lista zmian: [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md). Wytrenowane 7 LoRA v2 (512) → [`modele/v2/`](modele/v2/).
+- **Zbiór v3-final** (2026-10-22, tylko 512): 58 budynków z v2 + 30 nowych obiektów (okrągłe, wysokie, przemysł, nietypowe bryły) wygenerowanych z LoRA v2 i wybranych przez właściciela → [`zbiory/v3-final/`](zbiory/v3-final/), zmiany: [`ZMIANY_V2_V3.md`](zbiory/v3-final/ZMIANY_V2_V3.md).
 - **Porównania** (nasze LoRA i ChatGPT / Gemini na tych samych 10 budynkach testowych) → [`porownania/`](porownania/). Rankingi z ocen właściciela: [v1 · prompty v1](porownania/2026-10-21_lora-v1_prompty-v1/), [v1 · prompty v2](porownania/2026-10-21_lora-v1_prompty-v2/), [v2 · prompty v2](porownania/2026-10-21_lora-v2_prompty-v2/), [pojedynki v1 vs v2](porownania/2026-10-21_pojedynki/).
 
 ## Katalogi
@@ -15,6 +16,7 @@ Obrazy zbioru wygenerował ChatGPT, a my przerobiliśmy je na format gry (kadr, 
 |---|---|
 | [`zbiory/v1-final/`](zbiory/v1-final/) | zbiór treningowy v1 (zamrożony): `train_512/`, `train_1024/`, `sprites/` (format gry), `metadata.jsonl`, `captions.csv`, skrypty |
 | [`zbiory/v2-final/`](zbiory/v2-final/) | zbiór v2-final (zamrożony) + [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md) |
+| [`zbiory/v3-final/`](zbiory/v3-final/) | zbiór v3-final (88 obiektów, 512) + [`ZMIANY_V2_V3.md`](zbiory/v3-final/ZMIANY_V2_V3.md) |
 | [`modele/v2/`](modele/v2/) | LoRA v2-final: tabela z linkami do HF, podglądy kroków |
 | [`modele/v1/`](modele/v1/) | po jednym folderze na LoRA: README (jak uczona, jak używać, licencja), `config_ai-toolkit.yaml`, `podglady/` (kroki 0–2000) |
 | [`testy/`](testy/) | zestaw testowy: 10 budynków spoza zbioru, prompty v1/v2, wzory stylu i drzwi, prompty „paskowe” dla modeli zewnętrznych |

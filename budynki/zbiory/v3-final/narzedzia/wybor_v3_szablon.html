@@ -1,0 +1,90 @@
+<title>Wybór do zbioru v3</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{--bg:#f2f0e8;--panel:#fffdf6;--fg:#23261f;--mut:#6a6e60;--line:#d8d3c3;--acc:#2f7a4c;--odrz:#b8432e;--odrzbg:rgba(184,67,46,.55);--tile:#ff00ff;
+  font-family:"Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1e19;--panel:#252a23;--fg:#ecebe3;--mut:#a2a695;--line:#3a4036;--acc:#5fc287;--odrz:#e2765c;--odrzbg:rgba(160,50,30,.6);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1b1e19;--panel:#252a23;--fg:#ecebe3;--mut:#a2a695;--line:#3a4036;--acc:#5fc287;--odrz:#e2765c;--odrzbg:rgba(160,50,30,.6);color-scheme:dark}
+body{background:var(--bg);color:var(--fg);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px 60px}
+.wrap{max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1{font-size:20px;margin:0;text-wrap:balance}
+.pasek{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid var(--line)}
+.pasek select,.pasek button,.pasek label{font:inherit;font-size:14px}
+.pasek select,.pasek button{border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:8px;padding:6px 10px}
+.mut{color:var(--mut);font-size:13px}
+.obiekt{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.obiekt h2{font-size:17px;margin:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.obiekt h2 small{font-weight:400;color:var(--mut);font-size:13px}
+.siatka{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.k{position:relative;border-radius:8px;overflow:hidden;cursor:pointer;border:3px solid transparent;background:var(--tile)}
+.k img{display:block;width:100%;aspect-ratio:1;image-rendering:auto}
+.k .et{position:absolute;left:0;right:0;bottom:0;background:rgba(20,22,18,.78);color:#f3f1e6;font-size:12px;padding:3px 6px;display:flex;justify-content:space-between;gap:4px}
+.k.odrz{border-color:var(--odrz)}
+.k.odrz::after{content:"ODRZUCONY";position:absolute;inset:0;background:var(--odrzbg);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px;letter-spacing:.06em}
+.k .lupa{position:absolute;top:4px;right:4px;background:rgba(20,22,18,.7);color:#fff;border:0;border-radius:6px;font-size:13px;padding:2px 6px;cursor:zoom-in;z-index:2}
+.duzy{position:fixed;inset:0;background:rgba(10,10,10,.85);display:grid;place-items:center;z-index:20;padding:16px}
+.duzy img{max-width:min(92vw,720px);max-height:86vh;image-rendering:auto;border-radius:8px}
+.duzy div{color:#fff;text-align:center;margin-top:8px;font-size:14px}
+</style>
+<div class="wrap">
+  <h1>Wybór obrazów do zbioru v3 · etap 1: odrzucanie</h1>
+  <div class="mut">Nowe obiekty spoza zbioru (test-v2), LoRA budynki v2, 512 px, seed 42+i; dla obiektów bez wyboru dodane Krea + prompt K na 5 nowych seedach (bez dymu w przemyśle). Kliknij obraz, żeby go odrzucić (kliknij ponownie, żeby cofnąć); lupa = powiększenie. Budynki wejściowe, w których nie da się podmienić drzwi na kanoniczne, są już usunięte (<span id="ileDrzwi"></span>).</div>
+  <div class="pasek">
+    <select id="fModel"><option value="">wszystkie modele</option></select>
+    <select id="fGrupa"><option value="">wszystkie grupy</option></select>
+    <select id="fWar"><option value="">v2 + J + K</option><option value="v2">tylko v2 (bez uzdatnienia)</option><option value="J">tylko J</option><option value="K">tylko K</option><option value="Ks">tylko nowe seedy (K)</option></select>
+    <label><input type="checkbox" id="fUkryj"> ukryj odrzucone</label>
+    <span class="mut" id="licz"></span>
+    <span class="mut" id="status"></span>
+  </div>
+  <div id="lista" style="display:flex;flex-direction:column;gap:14px"></div>
+</div>
+<script>
+const DANE = /*DANE*/null;
+const $ = s => document.querySelector(s);
+let db = null, odrz = {};
+$("#ileDrzwi").textContent = DANE.odrzuconeDrzwi + " obrazów";
+DANE.modele.forEach(m => $("#fModel").insertAdjacentHTML("beforeend", `<option value="${m.kod}">${m.nazwa}</option>`));
+DANE.grupy.forEach(g => $("#fGrupa").insertAdjacentHTML("beforeend", `<option value="${g}">${g}</option>`));
+const NM = Object.fromEntries(DANE.modele.map(m => [m.kod, m.nazwa]));
+const WAR = { v2: "v2", J: "J realistic", K: "K semi-real." }; const war = w => WAR[w] || ("K · seed " + w.slice(2));
+
+function rysuj() {
+  const fm = $("#fModel").value, fg = $("#fGrupa").value, fw = $("#fWar").value, uk = $("#fUkryj").checked;
+  let html = "", wid = 0;
+  for (const o of DANE.obiekty) {
+    if (fg && o.grupa !== fg) continue;
+    const ks = o.obrazy.filter(x => (!fm || x.m === fm) && (!fw || x.w === fw || (fw === "Ks" && x.w.startsWith("Ks"))) && !(uk && odrz[x.id]));
+    if (!ks.length) continue; wid += ks.length;
+    const zost = o.obrazy.filter(x => !odrz[x.id]).length;
+    html += `<section class="obiekt"><h2>${o.nazwa} <small>${o.grupa} · ${o.typ === "enterable" ? "wejściowy" : "dekoracyjny"} · zostaje ${zost} z ${o.obrazy.length}</small></h2><div class="siatka">` +
+      ks.map(x => `<div class="k${odrz[x.id] ? " odrz" : ""}" data-id="${x.id}"><img loading="lazy" src="${x.src}" alt="${o.nazwa} ${NM[x.m]} ${x.w}"><button class="lupa" data-l="${x.id}">⤢</button><div class="et"><span>${NM[x.m]}</span><span>${war(x.w)}</span></div></div>`).join("") + `</div></section>`;
+  }
+  $("#lista").innerHTML = html || `<div class="mut">Nic do pokazania przy tych filtrach.</div>`;
+  const wsz = DANE.obiekty.reduce((a, o) => a + o.obrazy.length, 0), od = DANE.obiekty.reduce((a, o) => a + o.obrazy.filter(x => odrz[x.id]).length, 0);
+  $("#licz").textContent = `widać ${wid} · odrzucone ${od} z ${wsz} · zostaje ${wsz - od}`;
+}
+const PO_ID = {}; DANE.obiekty.forEach(o => o.obrazy.forEach(x => PO_ID[x.id] = { ...x, obiekt: o.nazwa }));
+$("#lista").addEventListener("click", async e => {
+  const l = e.target.closest(".lupa");
+  if (l) { e.stopPropagation(); const x = PO_ID[l.dataset.l]; const d = document.createElement("div"); d.className = "duzy";
+    d.innerHTML = `<div><img src="${x.src}" alt=""><div>${x.obiekt} · ${NM[x.m]} · ${war(x.w)}</div></div>`; d.onclick = () => d.remove(); document.body.append(d); return; }
+  const k = e.target.closest(".k"); if (!k) return;
+  const id = k.dataset.id, nowa = !odrz[id]; odrz[id] = nowa; k.classList.toggle("odrz", nowa); rysujLicz();
+  if (!db) { $("#status").textContent = "Brak zapisu – baza niedostępna."; return; }
+  try { await db.doc("etap1/" + id).set({ odrzucony: nowa, czas: new Date().toISOString() }); $("#status").textContent = "Zapisano"; }
+  catch (err) { $("#status").textContent = "Błąd zapisu: " + (err.code || err.message); }
+});
+function rysujLicz() { const wsz = DANE.obiekty.reduce((a, o) => a + o.obrazy.length, 0), od = Object.keys(PO_ID).filter(i => odrz[i]).length;
+  $("#licz").textContent = `odrzucone ${od} z ${wsz} · zostaje ${wsz - od}`; }
+["#fModel", "#fGrupa", "#fWar", "#fUkryj"].forEach(s => $(s).addEventListener("change", rysuj));
+document.addEventListener("keydown", e => { if (e.key === "Escape") document.querySelectorAll(".duzy").forEach(d => d.remove()); });
+rysuj();
+(async () => {
+  try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { $("#status").textContent = "Baza niedostępna – odrzucenia nie zostaną zapisane."; return; }
+  $("#status").textContent = "Połączono z bazą.";
+  db.collection("etap1").onSnapshot(s => { odrz = {}; for (const d of s.docs) odrz[d.id] = !!(d.data() || {}).odrzucony; rysuj(); },
+    e => { $("#status").textContent = "Błąd bazy: " + e.code; });
+})();
+</script>
