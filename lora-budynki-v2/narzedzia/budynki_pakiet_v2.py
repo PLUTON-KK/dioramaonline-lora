@@ -3,13 +3,17 @@ Roznica wzgledem v1: skali NIE uczymy w obrazie. Kazdy budynek kadrowany ciasno 
 a jego prawdziwy rozmiar jest w opisie ("about 10 m wide and 8 m tall"). Skale gry (24 px/m) przywraca skrypt po generacji:
 szerokosc budynku na wyniku -> szer_m * 24 px.
 Zrodlo: sprites/ i opisy z lora-budynki-v1-final (te same 72 budynki), z poprawka budki (bez zaprzeczenia)."""
-import csv, json, os, shutil
+import csv, json, os, re, shutil
 import numpy as np
 from PIL import Image
 
 V1 = "E:/ai/lora/lora-budynki-v1-final"; OUT = "E:/ai/lora/lora-budynki-v2"
 WYPELN = 0.88                      # dluzszy bok budynku wzgledem plotna (margines 6% z kazdej strony)
 MAGENTA = (255, 0, 255)
+# "side door" modele bazowe rozumieja jako drzwi w scianie bocznej -> pokazuja bok budynku (izometria).
+# Na obrazkach to zawsze dodatkowe drzwi NA FRONCIE - opisujemy ich polozenie (sprawdzone recznie na kazdym sprite, 2026-10-21).
+DRZWI_BOCZNE = {n: "right" for n in "dom-z-lokalem dom-z-panelami hala-sportowa kamienica-pierzeja-1 kamienica-pierzeja-2 kamienica-pierzeja-4 magazyn-blacha magazyn piekarnia-dom remiza warsztat-panele zajezdnia".split()}
+DRZWI_BOCZNE["warsztat"] = "left"
 POPRAWKI = {   # zaprzeczenia w opisach v1 -> opis pozytywny
     "budka-pokazu": (", with no visible door.", ", the serving window being the only opening in the front."),
 }
@@ -25,6 +29,10 @@ def skaluj(im, s):
 def opis(n, cap, szer_m, wys_m):
     if n in POPRAWKI:
         stare, nowe = POPRAWKI[n]; assert stare in cap, n; cap = cap.replace(stare, nowe)
+    if n in DRZWI_BOCZNE:
+        cap, k = re.subn(r"((?:a|an) [^,.]*?)side door( with steps)?", lambda m: f"{m.group(1)}door{m.group(2) or ''} on the {DRZWI_BOCZNE[n]} of the front facade", cap)
+        assert k == 1, (n, k)
+    assert "side door" not in cap, n
     typ = "enterable building" if "enterable building" in cap else "decorative building"
     return cap.replace(typ + ", ", f"{typ}, about {round(szer_m)} m wide and {round(wys_m)} m tall, ", 1)
 
