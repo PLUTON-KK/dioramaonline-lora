@@ -1,5 +1,7 @@
 # LoRA: MOSS-Image, budynki v1 final, 512
 
+**Pliki LoRA (wszystkie kroki 500-2000): [Hugging Face](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/moss-image-base-512)**
+
 Wytrenowana na **MOSS-Image Base** (int8 convrot), zbior `../../train_512` (72 budynki), ai-toolkit, rank 16, lr 1e-4, 2000 krokow, 48 min na RTX 3080 10 GB (2026-10-20).
 
 | plik | krok | zalecane uzycie |

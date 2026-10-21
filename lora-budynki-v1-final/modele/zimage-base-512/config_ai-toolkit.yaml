@@ -1,0 +1,83 @@
+job: extension
+config:
+  name: swiat2d_zimagebase_budynki_v1final_512
+  process:
+  - type: sd_trainer
+    training_folder: E:/ai/lora/output
+    device: cuda:0
+    trigger_word: swiat2d style
+    network:
+      type: lora
+      linear: 16
+      linear_alpha: 16
+    save:
+      dtype: float16
+      save_every: 250
+      max_step_saves_to_keep: 6
+      push_to_hub: false
+    datasets:
+    - folder_path: E:/ai/lora/lora-budynki-v1-final/train_512
+      caption_ext: txt
+      caption_dropout_rate: 0.0
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      resolution:
+      - 512
+    train:
+      batch_size: 1
+      steps: 2000
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0001
+      dtype: bf16
+      skip_first_sample: true
+      cache_text_embeddings: true
+    model:
+      name_or_path: E:/ai/ComfyUI_windows_portable/ComfyUI/models/diffusion_models/z_image_bf16.safetensors
+      extras_name_or_path: Tongyi-MAI/Z-Image-Turbo
+      arch: zimage
+      quantize: true
+      quantize_te: true
+      low_vram: true
+    sample:
+      sampler: flowmatch
+      sample_every: 500
+      width: 512
+      height: 512
+      prompts:
+      - 'swiat2d style, enterable building, a single-storey flower shop with cream
+        walls and orange timber corners, a plain sign board with a flower pictogram,
+        a wide window with bouquets and a dark grey flat roof with an air conditioning
+        unit, and the standard entrance door on the right side of the front facade.
+        Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing
+        the viewer, flat rectangular roof visible from above, isolated on solid magenta
+        #FF00FF background.'
+      - 'swiat2d style, enterable building, a three-storey hotel with cream render
+        and orange timber cladding, windows with balconies and a flat roof covered
+        with light gravel, and the standard entrance door in the middle of the front
+        facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade
+        facing the viewer, flat rectangular roof visible from above, isolated on solid
+        magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, a small ambulance station with cream
+        walls, a red cross pictogram sign and a flat roof covered with dark grey ribbed
+        metal sheets, with two closed white roller doors and a small side door. Pixel
+        art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the
+        viewer, flat rectangular roof visible from above, isolated on solid magenta
+        #FF00FF background.'
+      - 'swiat2d style, decorative building, a small ice cream booth with a pink striped
+        awning over a serving window and a dark grey flat roof with an air conditioning
+        unit, with no visible door. Pixel art game sprite, fixed orthographic RPG
+        3/4 camera, front facade facing the viewer, flat rectangular roof visible
+        from above, isolated on solid magenta #FF00FF background.'
+      neg: ''
+      seed: 42
+      walk_seed: true
+      guidance_scale: 4
+      sample_steps: 25
+meta:
+  name: swiat2d_zimagebase_budynki_v1final_512
+  version: '1.0'

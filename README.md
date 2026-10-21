@@ -20,8 +20,15 @@ Każdy zbiór ma `train_512/` i `train_1024/` (PNG + TXT, gotowe do ai-toolkit /
 
 ## Gotowe LoRA
 
-| LoRA | model | gdzie |
-|---|---|---|
-| budynki v1 final, 512 | Z-Image Turbo | [`lora-budynki-v1-final/modele/zimage-turbo-512`](lora-budynki-v1-final/modele/zimage-turbo-512/) |
-| budynki v1 final, 512 | MOSS-Image (trening na Base, najlepsza na SFT) | [`lora-budynki-v1-final/modele/moss-image-base-512`](lora-budynki-v1-final/modele/moss-image-base-512/) |
-| budynki v1 final, 512 | FLUX 3 Image Klein (trening na base, najlepsza na destylacie; licencja FLUX Kommunity) | [`lora-budynki-v1-final/modele/flux3-klein-base-512`](lora-budynki-v1-final/modele/flux3-klein-base-512/) |
+Pliki LoRA (`.safetensors`, wszystkie zapisane kroki) są na Hugging Face: **[q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models)**. Tutaj zostają opisy, konfiguracje i podglądy.
+
+| LoRA | model | trening | opis i podglądy | pliki |
+|---|---|---|---|---|
+| budynki v1 final, 512 | Z-Image Turbo | RTX 3080 | [`zimage-turbo-512`](lora-budynki-v1-final/modele/zimage-turbo-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/zimage-turbo-512) |
+| budynki v1 final, 512 | Z-Image Base (nie działa na Turbo) | RTX 3080 | [`zimage-base-512`](lora-budynki-v1-final/modele/zimage-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/zimage-base-512) |
+| budynki v1 final, 512 | MOSS-Image (trening na Base, najlepsza na SFT) | RTX 3080 | [`moss-image-base-512`](lora-budynki-v1-final/modele/moss-image-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/moss-image-base-512) |
+| budynki v1 final, 512 | FLUX 3 Image Klein (trening na base, najlepsza na destylacie; licencja FLUX Kommunity) | RTX 3080 | [`flux3-klein-base-512`](lora-budynki-v1-final/modele/flux3-klein-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/flux3-klein-base-512) |
+| budynki v1 final, 512 | FLUX.2 Klein 4B | RTX 3080 | [`flux2-klein-4b-512`](lora-budynki-v1-final/modele/flux2-klein-4b-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/flux2-klein-4b-512) |
+| budynki v1 final, 512 | Qwen-Image 2512 (bf16) | RunPod A100 | [`qwen-image-2512-512`](lora-budynki-v1-final/modele/qwen-image-2512-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/qwen-image-2512-512) |
+
+W treningu na RunPod (2026-10-21): Qwen-Image-Edit 2511 (512), Krea 2 Raw (512), Z-Image Turbo / MOSS / FLUX 3 w 1024 bf16. Dopisuję, gdy skończą.
