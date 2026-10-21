@@ -35,6 +35,7 @@ LoRA, która rysuje budynki do dioramy w stylu gry: pixel art, rzut RPG 3/4 (fro
 | 8 | Modele zewnętrzne (ChatGPT, Gemini) | Wzór stylu + prompt paskowy, bez treningu. Punkt odniesienia, nie do użycia lokalnie. | [modele-zewnetrzne](porownania/2026-10-21_modele-zewnetrzne/) |
 | 9 | LoRA v2, prompty v2 (11 wierszy) | 108 pkt vs 106 dla v1/v1 na tych samych modelach – remis. Najlepsze: FLUX 3 destylat 16, Z-Image Turbo 15, Krea 2 Turbo 14. Zyskały stacja karetek i hotel, straciła latarnia. MOSS SFT spada (3). | [lora-v2_prompty-v2](porownania/2026-10-21_lora-v2_prompty-v2/) |
 | 10 | Pojedynki v1/v1 vs v2/v2 (dobre obrazy) | v1 vs v2 bezpośrednio 29 : 28. Krea 2 (Raw i Turbo) w czołówce niezależnie od LoRA. Z-Image Base i MOSS Base 1024 na dole. | [pojedynki](porownania/2026-10-21_pojedynki/) |
+| 11 | Drzwi w Krea 2 Turbo (52 budynki wejściowe, wszystkie warianty) | 50/52 kanoniczne drzwi na miejscu (sprawdzone ręcznie). Wyjątek: dom turkusowy z J i K – pojedyncze drzwi („realistic” zmienia styl drzwi). | [drzwi-krea2-turbo](porownania/2026-10-21_drzwi-krea2-turbo/) |
 
 ## Wnioski
 1. **LoRA uczy stylu, nie kopiuje zbioru.** Front, płaski dach, drzwi, paleta i donice przenoszą się na nowe budynki. Kolory z promptu zostają (turkusowy dom). Kosztem jest to, że nietypowe dachy (szkło, kopuła, skosy) LoRA ściąga do płaskiego prostokąta.

@@ -15,3 +15,4 @@ Skrypty do składania zestawień. Ścieżki w środku są lokalne (E:/ai/...) �
 | `elo_artefakt.py` + `elo_szablon.html` | strona pojedynków (dwa obrazy tego samego budynku, ukryte nazwy) z rankingiem Bradley-Terry |
 | `elo_analiza.py` | analiza głosów: liczba porównań, zgodność z ocenami, przedziały niepewności (bootstrap) |
 | `arkusz_krea_latarnia_szklarnia.py` | wszystkie warianty latarni i szklarni z Krea 2 Turbo na jednym arkuszu |
+| `drzwi_krea.py` + `drzwi_krea_zoom.py` | dopasowanie kanonicznych drzwi we wszystkich budynkach wejściowych Krea 2 Turbo + powiększenia do ręcznej weryfikacji |
