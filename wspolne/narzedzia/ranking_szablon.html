@@ -1,0 +1,134 @@
+<title>Ranking LoRA budynków</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root { --mid:#a07a12; --mid-bg:#f6edd2; --bg:#f4f2ec; --panel:#ffffff; --fg:#1f2421; --muted:#68706a; --line:#d9d6cc; --accent:#8a3fb8; --good:#2f7d46; --good-bg:#e3f2e7; --bad:#b0412e; --bad-bg:#f8e3df; --chip:#ece9e0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#191c1a; --panel:#232724; --fg:#e8ebe6; --muted:#9aa39c; --line:#353a36; --accent:#c48ae8; --good:#6fcf8b; --good-bg:#1f3527; --bad:#ef8a76; --bad-bg:#3d241f; --chip:#2c312d; --mid:#e2b94d; --mid-bg:#3a321c; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#191c1a; --panel:#232724; --fg:#e8ebe6; --muted:#9aa39c; --line:#353a36; --accent:#c48ae8; --good:#6fcf8b; --good-bg:#1f3527; --bad:#ef8a76; --bad-bg:#3d241f; --chip:#2c312d; --mid:#e2b94d; --mid-bg:#3a321c; color-scheme:dark }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 60px; }
+h1 { font-size: 1.5rem; margin: 0 0 4px; text-wrap: balance; }
+.intro { color: var(--muted); max-width: 75ch; margin: 0 0 14px; }
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.tabs button, .ctrl button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--fg); padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+.tabs button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.ranking { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; margin: 10px 0 18px; overflow-x: auto; }
+.ranking h2 { font-size: 1rem; margin: 0 0 8px; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+th { font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+td.num { text-align: right; }
+.bar { height: 8px; border-radius: 4px; background: var(--chip); overflow: hidden; min-width: 80px; }
+.bar > i { display: block; height: 100%; background: var(--good); }
+.status { color: var(--muted); font-size: .85rem; min-height: 1.2em; }
+.wiersz { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin: 10px 0; padding: 10px; }
+.wiersz header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; }
+.wiersz header b { font-size: 1.02rem; }
+.wiersz header span { color: var(--muted); font-size: .85rem; }
+.wiersz header .wynik { margin-left: auto; font-size: .85rem; color: var(--fg); }
+.pas { display: grid; grid-template-columns: repeat(10, minmax(118px, 1fr)); gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.kom { display: flex; flex-direction: column; gap: 4px; border: 2px solid transparent; border-radius: 6px; padding: 3px; min-width: 0; }
+.kom.dobre { border-color: var(--good); background: var(--good-bg); }
+.kom.slabe { border-color: var(--bad); background: var(--bad-bg); }
+.kom.srednie { border-color: var(--mid); background: var(--mid-bg); }
+.kom .nazwa { font-size: .74rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kom .obr { position: relative; aspect-ratio: 1; background: #ff00ff; border-radius: 4px; overflow: hidden; cursor: zoom-in; }
+.kom .obr img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.kom .brak { aspect-ratio: 1; display: grid; place-items: center; background: var(--chip); color: var(--muted); font-size: .75rem; border-radius: 4px; }
+.przyc { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3px; }
+.przyc button { font: inherit; font-size: .72rem; padding: 4px 0; border-radius: 4px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); cursor: pointer; }
+.przyc button.d[aria-pressed="true"] { background: var(--good); color: #fff; border-color: var(--good); }
+.przyc button.s[aria-pressed="true"] { background: var(--bad); color: #fff; border-color: var(--bad); }
+.przyc button.m[aria-pressed="true"] { background: var(--mid); color: #fff; border-color: var(--mid); }
+dialog { border: 0; padding: 0; background: transparent; max-width: 96vw; }
+dialog img { width: min(90vmin, 900px); image-rendering: pixelated; display: block; border-radius: 6px; }
+dialog::backdrop { background: rgba(0,0,0,.75); }
+</style>
+
+<h1>Ranking LoRA budynków</h1>
+<p class="intro">Przy każdym obrazku kliknij <b>dobre</b>, <b>średnie</b> albo <b>słabe</b> (ponowne kliknięcie cofa ocenę). Oceny zapisują się od razu; ranking na górze liczy się na bieżąco: punkty = 2 × dobre + 1 × średnie. Kliknij obrazek, żeby powiększyć.</p>
+<div class="tabs" id="tabs"></div>
+<p class="intro" id="opisZestawu"></p>
+<div class="ranking"><h2>Ranking</h2><div id="rank"></div><div class="status" id="status"></div></div>
+<div id="lista"></div>
+<dialog id="pow"><img alt=""></dialog>
+
+<script>
+const DANE = /*DANE*/null;
+let db = null, oceny = {}, akt = DANE.zestawy[0].id;
+try { const z = localStorage.getItem("ranking_zakladka"); if (z && DANE.zestawy.some(x => x.id === z)) akt = z; } catch (e) {}
+const $ = s => document.querySelector(s);
+const klucz = (z, w, b) => `${z}__${w}__${b}`;
+
+function rysujZakladki() {
+  const t = $("#tabs"); t.innerHTML = "";
+  for (const z of DANE.zestawy) {
+    const b = document.createElement("button"); b.textContent = z.nazwa; b.setAttribute("aria-pressed", z.id === akt);
+    b.onclick = () => { akt = z.id; try { localStorage.setItem("ranking_zakladka", akt); } catch (e) {} rysujZakladki(); rysuj(); };
+    t.appendChild(b);
+  }
+}
+function zestaw() { return DANE.zestawy.find(z => z.id === akt); }
+function rysuj() {
+  const z = zestaw(); $("#opisZestawu").textContent = z.opis;
+  const L = $("#lista"); L.innerHTML = "";
+  for (const w of z.wiersze) {
+    const s = document.createElement("section"); s.className = "wiersz"; s.dataset.w = w.id;
+    s.innerHTML = `<header><b></b><span></span><span class="wynik"></span></header><div class="pas"></div>`;
+    s.querySelector("b").textContent = w.model; s.querySelector("header span").textContent = w.opis;
+    const pas = s.querySelector(".pas");
+    (z.kolumny || DANE.budynki).forEach((bud, j) => {
+      const k = document.createElement("div"); k.className = "kom"; k.dataset.k = klucz(z.id, w.id, j);
+      const nz = document.createElement("div"); nz.className = "nazwa"; nz.textContent = bud; k.appendChild(nz);
+      if (w.obrazy[j]) {
+        const o = document.createElement("div"); o.className = "obr"; const im = document.createElement("img"); im.src = w.obrazy[j]; im.alt = `${w.model} – ${bud}`; im.loading = "lazy";
+        o.appendChild(im); o.onclick = () => { $("#pow img").src = w.obrazy[j]; $("#pow").showModal(); }; k.appendChild(o);
+        const p = document.createElement("div"); p.className = "przyc";
+        p.innerHTML = `<button class="d" aria-pressed="false">dobre</button><button class="m" aria-pressed="false">średnie</button><button class="s" aria-pressed="false">słabe</button>`;
+        p.querySelector(".d").onclick = () => ustaw(k.dataset.k, "dobre"); p.querySelector(".s").onclick = () => ustaw(k.dataset.k, "slabe"); p.querySelector(".m").onclick = () => ustaw(k.dataset.k, "srednie");
+        k.appendChild(p);
+      } else { const b = document.createElement("div"); b.className = "brak"; b.textContent = "brak obrazu"; k.appendChild(b); }
+      pas.appendChild(k);
+    });
+    L.appendChild(s);
+  }
+  odswiez();
+}
+function odswiez() {
+  const z = zestaw(); const wyn = [];
+  for (const k of document.querySelectorAll(".kom[data-k]")) {
+    const o = oceny[k.dataset.k] || null; k.classList.toggle("dobre", o === "dobre"); k.classList.toggle("slabe", o === "slabe"); k.classList.toggle("srednie", o === "srednie");
+    const d = k.querySelector(".d"), s = k.querySelector(".s"), m = k.querySelector(".m"); if (d) { d.setAttribute("aria-pressed", o === "dobre"); s.setAttribute("aria-pressed", o === "slabe"); m.setAttribute("aria-pressed", o === "srednie"); }
+  }
+  for (const w of z.wiersze) {
+    let d = 0, s = 0, m = 0; const n = Object.keys(w.obrazy).length;
+    for (const j of Object.keys(w.obrazy)) { const o = oceny[klucz(z.id, w.id, j)]; if (o === "dobre") d++; else if (o === "slabe") s++; else if (o === "srednie") m++; }
+    wyn.push({ w, d, s, m, n, pkt: 2 * d + m });
+    const el = document.querySelector(`.wiersz[data-w="${CSS.escape(w.id)}"] .wynik`); if (el) el.textContent = `dobre ${d} · średnie ${m} · słabe ${s} · z ${n} · ${2 * d + m} pkt`;
+  }
+  wyn.sort((a, b) => b.pkt - a.pkt || b.d - a.d || a.s - b.s);
+  const r = $("#rank"); r.innerHTML = "";
+  const t = document.createElement("table");
+  t.innerHTML = `<thead><tr><th>#</th><th>model</th><th>wariant</th><th class="num">punkty</th><th class="num">dobre</th><th class="num">średnie</th><th class="num">słabe</th><th class="num">nieocenione</th><th>wynik</th></tr></thead><tbody></tbody>`;
+  wyn.forEach((x, i) => {
+    const tr = document.createElement("tr"); const proc = x.n ? Math.round(100 * x.pkt / (2 * x.n)) : 0;
+    tr.innerHTML = `<td>${i + 1}</td><td></td><td></td><td class="num"><b>${x.pkt}</b></td><td class="num">${x.d}</td><td class="num">${x.m}</td><td class="num">${x.s}</td><td class="num">${x.n - x.d - x.s - x.m}</td><td><div class="bar"><i style="width:${proc}%"></i></div></td>`;
+    tr.children[1].textContent = x.w.model; tr.children[2].textContent = x.w.opis.replace(/^LoRA /, "");
+    t.querySelector("tbody").appendChild(tr);
+  });
+  r.appendChild(t);
+}
+async function ustaw(k, o) {
+  const nowa = oceny[k] === o ? null : o; oceny[k] = nowa; odswiez();
+  if (!db) { $("#status").textContent = "Brak zapisu (baza niedostępna w tym widoku) – oceny znikną po odświeżeniu."; return; }
+  try { await db.doc("ocena/" + k).set({ ocena: nowa, czas: new Date().toISOString() }); $("#status").textContent = "Zapisano"; }
+  catch (e) { $("#status").textContent = "Nie zapisano: " + (e && e.message || e); }
+}
+$("#pow").onclick = () => $("#pow").close();
+rysujZakladki(); rysuj();
+(async () => {
+  try { db = window.claude ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { $("#status").textContent = "Baza niedostępna – oceny nie będą zapisane."; return; }
+  db.collection("ocena").onSnapshot(snap => { for (const d of snap.docs) oceny[d.id] = (d.data() || {}).ocena || null; odswiez(); });
+})();
+</script>

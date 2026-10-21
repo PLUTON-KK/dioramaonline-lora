@@ -1,0 +1,92 @@
+Model: Z-Image Turbo + LoRA budynki v1 (512), seed 271828
+
+[v1] kwiaciarnia
+swiat2d style, enterable building, a single-storey flower shop with cream walls and orange timber corners, a plain sign board with a flower pictogram, a wide window with bouquets and a dark grey flat roof with an air conditioning unit, and the standard entrance door on the right side of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] hotel
+swiat2d style, enterable building, a three-storey hotel with cream render and orange timber cladding, windows with balconies and a flat roof covered with light gravel, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] stacja karetek
+swiat2d style, decorative building, a small ambulance station with cream walls, a red cross pictogram sign and a flat roof covered with dark grey ribbed metal sheets, with two closed white roller doors and a small side door. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] budka z lodami
+swiat2d style, decorative building, a small ice cream booth with a pink striped awning over a serving window and a dark grey flat roof with an air conditioning unit, with no visible door. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] dom turkusowy
+swiat2d style, enterable building, a two-storey residential house with turquoise painted walls and white window frames, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] latarnia z domkiem
+swiat2d style, decorative building, a tall round lighthouse tower with white and red horizontal stripes, a glass lantern room with a bright light on top, and a small cream keeper's house standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] szklarnia
+swiat2d style, enterable building, a garden centre greenhouse with large glass walls and a glass roof, green plants visible inside, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] obserwatorium
+swiat2d style, enterable building, an astronomical observatory, a building with a large white dome on top, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] weterynarz
+swiat2d style, enterable building, a single-storey veterinary clinic with shop windows, a plain sign board with a paw print pictogram, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[v1] kino
+swiat2d style, enterable building, a small cinema with film posters on the facade, a large plain sign board with a film reel pictogram and a wide entrance canopy with lights, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] kwiaciarnia
+swiat2d style, enterable building, a single-storey flower shop with cream walls and orange timber corners, a plain sign board with a flower pictogram, a wide window with bouquets and a dark grey flat roof with an air conditioning unit, realistic materials and proportions: painted plaster walls with visible texture, wooden corner beams with wood grain, a shop window with glass reflections and flower buckets behind it, and the standard entrance door on the right side of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] hotel
+swiat2d style, enterable building, a three-storey hotel with cream render and orange timber cladding, windows with balconies and a flat roof covered with light gravel, realistic materials and proportions: textured render and wooden cladding boards, glass balcony railings with reflections, window frames with depth, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] stacja karetek
+swiat2d style, decorative building, a small ambulance station with cream walls, a red cross pictogram sign and a flat roof covered with dark grey ribbed metal sheets, realistic materials and proportions: textured plaster walls, ribbed metal roof sheets with visible ridges, metal roller doors with horizontal slats, with two closed white roller doors and a small door on the right of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] budka z lodami
+swiat2d style, decorative building, a small ice cream booth with a pink striped awning over a serving window and a dark grey flat roof with an air conditioning unit, realistic materials and proportions: a small timber booth with visible wood planks, a fabric awning with folds, a glass display of ice cream behind the serving window, the serving window being the only opening in the front. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] dom turkusowy
+swiat2d style, enterable building, a two-storey residential house with turquoise painted walls and white window frames, realistic materials and proportions: painted plaster walls with slight weathering, window frames and sills with depth, a stone plinth along the bottom, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] latarnia z domkiem
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, the round tower shaded like a real cylinder: lit from the top-left, gradually darker towards its right edge, so it clearly looks round and solid, realistic materials and proportions: painted stone tower with visible stone blocks and weathered paint, a stone base with a small entrance door at the bottom of the tower, small windows going up the tower, and a small cream keeper's house with a dark grey flat roof standing next to the tower on its right side. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+[J] szklarnia
+swiat2d style, enterable building, a garden centre greenhouse with large glass walls and a flat rectangular glass roof made of glass panels in a metal frame, seen from above like the flat roofs of the other buildings, green plants visible through the glass walls and the glass roof, realistic materials and proportions: thin metal frame with glass panes and reflections, plants and shelves seen through the glass, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] obserwatorium
+swiat2d style, enterable building, an astronomical observatory, a building with a large white dome on top, realistic materials and proportions: a white metal dome with panel seams and a vertical observation slit, a stone building below with visible blocks, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] weterynarz
+swiat2d style, enterable building, a single-storey veterinary clinic with shop windows, a plain sign board with a paw print pictogram, realistic materials and proportions: textured plaster walls, shop windows with glass reflections and shelves of pet supplies behind them, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[J] kino
+swiat2d style, enterable building, a small cinema with film posters on the facade, a large plain sign board with a film reel pictogram and a wide entrance canopy with lights, realistic materials and proportions: textured facade, framed film posters behind glass, a canopy with small light bulbs, and the standard entrance door in the middle of the front facade. Detailed pixel art game sprite with realistic shading and volume, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] kwiaciarnia
+swiat2d style, enterable building, a single-storey flower shop with cream walls and orange timber corners, a plain sign board with a flower pictogram, a wide window with bouquets and a dark grey flat roof with an air conditioning unit, realistic materials and proportions: painted plaster walls with visible texture, wooden corner beams with wood grain, a shop window with glass reflections and flower buckets behind it, and the standard entrance door on the right side of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] hotel
+swiat2d style, enterable building, a three-storey hotel with cream render and orange timber cladding, windows with balconies and a flat roof covered with light gravel, realistic materials and proportions: textured render and wooden cladding boards, glass balcony railings with reflections, window frames with depth, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] stacja karetek
+swiat2d style, decorative building, a small ambulance station with cream walls, a red cross pictogram sign and a flat roof covered with dark grey ribbed metal sheets, realistic materials and proportions: textured plaster walls, ribbed metal roof sheets with visible ridges, metal roller doors with horizontal slats, with two closed white roller doors and a small door on the right of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] budka z lodami
+swiat2d style, decorative building, a small ice cream booth with a pink striped awning over a serving window and a dark grey flat roof with an air conditioning unit, realistic materials and proportions: a small timber booth with visible wood planks, a fabric awning with folds, a glass display of ice cream behind the serving window, the serving window being the only opening in the front. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] dom turkusowy
+swiat2d style, enterable building, a two-storey residential house with turquoise painted walls and white window frames, realistic materials and proportions: painted plaster walls with slight weathering, window frames and sills with depth, a stone plinth along the bottom, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] latarnia z domkiem
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, the round tower shaded like a real cylinder: lit from the top-left, gradually darker towards its right edge, so it clearly looks round and solid, realistic materials and proportions: painted stone tower with visible stone blocks and weathered paint, a stone base with a small entrance door at the bottom of the tower, small windows going up the tower, and a small cream keeper's house with a dark grey flat roof standing next to the tower on its right side. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+[K] szklarnia
+swiat2d style, enterable building, a garden centre greenhouse with large glass walls and a flat rectangular glass roof made of glass panels in a metal frame, seen from above like the flat roofs of the other buildings, green plants visible through the glass walls and the glass roof, realistic materials and proportions: thin metal frame with glass panes and reflections, plants and shelves seen through the glass, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] obserwatorium
+swiat2d style, enterable building, an astronomical observatory, a building with a large white dome on top, realistic materials and proportions: a white metal dome with panel seams and a vertical observation slit, a stone building below with visible blocks, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] weterynarz
+swiat2d style, enterable building, a single-storey veterinary clinic with shop windows, a plain sign board with a paw print pictogram, realistic materials and proportions: textured plaster walls, shop windows with glass reflections and shelves of pet supplies behind them, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+[K] kino
+swiat2d style, enterable building, a small cinema with film posters on the facade, a large plain sign board with a film reel pictogram and a wide entrance canopy with lights, realistic materials and proportions: textured facade, framed film posters behind glass, a canopy with small light bulbs, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+

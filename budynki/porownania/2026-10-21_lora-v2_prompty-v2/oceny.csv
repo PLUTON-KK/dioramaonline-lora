@@ -1,0 +1,111 @@
+model,lora,budynek,ocena
+FLUX 3 Klein (destylat),LoRA v2-final (z base),kwiaciarnia,słabe
+FLUX 3 Klein (destylat),LoRA v2-final (z base),hotel,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),stacja karetek,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),budka z lodami,średnie
+FLUX 3 Klein (destylat),LoRA v2-final (z base),dom turkusowy,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),latarnia z domkiem,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),szklarnia,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),obserwatorium,dobre
+FLUX 3 Klein (destylat),LoRA v2-final (z base),weterynarz,średnie
+FLUX 3 Klein (destylat),LoRA v2-final (z base),kino,dobre
+Z-Image Turbo,LoRA v2-final,kwiaciarnia,dobre
+Z-Image Turbo,LoRA v2-final,hotel,dobre
+Z-Image Turbo,LoRA v2-final,stacja karetek,dobre
+Z-Image Turbo,LoRA v2-final,budka z lodami,średnie
+Z-Image Turbo,LoRA v2-final,dom turkusowy,dobre
+Z-Image Turbo,LoRA v2-final,latarnia z domkiem,średnie
+Z-Image Turbo,LoRA v2-final,szklarnia,słabe
+Z-Image Turbo,LoRA v2-final,obserwatorium,średnie
+Z-Image Turbo,LoRA v2-final,weterynarz,dobre
+Z-Image Turbo,LoRA v2-final,kino,dobre
+Krea 2 Turbo int8,LoRA v2-final (z Raw),kwiaciarnia,dobre
+Krea 2 Turbo int8,LoRA v2-final (z Raw),hotel,dobre
+Krea 2 Turbo int8,LoRA v2-final (z Raw),stacja karetek,średnie
+Krea 2 Turbo int8,LoRA v2-final (z Raw),budka z lodami,średnie
+Krea 2 Turbo int8,LoRA v2-final (z Raw),dom turkusowy,dobre
+Krea 2 Turbo int8,LoRA v2-final (z Raw),latarnia z domkiem,średnie
+Krea 2 Turbo int8,LoRA v2-final (z Raw),szklarnia,średnie
+Krea 2 Turbo int8,LoRA v2-final (z Raw),obserwatorium,słabe
+Krea 2 Turbo int8,LoRA v2-final (z Raw),weterynarz,dobre
+Krea 2 Turbo int8,LoRA v2-final (z Raw),kino,dobre
+FLUX 3 Klein base,LoRA v2-final,kwiaciarnia,słabe
+FLUX 3 Klein base,LoRA v2-final,hotel,średnie
+FLUX 3 Klein base,LoRA v2-final,stacja karetek,średnie
+FLUX 3 Klein base,LoRA v2-final,budka z lodami,średnie
+FLUX 3 Klein base,LoRA v2-final,dom turkusowy,dobre
+FLUX 3 Klein base,LoRA v2-final,latarnia z domkiem,dobre
+FLUX 3 Klein base,LoRA v2-final,szklarnia,dobre
+FLUX 3 Klein base,LoRA v2-final,obserwatorium,dobre
+FLUX 3 Klein base,LoRA v2-final,weterynarz,średnie
+FLUX 3 Klein base,LoRA v2-final,kino,średnie
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),kwiaciarnia,słabe
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),hotel,średnie
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),stacja karetek,dobre
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),budka z lodami,średnie
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),dom turkusowy,dobre
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),latarnia z domkiem,słabe
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),szklarnia,słabe
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),obserwatorium,dobre
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),weterynarz,dobre
+FLUX.2 Klein 4B (destylat),LoRA v2-final (z base),kino,średnie
+Krea 2 Raw,LoRA v2-final,kwiaciarnia,słabe
+Krea 2 Raw,LoRA v2-final,hotel,dobre
+Krea 2 Raw,LoRA v2-final,stacja karetek,średnie
+Krea 2 Raw,LoRA v2-final,budka z lodami,średnie
+Krea 2 Raw,LoRA v2-final,dom turkusowy,średnie
+Krea 2 Raw,LoRA v2-final,latarnia z domkiem,słabe
+Krea 2 Raw,LoRA v2-final,szklarnia,słabe
+Krea 2 Raw,LoRA v2-final,obserwatorium,słabe
+Krea 2 Raw,LoRA v2-final,weterynarz,dobre
+Krea 2 Raw,LoRA v2-final,kino,dobre
+FLUX.2 Klein 4B,LoRA v2-final,kwiaciarnia,słabe
+FLUX.2 Klein 4B,LoRA v2-final,hotel,dobre
+FLUX.2 Klein 4B,LoRA v2-final,stacja karetek,średnie
+FLUX.2 Klein 4B,LoRA v2-final,budka z lodami,średnie
+FLUX.2 Klein 4B,LoRA v2-final,dom turkusowy,średnie
+FLUX.2 Klein 4B,LoRA v2-final,latarnia z domkiem,średnie
+FLUX.2 Klein 4B,LoRA v2-final,szklarnia,średnie
+FLUX.2 Klein 4B,LoRA v2-final,obserwatorium,słabe
+FLUX.2 Klein 4B,LoRA v2-final,weterynarz,średnie
+FLUX.2 Klein 4B,LoRA v2-final,kino,słabe
+MOSS-Image Base,LoRA v2-final,kwiaciarnia,słabe
+MOSS-Image Base,LoRA v2-final,hotel,dobre
+MOSS-Image Base,LoRA v2-final,stacja karetek,średnie
+MOSS-Image Base,LoRA v2-final,budka z lodami,słabe
+MOSS-Image Base,LoRA v2-final,dom turkusowy,słabe
+MOSS-Image Base,LoRA v2-final,latarnia z domkiem,słabe
+MOSS-Image Base,LoRA v2-final,szklarnia,dobre
+MOSS-Image Base,LoRA v2-final,obserwatorium,słabe
+MOSS-Image Base,LoRA v2-final,weterynarz,średnie
+MOSS-Image Base,LoRA v2-final,kino,średnie
+Z-Image Base,LoRA v2-final,kwiaciarnia,dobre
+Z-Image Base,LoRA v2-final,hotel,dobre
+Z-Image Base,LoRA v2-final,stacja karetek,dobre
+Z-Image Base,LoRA v2-final,budka z lodami,słabe
+Z-Image Base,LoRA v2-final,dom turkusowy,słabe
+Z-Image Base,LoRA v2-final,latarnia z domkiem,słabe
+Z-Image Base,LoRA v2-final,szklarnia,–
+Z-Image Base,LoRA v2-final,obserwatorium,–
+Z-Image Base,LoRA v2-final,weterynarz,–
+Z-Image Base,LoRA v2-final,kino,–
+Qwen-Image 2512,LoRA v2-final,kwiaciarnia,słabe
+Qwen-Image 2512,LoRA v2-final,hotel,dobre
+Qwen-Image 2512,LoRA v2-final,stacja karetek,średnie
+Qwen-Image 2512,LoRA v2-final,budka z lodami,słabe
+Qwen-Image 2512,LoRA v2-final,dom turkusowy,średnie
+Qwen-Image 2512,LoRA v2-final,latarnia z domkiem,średnie
+Qwen-Image 2512,LoRA v2-final,szklarnia,słabe
+Qwen-Image 2512,LoRA v2-final,obserwatorium,słabe
+Qwen-Image 2512,LoRA v2-final,weterynarz,słabe
+Qwen-Image 2512,LoRA v2-final,kino,średnie
+MOSS-Image SFT,LoRA v2-final (z Base),kwiaciarnia,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),hotel,średnie
+MOSS-Image SFT,LoRA v2-final (z Base),stacja karetek,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),budka z lodami,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),dom turkusowy,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),latarnia z domkiem,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),szklarnia,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),obserwatorium,dobre
+MOSS-Image SFT,LoRA v2-final (z Base),weterynarz,słabe
+MOSS-Image SFT,LoRA v2-final (z Base),kino,słabe

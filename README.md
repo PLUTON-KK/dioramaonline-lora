@@ -24,13 +24,13 @@ wspolne/        ← rzeczy wspólne dla tematów (skrypty do zestawień)
 devlog/         ← dziennik projektu
 ```
 
-Pliki LoRA (`.safetensors`) leżą na Hugging Face: **[q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models)**, w tym samym podziale (`budynki/v1/<model>/`).
+Pliki LoRA (`.safetensors`) leżą na Hugging Face: **[q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models)**, w tym samym podziale (`budynki/v1/<model>/`, `budynki/v2/<model>/`).
 
 ## Tematy
 
 | temat | zbiory | LoRA | porównania | status |
 |---|---|---|---|---|
-| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2-final](budynki/zbiory/v2-final/) (te same 72, ciasny kadr, zamrożony) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024) | [budynki/porownania](budynki/porownania/) | v1 wytrenowane, v2 w treningu |
+| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2-final](budynki/zbiory/v2-final/) (te same 72, ciasny kadr, zamrożony) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024), [7 LoRA v2](budynki/modele/v2/) (512) | [budynki/porownania](budynki/porownania/), skrót: [BADANIA.md](budynki/BADANIA.md) | v1 i v2 wytrenowane i ocenione |
 | natura | – | – | – | plan |
 | produkty (zdjęcie produktu → diorama) | – | – | – | później, modele z edycją obrazu (tabela niżej) |
 
