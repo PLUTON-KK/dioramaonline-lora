@@ -1,0 +1,7 @@
+Attached: a style reference sheet of buildings from my pixel art game.
+Draw 3 new buildings in ONE image, side by side in a single row, all standing on the same ground line, at the same scale (one shared metre scale for all buildings), in exactly the style of the reference: same pixel size, same fixed orthographic RPG 3/4 camera (front facade facing the viewer, vertical walls, flat rectangular roof seen from above), same outlines, palette and lighting, on a solid magenta #FF00FF background. Use the references only for style, not for content.
+
+Buildings, from left to right:
+1. decorative building, a small ambulance station with cream walls, a red cross pictogram sign and a flat roof covered with dark grey ribbed metal sheets, with two closed white roller doors and a small side door.
+2. decorative building, a small ice cream booth with a pink striped awning over a serving window and a dark grey flat roof with an air conditioning unit, with no visible door.
+3. decorative building, a tall round lighthouse tower with white and red horizontal stripes, a glass lantern room with a bright light on top, and a small cream keeper's house standing next to the tower on its right side.

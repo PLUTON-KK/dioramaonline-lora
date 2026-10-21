@@ -1,0 +1,12 @@
+Attached: a style reference sheet of buildings from my pixel art game and a reference of the standard entrance door.
+Draw 7 new buildings in ONE image, side by side in a single row, all standing on the same ground line, at the same scale (one shared metre scale for all buildings), in exactly the style of the reference: same pixel size, same fixed orthographic RPG 3/4 camera (front facade facing the viewer, vertical walls, flat rectangular roof seen from above), same outlines, palette and lighting, on a solid magenta #FF00FF background. Use the references only for style, not for content.
+Every 'standard entrance door' must be exactly the door from the door reference: same shape, size in pixels and colours.
+
+Buildings, from left to right:
+1. enterable building, a single-storey flower shop with cream walls and orange timber corners, a plain sign board with a flower pictogram, a wide window with bouquets and a dark grey flat roof with an air conditioning unit, and the standard entrance door on the right side of the front facade.
+2. enterable building, a three-storey hotel with cream render and orange timber cladding, windows with balconies and a flat roof covered with light gravel, and the standard entrance door in the middle of the front facade.
+3. enterable building, a two-storey residential house with turquoise painted walls and white window frames, and the standard entrance door in the middle of the front facade.
+4. enterable building, a garden centre greenhouse with large glass walls and a glass roof, green plants visible inside, and the standard entrance door in the middle of the front facade.
+5. enterable building, an astronomical observatory, a building with a large white dome on top, and the standard entrance door in the middle of the front facade.
+6. enterable building, a single-storey veterinary clinic with shop windows, a plain sign board with a paw print pictogram, and the standard entrance door in the middle of the front facade.
+7. enterable building, a small cinema with film posters on the facade, a large plain sign board with a film reel pictogram and a wide entrance canopy with lights, and the standard entrance door in the middle of the front facade.

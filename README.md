@@ -9,14 +9,30 @@ Skąd ten projekt, co testowaliśmy, co nie wyszło i dlaczego. Zaczyna się od 
 >
 > *Sorry it's in Polish, it's just easier for me. We live in the age of AI (seriously!), so feel free to auto-translate it.*
 
-## Zbiory
+## Jak to jest poukładane
 
-| zbiór | co | obrazy | status |
-|---|---|---|---|
-| [`lora-budynki-v1-final`](lora-budynki-v1-final/) | budynki, fronty, `enterable` / `decorative` | 72 (47 + 25) | zaakceptowany 2026-10-20 |
-| [`lora-budynki-v2`](lora-budynki-v2/) | te same budynki, kadrowane ciasno, rozmiar w metrach w opisie (skala gry przywracana po generacji) | 72 (47 + 25) | 2026-10-21, w treningu |
+Repo dzielimy **po tematach** (budynki, potem natura, auta, produkty…). Każdy temat ma ten sam układ:
 
-Każdy zbiór ma `train_512/` i `train_1024/` (PNG + TXT, gotowe do ai-toolkit / kohya / KohakuMossTrainer), `sprites/` (format gry) i README z zasadami.
+```
+<temat>/
+  README.md     ← stan tematu: aktualny zbiór, LoRA, ostatnie porównania
+  zbiory/       ← zbiory treningowe (v1-final, v2, …): train_512/, train_1024/, sprites/, opisy
+  modele/       ← opisy wytrenowanych LoRA (konfiguracja, podglądy kroków); same pliki LoRA są na Hugging Face
+  testy/        ← zestaw testowy tematu: budynki spoza zbioru, prompty, wzory stylu
+  porownania/   ← zestawienia wyników: nasze LoRA i modele zewnętrzne (ChatGPT, Gemini) na tym samym zestawie testowym
+wspolne/        ← rzeczy wspólne dla tematów (skrypty do zestawień)
+devlog/         ← dziennik projektu
+```
+
+Pliki LoRA (`.safetensors`) leżą na Hugging Face: **[q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models)**, w tym samym podziale (`budynki/v1/<model>/`).
+
+## Tematy
+
+| temat | zbiory | LoRA | porównania | status |
+|---|---|---|---|---|
+| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2](budynki/zbiory/v2/) (te same 72, ciasny kadr) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024) | [budynki/porownania](budynki/porownania/) | v1 wytrenowane, v2 przed treningiem |
+| natura | – | – | – | plan |
+| produkty (zdjęcie produktu → diorama) | – | – | – | później, modele z edycją obrazu (tabela niżej) |
 
 ## Modele: generowanie czy też edycja obrazu
 
@@ -36,22 +52,3 @@ Każdy zbiór ma `train_512/` i `train_1024/` (PNG + TXT, gotowe do ai-toolkit /
 | Krea 3, Nano Banana, Imagen, ChatGPT (obrazy) | ✅ | ✅ | ❌ tylko API, wag nie ma | zamknięte | nie da się (brak wag) |
 
 Do przerabiania zdjęć produktów na styl dioramy kandydaci to modele z edycją: **Qwen-Image-Edit 2511**, **FLUX 3 Klein**, **FLUX.2 Klein 4B** (lokalnie), z naszą LoRA budynków albo przyszłą LoRA przedmiotów.
-
-## Gotowe LoRA
-
-Pliki LoRA (`.safetensors`, wszystkie zapisane kroki) są na Hugging Face: **[q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models)**. Tutaj zostają opisy, konfiguracje i podglądy.
-
-| LoRA | model | rozdz. | trening | opis i podglądy | pliki |
-|---|---|---|---|---|---|
-| budynki v1 final | Z-Image Turbo | 512 | RTX 3080 | [`zimage-turbo-512`](lora-budynki-v1-final/modele/zimage-turbo-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/zimage-turbo-512) |
-| budynki v1 final | Z-Image Turbo | 1024 | RunPod L40 | [`zimage-turbo-1024`](lora-budynki-v1-final/modele/zimage-turbo-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/zimage-turbo-1024) |
-| budynki v1 final | Z-Image Base (nie działa na Turbo) | 512 | RTX 3080 | [`zimage-base-512`](lora-budynki-v1-final/modele/zimage-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/zimage-base-512) |
-| budynki v1 final | MOSS-Image Base (najlepsza na SFT) | 512 | RTX 3080 | [`moss-image-base-512`](lora-budynki-v1-final/modele/moss-image-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/moss-image-base-512) |
-| budynki v1 final | MOSS-Image Base (najlepsza na SFT) | 1024 | RunPod L40 | [`moss-image-base-1024`](lora-budynki-v1-final/modele/moss-image-base-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/moss-image-base-1024) |
-| budynki v1 final | FLUX 3 Image Klein base (najlepsza na destylacie; FLUX Kommunity) | 512 | RTX 3080 | [`flux3-klein-base-512`](lora-budynki-v1-final/modele/flux3-klein-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/flux3-klein-base-512) |
-| budynki v1 final | FLUX 3 Image Klein base (najlepsza na destylacie; FLUX Kommunity) | 1024 | RunPod A40 | [`flux3-klein-base-1024`](lora-budynki-v1-final/modele/flux3-klein-base-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/flux3-klein-base-1024) |
-| budynki v1 final | FLUX.2 Klein 4B | 512 | RTX 3080 | [`flux2-klein-4b-512`](lora-budynki-v1-final/modele/flux2-klein-4b-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/flux2-klein-4b-512) |
-| budynki v1 final | Qwen-Image 2512 | 512 | RunPod A100 | [`qwen-image-2512-512`](lora-budynki-v1-final/modele/qwen-image-2512-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/qwen-image-2512-512) |
-| budynki v1 final | Qwen-Image-Edit 2511 (z obrazem wzoru) | 512 | RunPod A100 | [`qwen-image-edit-2511-512`](lora-budynki-v1-final/modele/qwen-image-edit-2511-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/qwen-image-edit-2511-512) |
-| budynki v1 final | Krea 2 Raw (do użycia na Krea 2 Turbo; Krea 2 Community License) | 512 | RunPod A6000 | [`krea2-raw-512`](lora-budynki-v1-final/modele/krea2-raw-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki-v1-final/krea2-raw-512) |
-
