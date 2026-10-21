@@ -1,4 +1,4 @@
-# Zasady (stan na 2026-10-21)
+# Zasady (stan na 2026-10-22)
 
 ## Grafika gry
 - Skala: 24 px = 1 m. Paleta świata: 64 kolory. Twarda przezroczystość (alfa 0 albo 255).
@@ -13,6 +13,13 @@
 - Wzór zawiera tylko zaakceptowane grafiki tej kategorii. Jeden zły przykład we wzorze wraca w wynikach.
 - Jeden pasek = jedna nowa rozmowa. Poprawka (np. dach trapezem) to edycja w tej samej rozmowie, zapisywana jako `pasekNN_edit1.png`.
 - Opisy obiektów pisane naszymi materiałami (krem, pomarańczowe drewno, szare panele). Słowa typu „town house”, „brick”, „shutters” ciągną w stronę starówki.
+
+## Opisy i prompty od v4 (obowiązuje sztywno)
+- Jeden schemat dla wszystkich tematów: `swiat2d style, <kategoria>, <podtyp>, <rozmiar>, <opis>. <końcówka>`.
+- Kategoria zawsze trzecim wyrazem, ze stałej listy: `building`, `structure`, `vehicle`, `outdoor prop`, `nature`, `interior object`, `product`, `character`, `terrain tile`, `overlay`. Podtypy i końcówki kamery przypisane do kategorii.
+- Szczegóły, lista podtypów, końcówki słowo w słowo: [`wspolne/SCHEMAT_OPISOW.md`](../wspolne/SCHEMAT_OPISOW.md). Każdy opis i prompt przechodzi przez walidator [`wspolne/narzedzia/sprawdz_opis.py`](../wspolne/narzedzia/sprawdz_opis.py).
+- Bez dymu i pary, bez parkingów i aut przed budynkami (robi to diorama), płaski dach w kamerze tylko przy płaskim dachu.
+- Zbiory v1–v3 zostają w starym zapisie (`enterable building` / `decorative building` / `decorative object`); przy budowie v4 przepisujemy je wg tabeli przejścia.
 
 ## Zbiory LoRA
 - Obrazy treningowe: płótno w jednej skali dla wszystkich obiektów (`train_512`: piksele gry ×1, linia gruntu y=492; `train_1024`: ×2, y=984), tło magenta #FF00FF, bez automatycznego skalowania w trenerze.

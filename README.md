@@ -20,7 +20,7 @@ Repo dzielimy **po tematach** (budynki, potem natura, auta, produkty…). Każdy
   modele/       ← opisy wytrenowanych LoRA (konfiguracja, podglądy kroków); same pliki LoRA są na Hugging Face
   testy/        ← zestaw testowy tematu: budynki spoza zbioru, prompty, wzory stylu
   porownania/   ← zestawienia wyników: nasze LoRA i modele zewnętrzne (ChatGPT, Gemini) na tym samym zestawie testowym
-wspolne/        ← rzeczy wspólne dla tematów (skrypty do zestawień)
+wspolne/        ← rzeczy wspólne dla tematów: SCHEMAT_OPISOW.md (obowiązujący schemat opisów od v4), skrypty
 devlog/         ← dziennik projektu
 ```
 
