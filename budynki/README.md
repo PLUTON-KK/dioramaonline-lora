@@ -5,14 +5,14 @@ Obrazy zbioru wygenerował ChatGPT, a my przerobiliśmy je na format gry (kadr, 
 
 ## Stan (2026-10-21)
 - **Zbiór v1-final** (72 budynki, skala gry w obrazie): wytrenowane 11 LoRA na 8 modelach bazowych → [`modele/v1/`](modele/v1/).
-- **Zbiór v2** (te same budynki, ciasny kadr, rozmiar w metrach w opisie, poprawione opisy) → [`zbiory/v2/`](zbiory/v2/), lista zmian: [`ZMIANY_V1_V2.md`](zbiory/v2/ZMIANY_V1_V2.md). Trening po ocenie wyników v1.
+- **Zbiór v2-final** (zamrożony 2026-10-21; te same budynki, ciasny kadr, rozmiar w metrach w opisie, poprawione opisy) → [`zbiory/v2-final/`](zbiory/v2-final/), lista zmian: [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md). Trening LoRA v2 (512) na RunPod: 2026-10-21.
 - **Porównania** (nasze LoRA i ChatGPT / Gemini na tych samych 10 budynkach testowych) → [`porownania/`](porownania/).
 
 ## Katalogi
 | katalog | co jest w środku |
 |---|---|
 | [`zbiory/v1-final/`](zbiory/v1-final/) | zbiór treningowy v1 (zamrożony): `train_512/`, `train_1024/`, `sprites/` (format gry), `metadata.jsonl`, `captions.csv`, skrypty |
-| [`zbiory/v2/`](zbiory/v2/) | zbiór v2 + [`ZMIANY_V1_V2.md`](zbiory/v2/ZMIANY_V1_V2.md) |
+| [`zbiory/v2-final/`](zbiory/v2-final/) | zbiór v2-final (zamrożony) + [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md) |
 | [`modele/v1/`](modele/v1/) | po jednym folderze na LoRA: README (jak uczona, jak używać, licencja), `config_ai-toolkit.yaml`, `podglady/` (kroki 0–2000) |
 | [`testy/`](testy/) | zestaw testowy: 10 budynków spoza zbioru, prompty v1/v2, wzory stylu i drzwi, prompty „paskowe” dla modeli zewnętrznych |
 | [`porownania/`](porownania/) | zestawienia wyników, każde w osobnym folderze z datą |

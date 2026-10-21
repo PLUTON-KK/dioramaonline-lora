@@ -30,7 +30,7 @@ Pliki LoRA (`.safetensors`) leżą na Hugging Face: **[q3ok/dioramaonline-lora-m
 
 | temat | zbiory | LoRA | porównania | status |
 |---|---|---|---|---|
-| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2](budynki/zbiory/v2/) (te same 72, ciasny kadr) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024) | [budynki/porownania](budynki/porownania/) | v1 wytrenowane, v2 przed treningiem |
+| [**budynki**](budynki/) | [v1-final](budynki/zbiory/v1-final/) (72, zamrożony), [v2-final](budynki/zbiory/v2-final/) (te same 72, ciasny kadr, zamrożony) | [11 LoRA v1](budynki/modele/v1/) (8 modeli bazowych, 512/1024) | [budynki/porownania](budynki/porownania/) | v1 wytrenowane, v2 w treningu |
 | natura | – | – | – | plan |
 | produkty (zdjęcie produktu → diorama) | – | – | – | później, modele z edycją obrazu (tabela niżej) |
 

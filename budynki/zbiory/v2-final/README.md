@@ -1,6 +1,6 @@
-# Budynki: zbiór v2
+# Budynki: zbiór v2-final
 
-(dawniej katalog `lora-budynki-v2`)
+**Zbiór zamrożony 2026-10-21 (decyzja właściciela): nie zmieniamy obrazów ani opisów. Na nim uczymy LoRA v2.** (dawniej katalog `lora-budynki-v2`, potem `zbiory/v2`)
 
 Te same 72 budynki co [zbiór v1-final](../v1-final/) (25 dekoracyjnych, 47 wejsciowych), inaczej podane do nauki.
 Generator: `E:/ai/lora/budynki_pakiet_v2.py`.

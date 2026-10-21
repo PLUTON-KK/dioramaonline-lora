@@ -19,7 +19,7 @@
 | plik | co to |
 |---|---|
 | [`prompty_v1.json`](prompty_v1.json) | prompty z podglądów treningu v1 (zbiór v1-final) |
-| [`prompty_v2.json`](prompty_v2.json) | prompty v2: rozmiar w metrach, drzwi stacji karetek opisane na froncie (zamiast „side door”), budka bez zaprzeczenia – szczegóły w [`ZMIANY_V1_V2.md`](../zbiory/v2/ZMIANY_V1_V2.md) |
+| [`prompty_v2.json`](prompty_v2.json) | prompty v2: rozmiar w metrach, drzwi stacji karetek opisane na froncie (zamiast „side door”), budka bez zaprzeczenia – szczegóły w [`ZMIANY_V1_V2.md`](../zbiory/v2-final/ZMIANY_V1_V2.md) |
 | [`pasek_wejsciowe_v1.txt`](pasek_wejsciowe_v1.txt), [`_v2`](pasek_wejsciowe_v2.txt) | jeden prompt na 7 budynków z wejściem w jednym obrazku – dla modeli zewnętrznych (ChatGPT, Gemini) |
 | [`pasek_dekoracyjne_v1.txt`](pasek_dekoracyjne_v1.txt), [`_v2`](pasek_dekoracyjne_v2.txt) | to samo dla 3 budynków dekoracyjnych |
 | [`wzory/wzor_wejsciowe.png`](wzory/wzor_wejsciowe.png) | wzór stylu: 7 budynków z wejściem ze zbioru v1-final, różne dachy, skala ×2 (48 px = 1 m), miarka 2 m |
