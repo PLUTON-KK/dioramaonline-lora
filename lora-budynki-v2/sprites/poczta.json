@@ -1,0 +1,73 @@
+{
+ "id": "poczta-closed",
+ "family": "poczta",
+ "image": {
+  "w": 374,
+  "h": 200
+ },
+ "anchor": {
+  "x": 187.0,
+  "y": 200
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 153,
+    "y": 123
+   },
+   "anchor": {
+    "x": 182.5,
+    "y": 181
+   },
+   "doorway": {
+    "x": 158,
+    "y": 126,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 163,
+    "y": 126,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 158,
+  "y": 126,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "poczta-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "poczta-open"
+  }
+ ],
+ "variantGroup": "poczta",
+ "metric": {
+  "width_m": 15.58,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.624 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "house-11n-closed",
+ "family": "house-11n",
+ "image": {
+  "w": 223,
+  "h": 226
+ },
+ "anchor": {
+  "x": 111.5,
+  "y": 226
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 46,
+    "y": 154
+   },
+   "anchor": {
+    "x": 75.5,
+    "y": 212
+   },
+   "doorway": {
+    "x": 51,
+    "y": 157,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 56,
+    "y": 157,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 51,
+  "y": 157,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "house-11n-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "house-11n-open"
+  }
+ ],
+ "variantGroup": "house-11n",
+ "metric": {
+  "width_m": 9.29,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.464 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "kamienica-nowa-closed",
+ "family": "kamienica-nowa",
+ "image": {
+  "w": 261,
+  "h": 330
+ },
+ "anchor": {
+  "x": 130.5,
+  "y": 330
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 102,
+    "y": 268
+   },
+   "anchor": {
+    "x": 131.5,
+    "y": 326
+   },
+   "doorway": {
+    "x": 107,
+    "y": 271,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 112,
+    "y": 271,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 107,
+  "y": 271,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "kamienica-nowa-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "kamienica-nowa-open"
+  }
+ ],
+ "variantGroup": "kamienica-nowa",
+ "metric": {
+  "width_m": 10.88,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.547 z oryginalu ChatGPT"
+}

@@ -1,0 +1,73 @@
+{
+ "id": "hala-wystawowa-closed",
+ "family": "hala-wystawowa",
+ "image": {
+  "w": 392,
+  "h": 269
+ },
+ "anchor": {
+  "x": 196.0,
+  "y": 269
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 165,
+    "y": 192
+   },
+   "anchor": {
+    "x": 194.5,
+    "y": 250
+   },
+   "doorway": {
+    "x": 170,
+    "y": 195,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 175,
+    "y": 195,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 170,
+  "y": 195,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "hala-wystawowa-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "hala-wystawowa-open"
+  }
+ ],
+ "variantGroup": "hala-wystawowa",
+ "metric": {
+  "width_m": 16.33,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.630 z oryginalu ChatGPT"
+}

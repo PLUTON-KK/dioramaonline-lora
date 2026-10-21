@@ -1,0 +1,73 @@
+{
+ "id": "stacja-kolejki-gorna-closed",
+ "family": "stacja-kolejki-gorna",
+ "image": {
+  "w": 249,
+  "h": 218
+ },
+ "anchor": {
+  "x": 124.5,
+  "y": 218
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 155,
+    "y": 145
+   },
+   "anchor": {
+    "x": 184.5,
+    "y": 203
+   },
+   "doorway": {
+    "x": 160,
+    "y": 148,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 165,
+    "y": 148,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 160,
+  "y": 148,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "stacja-kolejki-gorna-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "stacja-kolejki-gorna-open"
+  }
+ ],
+ "variantGroup": "stacja-kolejki-gorna",
+ "metric": {
+  "width_m": 10.38,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.574 z oryginalu ChatGPT"
+}

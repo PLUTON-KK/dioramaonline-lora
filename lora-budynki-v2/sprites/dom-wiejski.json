@@ -1,0 +1,73 @@
+{
+ "id": "dom-wiejski-closed",
+ "family": "dom-wiejski",
+ "image": {
+  "w": 245,
+  "h": 159
+ },
+ "anchor": {
+  "x": 122.5,
+  "y": 159
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 93,
+    "y": 85
+   },
+   "anchor": {
+    "x": 122.5,
+    "y": 143
+   },
+   "doorway": {
+    "x": 98,
+    "y": 88,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 103,
+    "y": 88,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 98,
+  "y": 88,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "dom-wiejski-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "dom-wiejski-open"
+  }
+ ],
+ "variantGroup": "dom-wiejski",
+ "metric": {
+  "width_m": 10.21,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.532 z oryginalu ChatGPT"
+}

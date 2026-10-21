@@ -1,0 +1,73 @@
+{
+ "id": "pracownia-klubowa-closed",
+ "family": "pracownia-klubowa",
+ "image": {
+  "w": 264,
+  "h": 201
+ },
+ "anchor": {
+  "x": 132.0,
+  "y": 201
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 104,
+    "y": 125
+   },
+   "anchor": {
+    "x": 133.5,
+    "y": 183
+   },
+   "doorway": {
+    "x": 109,
+    "y": 128,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 114,
+    "y": 128,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 109,
+  "y": 128,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "pracownia-klubowa-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "pracownia-klubowa-open"
+  }
+ ],
+ "variantGroup": "pracownia-klubowa",
+ "metric": {
+  "width_m": 11.0,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.617 z oryginalu ChatGPT"
+}

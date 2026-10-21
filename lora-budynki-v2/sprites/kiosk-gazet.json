@@ -1,0 +1,73 @@
+{
+ "id": "kiosk-gazet-closed",
+ "family": "kiosk-gazet",
+ "image": {
+  "w": 236,
+  "h": 193
+ },
+ "anchor": {
+  "x": 118.0,
+  "y": 193
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 141,
+    "y": 109
+   },
+   "anchor": {
+    "x": 170.5,
+    "y": 167
+   },
+   "doorway": {
+    "x": 146,
+    "y": 112,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 151,
+    "y": 112,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 146,
+  "y": 112,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "kiosk-gazet-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "kiosk-gazet-open"
+  }
+ ],
+ "variantGroup": "kiosk-gazet",
+ "metric": {
+  "width_m": 9.83,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.674 z oryginalu ChatGPT"
+}

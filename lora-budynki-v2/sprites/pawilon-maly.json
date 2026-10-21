@@ -1,0 +1,73 @@
+{
+ "id": "pawilon-maly-closed",
+ "family": "pawilon-maly",
+ "image": {
+  "w": 226,
+  "h": 186
+ },
+ "anchor": {
+  "x": 113.0,
+  "y": 186
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 84,
+    "y": 112
+   },
+   "anchor": {
+    "x": 113.5,
+    "y": 170
+   },
+   "doorway": {
+    "x": 89,
+    "y": 115,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 94,
+    "y": 115,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 89,
+  "y": 115,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "pawilon-maly-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "pawilon-maly-open"
+  }
+ ],
+ "variantGroup": "pawilon-maly",
+ "metric": {
+  "width_m": 9.42,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.569 z oryginalu ChatGPT"
+}

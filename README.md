@@ -14,6 +14,7 @@ Skąd ten projekt, co testowaliśmy, co nie wyszło i dlaczego. Zaczyna się od 
 | zbiór | co | obrazy | status |
 |---|---|---|---|
 | [`lora-budynki-v1-final`](lora-budynki-v1-final/) | budynki, fronty, `enterable` / `decorative` | 72 (47 + 25) | zaakceptowany 2026-10-20 |
+| [`lora-budynki-v2`](lora-budynki-v2/) | te same budynki, kadrowane ciasno, rozmiar w metrach w opisie (skala gry przywracana po generacji) | 72 (47 + 25) | 2026-10-21, w treningu |
 
 Każdy zbiór ma `train_512/` i `train_1024/` (PNG + TXT, gotowe do ai-toolkit / kohya / KohakuMossTrainer), `sprites/` (format gry) i README z zasadami.
 

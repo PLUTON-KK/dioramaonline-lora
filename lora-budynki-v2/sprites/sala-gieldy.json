@@ -1,0 +1,73 @@
+{
+ "id": "sala-gieldy-closed",
+ "family": "sala-gieldy",
+ "image": {
+  "w": 254,
+  "h": 195
+ },
+ "anchor": {
+  "x": 127.0,
+  "y": 195
+ },
+ "doors": [
+  {
+   "module": "std-external-2",
+   "placement": {
+    "x": 99,
+    "y": 121
+   },
+   "anchor": {
+    "x": 128.5,
+    "y": 179
+   },
+   "doorway": {
+    "x": 104,
+    "y": 124,
+    "w": 51,
+    "h": 55
+   },
+   "changedRegion": {
+    "x": 109,
+    "y": 124,
+    "w": 41,
+    "h": 55
+   }
+  }
+ ],
+ "doorway": {
+  "x": 104,
+  "y": 124,
+  "w": 51,
+  "h": 55
+ },
+ "states": {
+  "door": {
+   "values": [
+    "closed",
+    "open"
+   ],
+   "default": "closed"
+  }
+ },
+ "variants": [
+  {
+   "when": {
+    "door": "closed"
+   },
+   "contentKey": "sala-gieldy-closed"
+  },
+  {
+   "when": {
+    "door": "open"
+   },
+   "contentKey": "sala-gieldy-open"
+  }
+ ],
+ "variantGroup": "sala-gieldy",
+ "metric": {
+  "width_m": 10.58,
+  "depth_m": 8
+ },
+ "enterable": true,
+ "scale_note": "skala wg drzwi (58 px), x0.598 z oryginalu ChatGPT"
+}
