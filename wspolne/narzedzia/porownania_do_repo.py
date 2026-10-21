@@ -63,7 +63,8 @@ md += ["", "## Drzwi w budynkach wejściowych", "", "![drzwi](drzwi.png)", "",
        f"{ok} – drzwi w miejscu z promptu i na linii gruntu (podmiana możliwa), {len(drz) - ok - brak} – inne położenie lub nad gruntem, {brak} – brak drzwi. "
        "Rozmiar nie blokuje podmiany: budynek skaluje się tak, żeby drzwi miały 58 px. Wyniki per obraz: [`drzwi.csv`](drzwi.csv). Wykrywanie automatyczne – może się mylić (np. trafić w okno).",
        "", "Pliki: [`oceny.csv`](oceny.csv) – ocena każdego obrazu.", "", "## Nowe seedy", "",
-       "Słabsze budynki z 3 najlepszych wierszy wygenerowane ponownie z 5 nowymi seedami, z ocenami: [`nowe-seedy/`](nowe-seedy/)."]
+       "Słabsze budynki z 3 najlepszych wierszy wygenerowane ponownie z 5 nowymi seedami, z ocenami: [`nowe-seedy/`](nowe-seedy/).", "",
+       "## Latarnia i realizm", "", "Testy promptów na Z-Image Turbo: latarnia (kamera dla okrągłych, „realistic shading”, „semi-realistic pixel art”) i szklarnia z płaskim szklanym dachem: [`latarnia-i-realizm/`](latarnia-i-realizm/)."]
 open(f"{REPO}/2026-10-21_lora-v1_prompty-v1/README.md", "w", encoding="utf-8", newline="\n").write("\n".join(md) + "\n")
 
 # --- v1 na promptach v2

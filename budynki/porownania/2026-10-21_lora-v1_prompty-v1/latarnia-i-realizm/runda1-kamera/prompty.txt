@@ -1,0 +1,21 @@
+A: prompt v1 (bez zmian)
+swiat2d style, decorative building, a tall round lighthouse tower with white and red horizontal stripes, a glass lantern room with a bright light on top, and a small cream keeper's house standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+
+B: v1, kamera dla okrągłych (zamiast „flat rectangular roof”)
+swiat2d style, decorative building, a tall round lighthouse tower with white and red horizontal stripes, a glass lantern room with a bright light on top, and a small cream keeper's house standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+C: wieża = pionowy walec, góra jako elipsa + kamera okrągła
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, and a small cream keeper's house with a dark grey flat roof standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+D: jak C, domek bez dachu opisanego (tylko „small house”)
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, and a small cream keeper's house next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+E: jak C, sama wieża (bez domku)
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse. Pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+F: jak C + rozmiary (wieża 18 m, domek 4 m)
+swiat2d style, decorative building, a tall round lighthouse tower about 18 m tall drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, and a small cream keeper's house about 4 m tall with a dark grey flat roof standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera seen from the south and slightly from above, round shapes drawn straight from the front with vertical sides and their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.
+
+G: jak C, kamera v1 („front facade… flat rectangular roof”)
+swiat2d style, decorative building, a tall round lighthouse tower drawn as a straight vertical cylinder with white and red horizontal stripes, a round gallery with a railing and a glass lantern room with a bright light on top, the top of the tower seen from above as a flattened ellipse, and a small cream keeper's house with a dark grey flat roof standing next to the tower on its right side. Pixel art game sprite, fixed orthographic RPG 3/4 camera, front facade facing the viewer, flat rectangular roof visible from above, isolated on solid magenta #FF00FF background.
+

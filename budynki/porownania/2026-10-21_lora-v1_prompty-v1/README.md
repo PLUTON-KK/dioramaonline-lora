@@ -59,3 +59,7 @@ Pliki: [`oceny.csv`](oceny.csv) – ocena każdego obrazu.
 ## Nowe seedy
 
 Słabsze budynki z 3 najlepszych wierszy wygenerowane ponownie z 5 nowymi seedami, z ocenami: [`nowe-seedy/`](nowe-seedy/).
+
+## Latarnia i realizm
+
+Testy promptów na Z-Image Turbo: latarnia (kamera dla okrągłych, „realistic shading”, „semi-realistic pixel art”) i szklarnia z płaskim szklanym dachem: [`latarnia-i-realizm/`](latarnia-i-realizm/).
