@@ -1,0 +1,18 @@
+﻿model;lora_rozdzielczosc;skad_obraz;kwiaciarnia;hotel;stacja karetek;budka z lodami;dom turkusowy;latarnia z domkiem;szklarnia;obserwatorium;weterynarz;kino;punkty
+Qwen-Image 2512;budynki v1, 512 px;RunPod bf16;słabe;słabe;średnie;średnie;dobre;dobre;średnie;dobre;dobre;dobre;13
+Z-Image Turbo;budynki v1, 512 px;RunPod bf16;słabe;dobre;słabe;słabe;dobre;dobre;średnie;dobre;dobre;średnie;12
+Krea 2 Turbo;budynki v1 (z Raw), 512 px;RunPod bf16;dobre;dobre;średnie;średnie;dobre;średnie;słabe;słabe;średnie;dobre;12
+MOSS-Image SFT;budynki v1 (z Base), 512 px;RunPod bf16;słabe;dobre;średnie;średnie;dobre;średnie;dobre;średnie;słabe;średnie;11
+MOSS-Image Base;budynki v1, 1024 px;RunPod bf16;średnie;średnie;średnie;dobre;słabe;średnie;dobre;dobre;słabe;średnie;11
+FLUX 3 Klein base;budynki v1, 512 px;RunPod bf16;średnie;dobre;średnie;średnie;dobre;średnie;dobre;średnie;słabe;słabe;11
+MOSS-Image SFT;budynki v1 (z Base), 1024 px;RunPod bf16;słabe;dobre;średnie;dobre;słabe;średnie;średnie;średnie;słabe;dobre;10
+FLUX 3 Klein (destylat);budynki v1 (z base), 1024 px;ComfyUI int8, RTX 3080;słabe;dobre;średnie;słabe;średnie;słabe;średnie;dobre;słabe;dobre;9
+Qwen-Image-Edit 2511;budynki v1, 512 px;RunPod bf16, wzór jako obraz;słabe;dobre;średnie;słabe;średnie;słabe;dobre;słabe;dobre;średnie;9
+FLUX 3 Klein (destylat);budynki v1 (z base), 512 px;ComfyUI int8, RTX 3080;średnie;dobre;średnie;średnie;średnie;słabe;słabe;średnie;słabe;dobre;9
+Krea 2 Raw;budynki v1, 512 px;RunPod bf16;średnie;dobre;średnie;średnie;słabe;słabe;słabe;dobre;średnie;średnie;9
+FLUX 3 Klein base;budynki v1, 1024 px;RunPod bf16;średnie;słabe;słabe;średnie;średnie;słabe;słabe;dobre;słabe;dobre;7
+FLUX.2 Klein 4B (destylat);budynki v1 (z base), 512 px;ComfyUI bf16, RTX 3080;słabe;słabe;słabe;słabe;dobre;dobre;słabe;słabe;dobre;słabe;6
+Z-Image Turbo;budynki v1, 1024 px;RunPod bf16;średnie;dobre;słabe;słabe;średnie;słabe;słabe;średnie;słabe;słabe;5
+FLUX.2 Klein 4B base;budynki v1, 512 px;RunPod bf16;dobre;słabe;słabe;słabe;słabe;dobre;słabe;słabe;słabe;słabe;4
+MOSS-Image Base;budynki v1, 512 px;RunPod bf16;słabe;słabe;słabe;słabe;słabe;słabe;średnie;słabe;słabe;słabe;1
+Z-Image Base;budynki v1, 512 px;RunPod bf16;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;0

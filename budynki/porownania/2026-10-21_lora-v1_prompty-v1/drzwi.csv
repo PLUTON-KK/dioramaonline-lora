@@ -1,0 +1,134 @@
+﻿model;wariant;wiersz;budynek;ocena;pewnosc;polozenie;oczekiwane;skala;dol_odstep;werdykt
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;kwiaciarnia;dobre;0.71;prawo;prawo;1.67;0.07;podmiana OK
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;hotel;dobre;0.77;srodek;srodek;1.07;0.05;podmiana OK
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;dom turkusowy;dobre;0.7;lewo;srodek;1.31;0.46;do poprawy: położenie, nie na ziemi
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;szklarnia;srednie;0.58;srodek;srodek;1.7;0.06;podmiana OK
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;obserwatorium;srednie;0.63;prawo;srodek;0.5;0.34;do poprawy: położenie, nie na ziemi
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;weterynarz;dobre;0.63;srodek;srodek;1.82;0.07;podmiana OK
+Z-Image Turbo;budynki v1 512;swiat2d_zimage_budynki_v1final_512;kino;dobre;0.68;srodek;srodek;1.52;0.05;podmiana OK
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;kwiaciarnia;slabe;0.53;lewo;prawo;0.53;0.09;brak drzwi
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;hotel;dobre;0.75;srodek;srodek;1.07;0.04;podmiana OK
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;dom turkusowy;dobre;0.6;prawo;srodek;1.19;0.14;do poprawy: położenie, nie na ziemi
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;szklarnia;srednie;0.62;srodek;srodek;1.49;0.03;podmiana OK
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;obserwatorium;dobre;0.57;srodek;srodek;1.16;0.07;podmiana OK
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;weterynarz;dobre;0.74;srodek;srodek;1.55;0.08;podmiana OK
+Z-Image Turbo;budynki v1 1024;swiat2d_zimage_budynki_v1final_1024_bf16;kino;slabe;0.66;srodek;srodek;1.13;0.04;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;kwiaciarnia;dobre;0.72;prawo;prawo;1.91;0.1;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;hotel;dobre;0.78;srodek;srodek;1.04;0.06;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;dom turkusowy;dobre;0.7;srodek;srodek;1.31;0.07;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;szklarnia;slabe;0.65;srodek;srodek;1.67;0.07;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;obserwatorium;slabe;0.65;srodek;srodek;1.01;0.09;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;weterynarz;srednie;0.6;srodek;srodek;1.97;0.05;podmiana OK
+Z-Image Base;budynki v1 512;swiat2d_zimagebase_budynki_v1final_512;kino;slabe;0.69;srodek;srodek;1.43;0.05;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;kwiaciarnia;srednie;0.77;prawo;prawo;0.83;0.03;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;hotel;srednie;0.75;srodek;srodek;0.74;0.03;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;dom turkusowy;slabe;0.56;srodek;srodek;0.68;0.03;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;szklarnia;srednie;0.62;srodek;srodek;0.65;0.01;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;obserwatorium;srednie;0.53;srodek;srodek;0.5;0.0;brak drzwi
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;weterynarz;srednie;0.75;srodek;srodek;0.74;0.03;podmiana OK
+MOSS-Image Base;budynki v1 512;swiat2d_moss_base_budynki_v1final_512;kino;srednie;0.43;prawo;srodek;0.62;0.64;brak drzwi
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;kwiaciarnia;slabe;0.53;lewo;prawo;0.5;0.63;brak drzwi
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;hotel;dobre;0.77;srodek;srodek;0.98;0.04;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;dom turkusowy;dobre;0.6;srodek;srodek;0.98;0.06;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;szklarnia;srednie;0.62;srodek;srodek;1.07;0.04;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;obserwatorium;slabe;0.7;srodek;srodek;0.74;0.04;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;weterynarz;srednie;0.75;srodek;srodek;1.01;0.07;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 512;zestawienie_moss_sft_lora_base512;kino;srednie;0.73;srodek;srodek;0.83;0.07;podmiana OK
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;kwiaciarnia;dobre;0.76;prawo;prawo;1.67;0.08;podmiana OK
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;hotel;slabe;0.5;srodek;srodek;0.71;0.06;brak drzwi
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;dom turkusowy;slabe;0.5;srodek;srodek;0.65;0.2;brak drzwi
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;szklarnia;dobre;0.83;srodek;srodek;1.1;0.08;podmiana OK
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;obserwatorium;srednie;0.76;srodek;srodek;0.71;0.06;podmiana OK
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;weterynarz;dobre;0.81;srodek;srodek;1.1;0.08;podmiana OK
+MOSS-Image Base;budynki v1 1024;swiat2d_moss_budynki_v1final_1024_bf16;kino;srednie;0.82;lewo;srodek;1.19;0.08;do poprawy: położenie
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;kwiaciarnia;dobre;0.73;prawo;prawo;1.55;0.07;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;hotel;srednie;0.68;srodek;srodek;1.49;0.05;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;dom turkusowy;dobre;0.74;srodek;srodek;1.49;0.06;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;szklarnia;slabe;0.72;srodek;srodek;1.52;0.06;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;obserwatorium;srednie;0.73;srodek;srodek;1.37;0.07;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;weterynarz;slabe;0.65;srodek;srodek;1.19;0.1;podmiana OK
+FLUX 3 Klein base;budynki v1 512;swiat2d_flux3_base_budynki_v1final_512;kino;slabe;0.7;srodek;srodek;1.25;0.06;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;kwiaciarnia;dobre;0.63;prawo;prawo;1.46;0.09;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;hotel;dobre;0.69;srodek;srodek;1.55;0.04;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;dom turkusowy;dobre;0.59;srodek;srodek;1.49;0.08;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;szklarnia;slabe;0.54;srodek;srodek;0.53;0.07;brak drzwi
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;obserwatorium;srednie;0.63;srodek;srodek;1.58;0.03;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;weterynarz;slabe;0.63;srodek;srodek;1.43;0.06;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 512;zestawienie_flux3_destylat_lora_base512;kino;srednie;0.62;srodek;srodek;1.76;0.06;podmiana OK
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;kwiaciarnia;slabe;0.53;prawo;prawo;0.62;0.11;brak drzwi
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;hotel;srednie;0.55;srodek;srodek;1.07;0.06;podmiana OK
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;dom turkusowy;slabe;0.61;prawo;srodek;0.53;0.47;do poprawy: położenie, nie na ziemi
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;szklarnia;slabe;0.54;prawo;srodek;0.53;0.47;brak drzwi
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;obserwatorium;srednie;0.67;srodek;srodek;1.49;0.07;podmiana OK
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;weterynarz;srednie;0.6;srodek;srodek;1.19;0.09;podmiana OK
+FLUX 3 Klein base;budynki v1 1024;swiat2d_flux3_budynki_v1final_1024_bf16;kino;srednie;0.5;srodek;srodek;1.58;0.04;brak drzwi
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;kwiaciarnia;slabe;0.7;prawo;prawo;1.34;0.1;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;hotel;slabe;0.68;srodek;srodek;0.86;0.04;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;dom turkusowy;slabe;0.73;srodek;srodek;0.89;0.05;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;szklarnia;slabe;0.8;srodek;srodek;1.01;0.04;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;obserwatorium;slabe;0.73;srodek;srodek;0.89;0.04;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;weterynarz;srednie;0.72;srodek;srodek;1.1;0.09;podmiana OK
+FLUX.2 Klein 4B;budynki v1 512;swiat2d_klein4b_budynki_v1final_512;kino;slabe;0.75;srodek;srodek;1.16;0.08;podmiana OK
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;kwiaciarnia;slabe;0.53;prawo;prawo;0.98;0.09;brak drzwi
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;hotel;srednie;0.66;srodek;srodek;0.59;0.51;do poprawy: nie na ziemi
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;dom turkusowy;srednie;0.83;srodek;srodek;1.13;0.1;podmiana OK
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;szklarnia;slabe;0.72;srodek;srodek;1.28;0.07;podmiana OK
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;obserwatorium;slabe;0.64;srodek;srodek;1.07;0.09;podmiana OK
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;weterynarz;dobre;0.82;srodek;srodek;1.49;0.1;podmiana OK
+Qwen-Image 2512;budynki v1 512;swiat2d_qwenimage2512_budynki_v1final_512;kino;dobre;0.81;srodek;srodek;1.4;0.07;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;kwiaciarnia;slabe;0.49;prawo;prawo;1.01;0.05;brak drzwi
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;hotel;dobre;0.8;srodek;srodek;1.1;0.06;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;dom turkusowy;dobre;0.79;srodek;srodek;1.31;0.07;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;szklarnia;dobre;0.85;srodek;srodek;1.31;0.08;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;obserwatorium;slabe;0.88;srodek;srodek;1.61;0.05;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;weterynarz;srednie;0.85;srodek;srodek;1.52;0.05;podmiana OK
+Qwen-Image-Edit 2511;budynki v1 512;swiat2d_qwenedit2511_budynki_v1final_512;kino;srednie;0.9;srodek;srodek;1.7;0.04;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;kwiaciarnia;dobre;0.84;prawo;prawo;1.49;0.07;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;hotel;dobre;0.76;srodek;srodek;1.04;0.05;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;dom turkusowy;dobre;0.76;srodek;srodek;1.43;0.06;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;szklarnia;slabe;0.8;srodek;srodek;1.28;0.06;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;obserwatorium;srednie;0.7;srodek;srodek;1.01;0.08;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;weterynarz;dobre;0.85;srodek;srodek;1.4;0.08;podmiana OK
+Krea 2 Raw;budynki v1 512;swiat2d_krea2raw_budynki_v1final_512;kino;srednie;0.74;srodek;srodek;1.28;0.06;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;kwiaciarnia;dobre;0.75;prawo;prawo;1.85;0.08;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;hotel;dobre;0.84;srodek;srodek;1.52;0.06;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;dom turkusowy;dobre;0.71;srodek;srodek;1.43;0.07;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;szklarnia;srednie;0.78;srodek;srodek;1.7;0.08;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;obserwatorium;srednie;0.74;srodek;srodek;1.4;0.08;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;weterynarz;dobre;0.84;srodek;srodek;1.52;0.08;podmiana OK
+Krea 2 Turbo int8;budynki v1 (z Raw) 512;zestawienie_krea2turbo_lora_raw512;kino;dobre;0.67;srodek;srodek;1.55;0.05;podmiana OK
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;kwiaciarnia;slabe;0.59;lewo;prawo;0.5;0.73;do poprawy: położenie, nie na ziemi
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;hotel;slabe;0.43;lewo;srodek;0.5;0.63;brak drzwi
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;dom turkusowy;slabe;0.54;lewo;srodek;0.86;0.79;brak drzwi
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;szklarnia;slabe;0.49;lewo;srodek;0.5;0.28;brak drzwi
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;obserwatorium;slabe;0.53;srodek;srodek;1.1;0.11;brak drzwi
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;weterynarz;slabe;0.55;srodek;srodek;1.13;0.1;podmiana OK
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512) 512;zestawienie_qwenimage_q4_lora_2512;kino;slabe;0.51;lewo;srodek;0.8;0.67;brak drzwi
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;kwiaciarnia;dobre;0.6;prawo;prawo;1.7;0.09;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;hotel;dobre;0.88;srodek;srodek;1.49;0.06;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;dom turkusowy;dobre;0.91;srodek;srodek;1.34;0.06;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;szklarnia;srednie;0.83;srodek;srodek;1.46;0.06;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;obserwatorium;slabe;0.87;srodek;srodek;1.46;0.04;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;weterynarz;dobre;0.91;srodek;srodek;1.37;0.05;podmiana OK
+Qwen-Image-Edit 2511 Q4;budynki v1 512;zestawienie_qwenedit_q4_lora_2511;kino;dobre;0.88;srodek;srodek;1.61;0.05;podmiana OK
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;kwiaciarnia;slabe;0.52;lewo;prawo;0.74;0.17;brak drzwi
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;hotel;slabe;0.75;srodek;srodek;1.37;0.37;do poprawy: nie na ziemi
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;dom turkusowy;srednie;0.71;srodek;srodek;1.25;0.05;podmiana OK
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;szklarnia;dobre;0.7;srodek;srodek;1.61;0.08;podmiana OK
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;obserwatorium;slabe;0.73;srodek;srodek;1.28;0.07;podmiana OK
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;weterynarz;slabe;0.76;srodek;srodek;1.31;0.08;podmiana OK
+FLUX.2 Klein 4B (destylat);budynki v1 (z base) 512;zestawienie_klein4b_destylat_lora_base512;kino;slabe;0.62;srodek;srodek;1.31;0.07;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;kwiaciarnia;slabe;0.56;prawo;prawo;0.89;0.07;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;hotel;dobre;0.77;srodek;srodek;1.01;0.06;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;dom turkusowy;dobre;0.56;srodek;srodek;0.92;0.1;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;szklarnia;dobre;0.8;srodek;srodek;1.58;0.1;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;obserwatorium;srednie;0.78;srodek;srodek;1.4;0.11;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;weterynarz;srednie;0.77;srodek;srodek;1.49;0.11;podmiana OK
+MOSS-Image SFT;budynki v1 (z Base) 1024;zestawienie_moss_sft_lora_base1024;kino;dobre;0.85;srodek;srodek;1.16;0.08;podmiana OK
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;kwiaciarnia;slabe;0.51;prawo;prawo;0.71;0.0;brak drzwi
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;hotel;srednie;0.56;srodek;srodek;1.01;0.55;do poprawy: nie na ziemi
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;dom turkusowy;slabe;0.56;lewo;srodek;0.53;0.44;do poprawy: położenie, nie na ziemi
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;szklarnia;slabe;0.49;prawo;srodek;0.5;0.73;brak drzwi
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;obserwatorium;srednie;0.55;prawo;srodek;0.8;0.11;do poprawy: położenie
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;weterynarz;slabe;0.53;srodek;srodek;0.77;0.07;brak drzwi
+FLUX 3 Klein (destylat);budynki v1 (z base) 1024;zestawienie_flux3_destylat_lora_base1024;kino;slabe;0.67;srodek;srodek;1.52;0.07;podmiana OK

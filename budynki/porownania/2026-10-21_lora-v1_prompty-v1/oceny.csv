@@ -1,0 +1,20 @@
+﻿model;lora_rozdzielczosc;skad_obraz;kwiaciarnia;hotel;stacja karetek;budka z lodami;dom turkusowy;latarnia z domkiem;szklarnia;obserwatorium;weterynarz;kino;punkty
+Z-Image Turbo;budynki v1, 512 px;RTX 3080;dobre;dobre;dobre;słabe;dobre;średnie;średnie;średnie;dobre;dobre;15
+MOSS-Image SFT;budynki v1 (z Base), 1024 px;RunPod/RTX 3080, obraz ComfyUI;słabe;dobre;dobre;dobre;dobre;średnie;dobre;średnie;średnie;dobre;15
+Krea 2 Turbo int8;budynki v1 (z Raw), 512 px;RunPod/RTX 3080, obraz ComfyUI;dobre;dobre;średnie;średnie;dobre;średnie;średnie;średnie;dobre;dobre;15
+Krea 2 Raw;budynki v1, 512 px;RunPod A6000;dobre;dobre;dobre;dobre;dobre;słabe;słabe;średnie;dobre;średnie;14
+FLUX 3 Klein (destylat);budynki v1 (z base), 512 px;RunPod/RTX 3080, obraz ComfyUI;dobre;dobre;dobre;dobre;dobre;słabe;słabe;średnie;słabe;średnie;12
+Qwen-Image-Edit 2511 Q4;budynki v1, 512 px;RunPod/RTX 3080, obraz ComfyUI;dobre;dobre;średnie;słabe;dobre;słabe;średnie;słabe;dobre;dobre;12
+MOSS-Image SFT;budynki v1 (z Base), 512 px;RTX 3080, obraz ComfyUI;słabe;dobre;dobre;dobre;dobre;średnie;średnie;słabe;średnie;średnie;12
+MOSS-Image Base;budynki v1, 1024 px;RunPod L40;dobre;słabe;średnie;dobre;słabe;średnie;dobre;średnie;dobre;średnie;12
+Z-Image Turbo;budynki v1, 1024 px;RunPod L40;słabe;dobre;słabe;dobre;dobre;słabe;średnie;dobre;dobre;słabe;11
+Z-Image Base;budynki v1, 512 px;RTX 3080;dobre;dobre;średnie;dobre;dobre;słabe;słabe;słabe;średnie;słabe;10
+FLUX 3 Klein base;budynki v1, 512 px;RTX 3080;dobre;średnie;średnie;dobre;dobre;słabe;słabe;średnie;słabe;słabe;9
+Qwen-Image-Edit 2511;budynki v1, 512 px;RunPod A100;słabe;dobre;średnie;słabe;dobre;słabe;dobre;słabe;średnie;średnie;9
+FLUX 3 Klein base;budynki v1, 1024 px;RunPod A40;słabe;średnie;średnie;średnie;słabe;średnie;słabe;średnie;średnie;średnie;7
+Qwen-Image 2512;budynki v1, 512 px;RunPod A100;słabe;średnie;słabe;słabe;średnie;słabe;słabe;słabe;dobre;dobre;6
+MOSS-Image Base;budynki v1, 512 px;RTX 3080;średnie;średnie;słabe;słabe;słabe;słabe;średnie;średnie;średnie;średnie;6
+FLUX 3 Klein (destylat);budynki v1 (z base), 1024 px;RunPod/RTX 3080, obraz ComfyUI;słabe;średnie;dobre;średnie;słabe;słabe;słabe;średnie;słabe;słabe;5
+FLUX.2 Klein 4B;budynki v1, 512 px;RTX 3080;słabe;słabe;dobre;średnie;słabe;słabe;słabe;słabe;średnie;słabe;4
+FLUX.2 Klein 4B (destylat);budynki v1 (z base), 512 px;RunPod/RTX 3080, obraz ComfyUI;słabe;słabe;słabe;słabe;średnie;słabe;dobre;słabe;słabe;słabe;3
+Qwen-Image Q4 (GGUF);budynki v1 (z 2512), 512 px;RunPod/RTX 3080, obraz ComfyUI;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;słabe;0
