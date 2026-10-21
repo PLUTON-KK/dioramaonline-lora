@@ -55,3 +55,7 @@ Oceny właściciela: każdy z 10 budynków testowych w każdym wierszu oznaczony
 Automatyczne wyszukanie kanonicznych drzwi gry (std-external-2) w 7 budynkach wejściowych każdego wiersza (133 obrazów): 101 – drzwi w miejscu z promptu i na linii gruntu (podmiana możliwa), 11 – inne położenie lub nad gruntem, 21 – brak drzwi. Rozmiar nie blokuje podmiany: budynek skaluje się tak, żeby drzwi miały 58 px. Wyniki per obraz: [`drzwi.csv`](drzwi.csv). Wykrywanie automatyczne – może się mylić (np. trafić w okno).
 
 Pliki: [`oceny.csv`](oceny.csv) – ocena każdego obrazu.
+
+## Nowe seedy
+
+Słabsze budynki z 3 najlepszych wierszy wygenerowane ponownie z 5 nowymi seedami, z ocenami: [`nowe-seedy/`](nowe-seedy/).

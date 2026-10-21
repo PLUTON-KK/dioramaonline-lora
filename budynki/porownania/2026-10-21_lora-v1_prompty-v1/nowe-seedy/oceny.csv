@@ -1,0 +1,14 @@
+﻿model;lora;budynek;ocena_ranking;oryginal_ponownie;seed_1001;seed_2002;seed_3003;seed_4004;seed_5005
+Z-Image Turbo;LoRA v1, 512 px;budka z lodami;słabe;słabe;słabe;średnie;słabe;słabe;dobre
+Z-Image Turbo;LoRA v1, 512 px;latarnia z domkiem;średnie;słabe;słabe;słabe;średnie;słabe;słabe
+Z-Image Turbo;LoRA v1, 512 px;szklarnia;średnie;średnie;słabe;średnie;średnie;średnie;średnie
+Z-Image Turbo;LoRA v1, 512 px;obserwatorium;średnie;średnie;dobre;słabe;średnie;średnie;dobre
+MOSS-Image SFT;LoRA v1 (z Base), 1024 px;kwiaciarnia;słabe;słabe;słabe;słabe;słabe;słabe;słabe
+MOSS-Image SFT;LoRA v1 (z Base), 1024 px;latarnia z domkiem;średnie;średnie;średnie;średnie;słabe;średnie;średnie
+MOSS-Image SFT;LoRA v1 (z Base), 1024 px;obserwatorium;średnie;słabe;słabe;słabe;słabe;średnie;słabe
+MOSS-Image SFT;LoRA v1 (z Base), 1024 px;weterynarz;średnie;słabe;słabe;słabe;słabe;słabe;średnie
+Krea 2 Turbo int8;LoRA v1 (z Raw), 512 px;stacja karetek;średnie;średnie;średnie;średnie;średnie;dobre;dobre
+Krea 2 Turbo int8;LoRA v1 (z Raw), 512 px;budka z lodami;średnie;słabe;słabe;słabe;słabe;słabe;średnie
+Krea 2 Turbo int8;LoRA v1 (z Raw), 512 px;latarnia z domkiem;średnie;dobre;średnie;średnie;średnie;średnie;średnie
+Krea 2 Turbo int8;LoRA v1 (z Raw), 512 px;szklarnia;średnie;słabe;słabe;słabe;słabe;słabe;słabe
+Krea 2 Turbo int8;LoRA v1 (z Raw), 512 px;obserwatorium;średnie;dobre;dobre;dobre;dobre;dobre;dobre
