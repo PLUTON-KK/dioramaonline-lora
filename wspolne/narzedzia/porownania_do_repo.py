@@ -62,7 +62,7 @@ md += ["", "## Drzwi w budynkach wejściowych", "", "![drzwi](drzwi.png)", "",
        f"Automatyczne wyszukanie kanonicznych drzwi gry (std-external-2) w 7 budynkach wejściowych każdego wiersza ({len(drz)} obrazów): "
        f"{ok} – drzwi w miejscu z promptu i na linii gruntu (podmiana możliwa), {len(drz) - ok - brak} – inne położenie lub nad gruntem, {brak} – brak drzwi. "
        "Rozmiar nie blokuje podmiany: budynek skaluje się tak, żeby drzwi miały 58 px. Wyniki per obraz: [`drzwi.csv`](drzwi.csv). Wykrywanie automatyczne – może się mylić (np. trafić w okno).",
-       "", "Pliki: [`oceny.csv`](oceny.csv) – ocena każdego obrazu."]
+       "", "Pliki: [`oceny.csv`](oceny.csv) – ocena każdego obrazu.", "", "
 open(f"{REPO}/2026-10-21_lora-v1_prompty-v1/README.md", "w", encoding="utf-8", newline="\n").write("\n".join(md) + "\n")
 
 # --- v1 na promptach v2
