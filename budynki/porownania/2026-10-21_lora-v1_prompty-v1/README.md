@@ -14,12 +14,12 @@ Oceny właściciela: każdy z 10 budynków testowych w każdym wierszu oznaczony
 | # | model | LoRA, rozdzielczość | trening LoRA / generowanie obrazu | punkty | dobre | średnie | słabe | RTX 3080 / obraz |
 |---|---|---|---|---|---|---|---|---|
 | 1 | Z-Image Turbo | budynki v1, 512 px | RTX 3080 | **15** | 6 | 3 | 1 | 15 s |
-| 2 | MOSS-Image SFT | budynki v1 (z Base), 1024 px | RunPod/RTX 3080, obraz ComfyUI | **15** | 6 | 3 | 1 | 25 s |
-| 3 | Krea 2 Turbo int8 | budynki v1 (z Raw), 512 px | RunPod/RTX 3080, obraz ComfyUI | **15** | 5 | 5 | 0 | 8.2 s |
+| 2 | MOSS-Image SFT | budynki v1 (z Base), 1024 px | obraz: ComfyUI 3080 | **15** | 6 | 3 | 1 | 25 s |
+| 3 | Krea 2 Turbo int8 | budynki v1 (z Raw), 512 px | obraz: ComfyUI 3080 | **15** | 5 | 5 | 0 | 8.2 s |
 | 4 | Krea 2 Raw | budynki v1, 512 px | RunPod A6000 | **14** | 6 | 2 | 2 | za duży |
-| 5 | FLUX 3 Klein (destylat) | budynki v1 (z base), 512 px | RunPod/RTX 3080, obraz ComfyUI | **12** | 5 | 2 | 3 | 2.6 s |
-| 6 | Qwen-Image-Edit 2511 Q4 | budynki v1, 512 px | RunPod/RTX 3080, obraz ComfyUI | **12** | 5 | 2 | 3 | 326 s |
-| 7 | MOSS-Image SFT | budynki v1 (z Base), 512 px | RTX 3080, obraz ComfyUI | **12** | 4 | 4 | 2 | 7.7 s |
+| 5 | FLUX 3 Klein (destylat) | budynki v1 (z base), 512 px | obraz: ComfyUI 3080 | **12** | 5 | 2 | 3 | 2.6 s |
+| 6 | Qwen-Image-Edit 2511 Q4 | budynki v1, 512 px | obraz: ComfyUI 3080 | **12** | 5 | 2 | 3 | 326 s |
+| 7 | MOSS-Image SFT | budynki v1 (z Base), 512 px | obraz: ComfyUI 3080 | **12** | 4 | 4 | 2 | 7.7 s |
 | 8 | MOSS-Image Base | budynki v1, 1024 px | RunPod L40 | **12** | 4 | 4 | 2 | 24 s |
 | 9 | Z-Image Turbo | budynki v1, 1024 px | RunPod L40 | **11** | 5 | 1 | 4 | 22 s |
 | 10 | Z-Image Base | budynki v1, 512 px | RTX 3080 | **10** | 4 | 2 | 4 | 33 s |
@@ -28,10 +28,10 @@ Oceny właściciela: każdy z 10 budynków testowych w każdym wierszu oznaczony
 | 13 | FLUX 3 Klein base | budynki v1, 1024 px | RunPod A40 | **7** | 0 | 7 | 3 | 33 s |
 | 14 | Qwen-Image 2512 | budynki v1, 512 px | RunPod A100 | **6** | 2 | 2 | 6 | za duży |
 | 15 | MOSS-Image Base | budynki v1, 512 px | RTX 3080 | **6** | 0 | 6 | 4 | 7.8 s |
-| 16 | FLUX 3 Klein (destylat) | budynki v1 (z base), 1024 px | RunPod/RTX 3080, obraz ComfyUI | **5** | 1 | 3 | 6 | 6.3 s |
+| 16 | FLUX 3 Klein (destylat) | budynki v1 (z base), 1024 px | obraz: ComfyUI 3080 | **5** | 1 | 3 | 6 | 6.3 s |
 | 17 | FLUX.2 Klein 4B | budynki v1, 512 px | RTX 3080 | **4** | 1 | 2 | 7 | 16 s |
-| 18 | FLUX.2 Klein 4B (destylat) | budynki v1 (z base), 512 px | RunPod/RTX 3080, obraz ComfyUI | **3** | 1 | 1 | 8 | 3.1 s |
-| 19 | Qwen-Image Q4 (GGUF) | budynki v1 (z 2512), 512 px | RunPod/RTX 3080, obraz ComfyUI | **0** | 0 | 0 | 10 | 195 s |
+| 18 | FLUX.2 Klein 4B (destylat) | budynki v1 (z base), 512 px | obraz: ComfyUI 3080 | **3** | 1 | 1 | 8 | 3.1 s |
+| 19 | Qwen-Image Q4 (GGUF) | budynki v1 (z 2512), 512 px | obraz: ComfyUI 3080 | **0** | 0 | 0 | 10 | 195 s |
 
 ## Budynki: które modele narysowały je dobrze
 
