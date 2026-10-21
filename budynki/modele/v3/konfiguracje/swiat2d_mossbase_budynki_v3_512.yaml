@@ -1,0 +1,70 @@
+# RunPod, budynki v3-final (88), 512, bf16 bez kwantyzacji, 2000 krokow. Krok 0 = bez LoRA. Podglady co 250: 14 promptow testowych v3, seed 42+i.
+job: extension
+config:
+  name: swiat2d_mossbase_budynki_v3_512
+  process:
+  - type: sd_trainer
+    training_folder: /workspace/output
+    device: cuda:0
+    trigger_word: swiat2d style
+    network:
+      type: lora
+      linear: 16
+      linear_alpha: 16
+    save:
+      dtype: float16
+      save_every: 250
+      max_step_saves_to_keep: 14
+      push_to_hub: false
+    datasets:
+    - folder_path: /workspace/pakiet/dataset/img
+      caption_ext: txt
+      caption_dropout_rate: 0.0
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      resolution:
+      - 512
+    train:
+      batch_size: 1
+      steps: 2000
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0001
+      dtype: bf16
+      skip_first_sample: false
+      cache_text_embeddings: true
+    model:
+      name_or_path: OpenMOSS-Team/MOSS-Image-Base
+      arch: moss_image
+      quantize: false
+      quantize_te: false
+      low_vram: false
+    sample:
+      sampler: flowmatch
+      sample_every: 250
+      width: 512
+      height: 512
+      neg: ''
+      seed: 42
+      walk_seed: true
+      guidance_scale: 4
+      sample_steps: 30
+      prompts:
+      - 'swiat2d style, enterable building, about 16 m wide and 9 m tall, a glasshouse pavilion: large glass walls and a glass roof made of panes in a white metal frame, tall palms and green plants visible inside, a cream stone plinth along the bottom, and the standard entrance door in the middle of the front facade. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 20 m wide and 18 m tall, a medieval stone castle: a square keep in the middle, round corner towers with battlements and pointed slate roofs, a curtain wall with a gatehouse and a wooden gate with a portcullis. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, round shapes drawn straight from the front with their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 18 m wide and 5 m tall, an outdoor swimming pool: a rectangular pool with blue water and lane ropes seen from slightly above, a diving board, white sun loungers with striped umbrellas and a small changing building. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 9 m wide and 4 m tall, a tram stop: a long shelter with glass panels and a thin flat roof on a raised concrete platform, a bench, a timetable board and a tram stop sign on a pole. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 22 m wide and 10 m tall, a farmstead: a small farmhouse with white walls, a red wooden barn with big double doors next to it, a vegetable garden with rows of plants, hay bales and a low wooden fence. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 24 m wide and 10 m tall, a livestock farm: a long cowshed with a row of small windows and a wide open door, a fenced paddock with black and white cows in front of it and a tall round metal feed silo at the side. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, round shapes drawn straight from the front with their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 5 m wide and 2 m tall, a silver four-door sedan car from the 2000s seen from the side and facing right, with its roof, bonnet and windscreen visible slightly from above, black tyres and clear windows. Pixel art game sprite, fixed orthographic RPG 3/4 camera, the side facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, enterable building, about 16 m wide and 9 m tall, a glasshouse pavilion: large glass walls and a glass roof made of panes in a white metal frame, tall palms and green plants visible inside, a cream stone plinth along the bottom, realistic materials and proportions: thin white painted metal frame, clear glass panes with reflections, lush leaves pressed against the glass, and the standard entrance door in the middle of the front facade. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 20 m wide and 18 m tall, a medieval stone castle: a square keep in the middle, round corner towers with battlements and pointed slate roofs, a curtain wall with a gatehouse and a wooden gate with a portcullis, realistic materials and proportions: rough grey stone blocks with moss, dark slate roof tiles, heavy timber gate with iron straps. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, round shapes drawn straight from the front with their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 18 m wide and 5 m tall, an outdoor swimming pool: a rectangular pool with blue water and lane ropes seen from slightly above, a diving board, white sun loungers with striped umbrellas and a small changing building, realistic materials and proportions: blue water with ripples and light reflections, white ceramic tiles, painted metal ladders. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 9 m wide and 4 m tall, a tram stop: a long shelter with glass panels and a thin flat roof on a raised concrete platform, a bench, a timetable board and a tram stop sign on a pole, realistic materials and proportions: steel frame, glass panels with reflections, concrete platform edge with a yellow line. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 22 m wide and 10 m tall, a farmstead: a small farmhouse with white walls, a red wooden barn with big double doors next to it, a vegetable garden with rows of plants, hay bales and a low wooden fence, realistic materials and proportions: whitewashed plaster, red painted planks with wood grain, straw bales, dark soil rows. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative building, about 24 m wide and 10 m tall, a livestock farm: a long cowshed with a row of small windows and a wide open door, a fenced paddock with black and white cows in front of it and a tall round metal feed silo at the side, realistic materials and proportions: weathered timber and brick walls, corrugated metal roof sheets, wooden fence rails, galvanised silo. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the front facing the viewer and the top seen slightly from above, round shapes drawn straight from the front with their tops visible as flattened ellipses, isolated on solid magenta #FF00FF background.'
+      - 'swiat2d style, decorative object, about 5 m wide and 2 m tall, a silver four-door sedan car from the 2000s seen from the side and facing right, with its roof, bonnet and windscreen visible slightly from above, black tyres and clear windows, realistic materials and proportions: metallic silver paint with soft reflections, tinted glass, chrome door handles, dark rubber tyres. Semi-realistic pixel art game sprite, fixed orthographic RPG 3/4 camera, the side facing the viewer and the top seen slightly from above, isolated on solid magenta #FF00FF background.'
