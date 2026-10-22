@@ -1,8 +1,8 @@
 # LoRA: Z-Image Turbo, budynki v1 final, 512
 
-**Pliki LoRA (wszystkie kroki 500-2000): [Hugging Face](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/zimage-turbo-512)**
+**Plik LoRA (krok końcowy 2000): [Hugging Face](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/zimage-turbo-512)**
 
-- Plik: `swiat2d_zimage_budynki_v1final_512.safetensors` (krok 2000, rank 16, ~85 MB).
+- Plik: `swiat2d_zimage_budynki_v1final_512_000002000.safetensors` (krok 2000, rank 16, ~85 MB).
 - Model bazowy: Z-Image Turbo (`z_image_turbo_bf16.safetensors`), trening z adapterem ostris `zimage_turbo_training_adapter_v2`.
 - Zbior: [`budynki/zbiory/v1-final/train_512`](../../../zbiory/v1-final/train_512/) (72 budynki, 512x512, piksele gry x1), ai-toolkit, 2000 krokow, lr 1e-4, batch 1. Czas: 59 min na RTX 3080 10 GB (2026-10-20).
 - Konfiguracja: `config_ai-toolkit.yaml`.

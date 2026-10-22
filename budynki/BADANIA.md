@@ -1,4 +1,4 @@
-# Budynki: badania w skrócie (stan 2026-10-21)
+# Budynki: badania w skrócie (stan 2026-10-22)
 
 Ku pamięci: co sprawdzaliśmy, jak i co wyszło. Szczegóły, obrazy i oceny są w podlinkowanych folderach.
 
@@ -7,13 +7,14 @@ LoRA, która rysuje budynki do dioramy w stylu gry: pixel art, rzut RPG 3/4 (fro
 
 ## Jak badaliśmy
 
-**Zbiory** (oba zamrożone, obrazy z ChatGPT + nasza obróbka):
+**Zbiory** (v1 i v2 zamrożone, obrazy z ChatGPT + nasza obróbka; v3 = 58 z v2 + 30 obiektów z naszych LoRA v2):
 - [v1-final](zbiory/v1-final/): 72 budynki w skali gry (24 px = 1 m), budynki zajmują 100–200 px z 512.
 - [v2-final](zbiory/v2-final/): te same 72, ciasny kadr (88% płótna), rozmiar w metrach w opisie, poprawione „side door” i zaprzeczenie w budce. Skalę gry przywraca skrypt. Lista zmian: [ZMIANY_V1_V2.md](zbiory/v2-final/ZMIANY_V1_V2.md).
 
 **Trening:** ai-toolkit, rank 16, lr 1e-4, 2000 kroków, bf16. Lokalnie (RTX 3080) lub RunPod (karty 48 GB, Qwen na A100), po jednej maszynie na model, równolegle.
 - v1: 11 LoRA na 8 modelach (512 i część 1024).
 - v2: 7 LoRA (512).
+- v3: 4 LoRA (512; Z-Image Turbo 3000 kroków, reszta 2000) i v3-3000: FLUX 3 Klein, MOSS-Image, Krea 2 Raw po 3000 kroków → [modele/v3](modele/v3/).
 
 **Zestaw testowy:** [10 budynków spoza zbioru](testy/) (kwiaciarnia, hotel, stacja karetek, budka z lodami, dom turkusowy, latarnia z domkiem, szklarnia, obserwatorium, weterynarz, kino). Prompty v1 i v2, seed 42+i, krok 2000. LoRA uczona na wersji base działa też na lżejszych wersjach (destylat, SFT, Turbo int8) – te generowane w ComfyUI na RTX 3080.
 
@@ -37,6 +38,7 @@ LoRA, która rysuje budynki do dioramy w stylu gry: pixel art, rzut RPG 3/4 (fro
 | 10 | Pojedynki v1/v1 vs v2/v2 (dobre obrazy) | v1 vs v2 bezpośrednio 29 : 28. Krea 2 (Raw i Turbo) w czołówce niezależnie od LoRA. Z-Image Base i MOSS Base 1024 na dole. | [pojedynki](porownania/2026-10-21_pojedynki/) |
 | 11 | Drzwi w Krea 2 Turbo (52 budynki wejściowe, wszystkie warianty) | 50/52 kanoniczne drzwi na miejscu (sprawdzone ręcznie). Wyjątek: dom turkusowy z J i K – pojedyncze drzwi („realistic” zmienia styl drzwi). | [drzwi-krea2-turbo](porownania/2026-10-21_drzwi-krea2-turbo/) |
 | 12 | Nowe obiekty spoza zbioru (38) na LoRA v2: Krea 2 Turbo, FLUX 3 destylat, MOSS SFT, Z-Image Turbo; prompty v2/J/K | Kamera z płaskim dachem dla wszystkiego psuje kopuły i namioty – płaski dach tylko tam, gdzie logiczny. Najwięcej dobrych obrazów: Krea 2 Turbo + prompt K. Z-Image Turbo słabo łapie styl na nowych obiektach. MOSS: ładna grafika, dach zwężony do tyłu. Wybrane 30 obiektów → zbiór v3-final. | [zbiory/v3-final](zbiory/v3-final/) |
+| 13 | LoRA v3 i v3-3000 na modelach do generowania (27 obiektów, prompt zwykły i K) | Arkusz końcowy bez rankingu punktowego. Właściciel: styl v3 przestał się podobać – v4 zmienia rzut wierzchu na ½ głębi i paletę na 128 kolorów. | [modele/v3](modele/v3/) |
 
 ## Wnioski
 1. **LoRA uczy stylu, nie kopiuje zbioru.** Front, płaski dach, drzwi, paleta i donice przenoszą się na nowe budynki. Kolory z promptu zostają (turkusowy dom). Kosztem jest to, że nietypowe dachy (szkło, kopuła, skosy) LoRA ściąga do płaskiego prostokąta.
@@ -58,7 +60,6 @@ LoRA, która rysuje budynki do dioramy w stylu gry: pixel art, rzut RPG 3/4 (fro
    - Przy kilkuset głosach pewne są grupy, nie kolejność.
 
 ## Otwarte pomysły
-- **v3:** obiekty okrągłe (latarnia, wieża ciśnień, silos, kiosk) narysowane wg zasad rzutu 3/4: walec z pionowymi bokami, góra jako elipsa o wysokości 0,5 szerokości, paski jako łuki. Do tego szklane dachy. Najpierw wzorce do akceptacji.
-- Dłuższy trening (2500–3000 kroków) albo wyższa siła LoRA dla MOSS SFT i FLUX 3 – przeciw izometrii i zwężaniu dachu.
-- Uzdatnione prompty J/K z LoRA v2 (dotąd tylko z v1).
+- **v4** (w przygotowaniu): wierzch wszystkich poziomych powierzchni w rzucie ½ (D × 12 px), paleta 128, opisy wg schematu v4, despill magenty – zasady w [KARTA_TECHNICZNA_V4](../wspolne/KARTA_TECHNICZNA_V4.md) i [SCHEMAT_OPISOW](../wspolne/SCHEMAT_OPISOW.md).
+- Obiekty okrągłe (latarnia, wieża ciśnień, silos) w rzucie ½: walec z pionowymi bokami, wierzch jako elipsa. Najpierw pilot do akceptacji.
 - Pojedynki: dobierać pary bez nadreprezentacji budynków z 2 obrazami.

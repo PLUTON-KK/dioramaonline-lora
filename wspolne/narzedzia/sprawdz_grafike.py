@@ -243,6 +243,10 @@ def sprawdz(closed_png, open_png=None, meta=None, typ="wejsciowy", zrodlo=None, 
     otw = None
     if meta and meta.get("doors"): d = meta["doors"][0]["doorway"]; otw = (d["x"], d["y"], d["w"], d["h"])
     w = {"P1": p1(c), "P2": p2(z), "P3": p3(c, otw), "P4": p4(c), "P5": p5(c), "P6": p6(c)}
+    try:                                                      # P4b (v4): ciemna fioletowa obwodka po magencie (despill) - P4 jej nie lapie
+        import v4_obrobka as _V; u = _V.fioletowa_obwodka(c[..., :3], c[..., 3])
+        w["P4b"] = ("PASS", "") if u <= 0.05 else ("FAIL", f"fioletowa obwodka po magencie: {u:.0%} brzegu (despill)")
+    except Exception as e: w["P4b"] = ("SKIP", str(e))
     w["K1"] = k1(c, meta, typ)
     if pr["plaski"]:
         w["K2"], yo = k2(c); w["K3"] = k3(c, yo); w["K4"] = k4(c)

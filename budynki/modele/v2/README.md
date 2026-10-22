@@ -1,8 +1,8 @@
 # LoRA budynki v2-final
 
-Zbiór: [`../../zbiory/v2-final/`](../../zbiory/v2-final/) (te same 72 budynki co v1, ciasny kadr, rozmiar w metrach w opisie). Pliki LoRA: Hugging Face [`budynki/v2/`](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v2), wszystkie kroki 250–2000; w każdym folderze `config_ai-toolkit.yaml`.
+Zbiór: [`../../zbiory/v2-final/`](../../zbiory/v2-final/) (te same 72 budynki co v1, ciasny kadr, rozmiar w metrach w opisie). Pliki LoRA: Hugging Face [`budynki/v2/`](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v2), krok końcowy 2000; w każdym folderze `config_ai-toolkit.yaml`.
 
-Trening: ai-toolkit (ostris), RunPod, 512 px, bf16, rank 16, alpha 16, lr 1e-4, 2000 kroków, zapis co 250, podgląd co 500. Karty 48 GB (A6000 / A40 / L40), Qwen na A100 80 GB. Wszystkie 7 równolegle, każdy na osobnej maszynie. Słowo wyzwalające: `swiat2d style`.
+Trening: ai-toolkit (ostris), RunPod, 512 px, bf16, rank 16, alpha 16, lr 1e-4, 2000 kroków, podgląd co 500. Karty 48 GB (A6000 / A40 / L40), Qwen na A100 80 GB. Wszystkie 7 równolegle, każdy na osobnej maszynie. Słowo wyzwalające: `swiat2d style`.
 
 | model bazowy | do użycia też na | licencja | HF |
 |---|---|---|---|

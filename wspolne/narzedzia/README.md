@@ -17,5 +17,7 @@ Skrypty do składania zestawień. Ścieżki w środku są lokalne (E:/ai/...) �
 | `arkusz_krea_latarnia_szklarnia.py` | wszystkie warianty latarni i szklarni z Krea 2 Turbo na jednym arkuszu |
 | `drzwi_krea.py` + `drzwi_krea_zoom.py` | dopasowanie kanonicznych drzwi we wszystkich budynkach wejściowych Krea 2 Turbo + powiększenia do ręcznej weryfikacji |
 | `sprawdz_opis.py` | walidator opisów i promptów wg `wspolne/schemat_opisow.json` (obowiązuje od v4) |
-| `sprawdz_grafike.py` | walidator grafik bez AI (numpy + OpenCV), kryteria wspólne ze stroną gry: P1–P6 piksele, K1–K4 kamera i dach (heurystyki, SKIP gdy niepewne), D1–D9 drzwi, B1 dekoracyjne, M metadane; wynik PASS / FAIL / SKIP |
+| `sprawdz_grafike.py` | walidator grafik bez AI (numpy + OpenCV), kryteria wspólne ze stroną gry: P1–P6 piksele, K1–K4 kamera i dach (heurystyki, SKIP gdy niepewne), D1–D9 drzwi, B1 dekoracyjne, M metadane, P4b fioletowa obwódka po magencie (>5% brzegu = FAIL); wynik PASS / FAIL / SKIP |
 | `waliduj_zbior_v3.py` | uruchomienie walidatora na zbiorze budynki v3-final: CSV, podsumowanie, arkusz obiektów do obejrzenia |
+| `v4_obrobka.py` | obróbka sprite'ów v4 bez AI: `despill()` usuwa fioletowe zabarwienie brzegów po magencie, `mapuj()` mapuje na paletę 128 w przestrzeni Lab i czyści pojedyncze piksele, `fioletowa_obwodka()` – miara dla walidatora (P4b) |
+| `paleta128.py` | generator palety świata 128 (`wspolne/paleta128.json`, `paleta128.png`): 16 ramp materiałów × 8 jasności; opis w `wspolne/KARTA_TECHNICZNA_V4.md` |

@@ -1,42 +1,27 @@
 # Budynki
 
 Fronty budynków do dioramy: pixel art, stała kamera RPG 3/4, płaski prostokątny dach, tło magenta. Dwa typy: `enterable building` (z kanonicznymi drzwiami gry) i `decorative building`.
-Obrazy zbioru wygenerował ChatGPT, a my przerobiliśmy je na format gry (kadr, skala 24 px = 1 m, jedne kanoniczne drzwi, paleta świata, opisy).
+Pochodzenie obrazów: v1 i v2 wygenerował ChatGPT, a my przerobiliśmy je na format gry (kadr, skala 24 px = 1 m, jedne kanoniczne drzwi, paleta świata, opisy). W v3 doszło 30 obiektów wygenerowanych z naszymi LoRA v2 i wybranych przez właściciela.
 
-**Wszystkie badania w skrócie: [BADANIA.md](BADANIA.md)** (metoda, wyniki, wnioski).
+**Badania w skrócie: [BADANIA.md](BADANIA.md)** (metoda, wyniki, wnioski).
 
-## Stan (2026-10-21)
-- **Zbiór v1-final** (72 budynki, skala gry w obrazie): wytrenowane 11 LoRA na 8 modelach bazowych → [`modele/v1/`](modele/v1/).
-- **Zbiór v2-final** (zamrożony 2026-10-21; te same budynki, ciasny kadr, rozmiar w metrach w opisie, poprawione opisy) → [`zbiory/v2-final/`](zbiory/v2-final/), lista zmian: [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md). Wytrenowane 7 LoRA v2 (512) → [`modele/v2/`](modele/v2/).
-- **Zbiór v3-final** (2026-10-22, tylko 512): 58 budynków z v2 + 30 nowych obiektów (okrągłe, wysokie, przemysł, nietypowe bryły) wygenerowanych z LoRA v2 i wybranych przez właściciela → [`zbiory/v3-final/`](zbiory/v3-final/), zmiany: [`ZMIANY_V2_V3.md`](zbiory/v3-final/ZMIANY_V2_V3.md). Trening LoRA v3 (Z-Image Turbo 3000 kroków, FLUX 3 Klein, MOSS-Image, Krea 2 Raw) na RunPod od 2026-10-22 → [`modele/v3/`](modele/v3/).
-- **Porównania** (nasze LoRA i ChatGPT / Gemini na tych samych 10 budynkach testowych) → [`porownania/`](porownania/). Rankingi z ocen właściciela: [v1 · prompty v1](porownania/2026-10-21_lora-v1_prompty-v1/), [v1 · prompty v2](porownania/2026-10-21_lora-v1_prompty-v2/), [v2 · prompty v2](porownania/2026-10-21_lora-v2_prompty-v2/), [pojedynki v1 vs v2](porownania/2026-10-21_pojedynki/).
+## Stan (2026-10-22)
+
+| wersja | zbiór | LoRA | stan |
+|---|---|---|---|
+| v1 | [v1-final](zbiory/v1-final/) – 72 budynki, skala gry w obrazie | [modele/v1](modele/v1/) – 11 LoRA, 8 modeli bazowych | zamrożona |
+| v2 | [v2-final](zbiory/v2-final/) – te same 72, ciasny kadr, rozmiar w metrach w opisie ([zmiany](zbiory/v2-final/ZMIANY_V1_V2.md)) | [modele/v2](modele/v2/) – 7 LoRA, 512 | zamrożona |
+| v3 | [v3-final](zbiory/v3-final/) – 88 obiektów, 512 ([zmiany](zbiory/v3-final/ZMIANY_V2_V3.md)) | [modele/v3](modele/v3/) – v3 (4 LoRA) i v3-3000 (3 LoRA) | wytrenowana, styl odrzucony |
+| v4 | w przygotowaniu: budynki z v3 z dachem przerysowanym na rzut ½, nowe propsy, opisy wg schematu v4 | – | zasady: [KARTA_TECHNICZNA_V4](../wspolne/KARTA_TECHNICZNA_V4.md), [SCHEMAT_OPISOW](../wspolne/SCHEMAT_OPISOW.md), paleta [paleta128](../wspolne/paleta128.png) |
+
+Pliki LoRA: Hugging Face [q3ok/dioramaonline-lora-models](https://huggingface.co/q3ok/dioramaonline-lora-models), folder `budynki/<wersja>/<model>/` – jeden plik na LoRA (krok końcowy). Słowo wyzwalające: `swiat2d style`.
+
+Porównania (nasze LoRA i ChatGPT / Gemini na tych samych budynkach testowych): [`porownania/`](porownania/).
 
 ## Katalogi
 | katalog | co jest w środku |
 |---|---|
-| [`zbiory/v1-final/`](zbiory/v1-final/) | zbiór treningowy v1 (zamrożony): `train_512/`, `train_1024/`, `sprites/` (format gry), `metadata.jsonl`, `captions.csv`, skrypty |
-| [`zbiory/v2-final/`](zbiory/v2-final/) | zbiór v2-final (zamrożony) + [`ZMIANY_V1_V2.md`](zbiory/v2-final/ZMIANY_V1_V2.md) |
-| [`zbiory/v3-final/`](zbiory/v3-final/) | zbiór v3-final (88 obiektów, 512) + [`ZMIANY_V2_V3.md`](zbiory/v3-final/ZMIANY_V2_V3.md) |
-| [`modele/v3/`](modele/v3/) | LoRA v3: trening (karty, konfiguracje, prompty testowe), wyniki po zakończeniu |
-| [`modele/v2/`](modele/v2/) | LoRA v2-final: tabela z linkami do HF, podglądy kroków |
-| [`modele/v1/`](modele/v1/) | po jednym folderze na LoRA: README (jak uczona, jak używać, licencja), `config_ai-toolkit.yaml`, `podglady/` (kroki 0–2000) |
-| [`testy/`](testy/) | zestaw testowy: 10 budynków spoza zbioru, prompty v1/v2, wzory stylu i drzwi, prompty „paskowe” dla modeli zewnętrznych |
+| [`zbiory/`](zbiory/) | zbiory treningowe: `train_512/` (v1 też `train_1024/`), `sprites/` (format gry), `metadata.jsonl`, `captions.csv`, lista zmian względem poprzedniej wersji |
+| [`modele/`](modele/) | opis każdej wersji LoRA: trening, konfiguracje, podglądy, linki do HF |
+| [`testy/`](testy/) | zestaw testowy: budynki spoza zbioru, prompty, wzory stylu i drzwi |
 | [`porownania/`](porownania/) | zestawienia wyników, każde w osobnym folderze z datą |
-
-## LoRA
-
-Pliki: Hugging Face [`budynki/v1/`](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1) i [`budynki/v2/`](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v2) (LoRA v2: [`modele/v2/`](modele/v2/)). Słowo wyzwalające: `swiat2d style`.
-
-| zbiór | model | rozdz. | trening | opis i podglądy | pliki |
-|---|---|---|---|---|---|
-| v1-final | Z-Image Turbo | 512 | RTX 3080 | [`zimage-turbo-512`](modele/v1/zimage-turbo-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/zimage-turbo-512) |
-| v1-final | Z-Image Turbo | 1024 | RunPod L40 | [`zimage-turbo-1024`](modele/v1/zimage-turbo-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/zimage-turbo-1024) |
-| v1-final | Z-Image Base (nie działa na Turbo) | 512 | RTX 3080 | [`zimage-base-512`](modele/v1/zimage-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/zimage-base-512) |
-| v1-final | MOSS-Image Base (najlepsza na SFT) | 512 | RTX 3080 | [`moss-image-base-512`](modele/v1/moss-image-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/moss-image-base-512) |
-| v1-final | MOSS-Image Base (najlepsza na SFT) | 1024 | RunPod L40 | [`moss-image-base-1024`](modele/v1/moss-image-base-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/moss-image-base-1024) |
-| v1-final | FLUX 3 Image Klein base (najlepsza na destylacie; FLUX Kommunity) | 512 | RTX 3080 | [`flux3-klein-base-512`](modele/v1/flux3-klein-base-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/flux3-klein-base-512) |
-| v1-final | FLUX 3 Image Klein base (najlepsza na destylacie; FLUX Kommunity) | 1024 | RunPod A40 | [`flux3-klein-base-1024`](modele/v1/flux3-klein-base-1024/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/flux3-klein-base-1024) |
-| v1-final | FLUX.2 Klein 4B | 512 | RTX 3080 | [`flux2-klein-4b-512`](modele/v1/flux2-klein-4b-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/flux2-klein-4b-512) |
-| v1-final | Qwen-Image 2512 | 512 | RunPod A100 | [`qwen-image-2512-512`](modele/v1/qwen-image-2512-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/qwen-image-2512-512) |
-| v1-final | Qwen-Image-Edit 2511 (z obrazem wzoru) | 512 | RunPod A100 | [`qwen-image-edit-2511-512`](modele/v1/qwen-image-edit-2511-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/qwen-image-edit-2511-512) |
-| v1-final | Krea 2 Raw (do użycia na Krea 2 Turbo; Krea 2 Community License) | 512 | RunPod A6000 | [`krea2-raw-512`](modele/v1/krea2-raw-512/) | [HF](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/krea2-raw-512) |

@@ -1,6 +1,6 @@
 # LoRA: FLUX 3 Image Klein, budynki v1 final, 512
 
-**Pliki LoRA (wszystkie kroki 500-2000): [Hugging Face](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/flux3-klein-base-512)**
+**Plik LoRA (krok końcowy 2000): [Hugging Face](https://huggingface.co/q3ok/dioramaonline-lora-models/tree/main/budynki/v1/flux3-klein-base-512)**
 
 Wytrenowana na **FLUX 3 Image Klein base** (int8 convrot, koder Qwen3-VL-4B fp8), zbiór [`budynki/zbiory/v1-final/train_512`](../../../zbiory/v1-final/train_512/) (72 budynki), ai-toolkit (moduł `flux3`), rank 16, lr 1e-4, 2000 kroków, 47 min na RTX 3080 10 GB (2026-10-21).
 
