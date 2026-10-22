@@ -3,16 +3,170 @@
  "obowiazuje_od": "zbiory i prompty v4 (2026-10-22)",
  "szablon": "swiat2d style, <kategoria>, <podtyp>, <rozmiar>, <opis>. <koncowka>",
  "kategorie": {
-  "building": {"opis": "budynek z dachem", "podtypy": ["enterable", "decorative"], "rozmiar": "wh", "koncowki": ["front_plaski", "front"]},
-  "structure": {"opis": "obiekt techniczny lub duza konstrukcja, nie budynek", "podtypy": ["energy", "industrial", "infrastructure", "agricultural", "attraction"], "rozmiar": "wh", "koncowki": ["front"]},
-  "vehicle": {"opis": "pojazd", "podtypy": ["car", "van", "truck", "bus", "tram", "train", "emergency", "motorcycle", "bicycle", "boat"], "rozmiar": "lh", "koncowki": ["bok_prawo", "bok_lewo", "przod", "tyl"]},
-  "outdoor prop": {"opis": "element stojacy na zewnatrz", "podtypy": ["street furniture", "sign", "fence", "lighting", "playground", "sports", "market stall", "garden", "container"], "rozmiar": "wh", "koncowki": ["front"]},
-  "nature": {"opis": "roslinnosc i elementy natury", "podtypy": ["tree", "bush", "flower bed", "rock", "water"], "rozmiar": "wh", "koncowki": ["front"]},
-  "interior object": {"opis": "wyposazenie wnetrza (sklep, dom)", "podtypy": ["shelf", "counter", "display case", "table", "seating", "appliance", "lighting", "decoration", "storage"], "rozmiar": "wh", "koncowki": ["front"]},
-  "product": {"opis": "towar / przedmiot do reki", "podtypy": ["box", "bottle", "can", "food", "toy", "tool", "electronics", "clothing", "other"], "rozmiar": "cm", "koncowki": ["front"]},
-  "character": {"opis": "postac lub zwierze (zarezerwowane)", "podtypy": ["person", "animal"], "rozmiar": "wh", "koncowki": ["bok_prawo", "bok_lewo", "przod", "tyl"]},
-  "terrain tile": {"opis": "kafel podloza, bezszwowy", "podtypy": ["grass", "pavement", "road", "dirt", "gravel", "sand", "water", "floor"], "rozmiar": "kafel", "koncowki": ["kafel"]},
-  "overlay": {"opis": "nakladka na podloze", "podtypy": ["path", "puddle", "crack", "stain", "tyre tracks", "leaves", "flowers", "stones"], "rozmiar": "wd", "koncowki": ["nakladka"]}
+  "building": {
+   "opis": "budynek z dachem",
+   "podtypy": [
+    "enterable",
+    "decorative"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "front_plaski",
+    "front"
+   ]
+  },
+  "structure": {
+   "opis": "obiekt techniczny lub duza konstrukcja, nie budynek",
+   "podtypy": [
+    "energy",
+    "industrial",
+    "infrastructure",
+    "agricultural",
+    "attraction"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "front"
+   ]
+  },
+  "vehicle": {
+   "opis": "pojazd",
+   "podtypy": [
+    "car",
+    "van",
+    "truck",
+    "bus",
+    "tram",
+    "train",
+    "emergency",
+    "motorcycle",
+    "bicycle",
+    "boat"
+   ],
+   "rozmiar": "lh",
+   "koncowki": [
+    "bok_prawo",
+    "bok_lewo",
+    "przod",
+    "tyl"
+   ]
+  },
+  "outdoor prop": {
+   "opis": "element stojacy na zewnatrz",
+   "podtypy": [
+    "street furniture",
+    "sign",
+    "fence",
+    "lighting",
+    "playground",
+    "sports",
+    "market stall",
+    "garden",
+    "container"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "front"
+   ]
+  },
+  "nature": {
+   "opis": "roslinnosc i elementy natury",
+   "podtypy": [
+    "tree",
+    "bush",
+    "flower bed",
+    "rock",
+    "water"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "front"
+   ]
+  },
+  "interior object": {
+   "opis": "wyposazenie wnetrza (sklep, dom)",
+   "podtypy": [
+    "shelf",
+    "counter",
+    "display case",
+    "table",
+    "seating",
+    "appliance",
+    "lighting",
+    "decoration",
+    "storage"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "front"
+   ]
+  },
+  "product": {
+   "opis": "towar / przedmiot do reki",
+   "podtypy": [
+    "box",
+    "bottle",
+    "can",
+    "food",
+    "toy",
+    "tool",
+    "electronics",
+    "clothing",
+    "other"
+   ],
+   "rozmiar": "cm",
+   "koncowki": [
+    "front"
+   ]
+  },
+  "character": {
+   "opis": "postac lub zwierze (zarezerwowane)",
+   "podtypy": [
+    "person",
+    "animal"
+   ],
+   "rozmiar": "wh",
+   "koncowki": [
+    "bok_prawo",
+    "bok_lewo",
+    "przod",
+    "tyl"
+   ]
+  },
+  "terrain tile": {
+   "opis": "kafel podloza, bezszwowy",
+   "podtypy": [
+    "grass",
+    "pavement",
+    "road",
+    "dirt",
+    "gravel",
+    "sand",
+    "water",
+    "floor"
+   ],
+   "rozmiar": "kafel",
+   "koncowki": [
+    "kafel"
+   ]
+  },
+  "overlay": {
+   "opis": "nakladka na podloze",
+   "podtypy": [
+    "path",
+    "puddle",
+    "crack",
+    "stain",
+    "tyre tracks",
+    "leaves",
+    "flowers",
+    "stones"
+   ],
+   "rozmiar": "wd",
+   "koncowki": [
+    "nakladka"
+   ]
+  }
  },
  "rozmiar": {
   "wh": "about {w} m wide and {h} m tall",
@@ -33,12 +187,49 @@
  },
  "dopisek_okragle": "round shapes drawn straight from the front with their tops visible as flattened ellipses",
  "dopisek_okragle_gdzie": "przed ', isolated on' w koncowkach front_plaski i front, tylko gdy obiekt ma okragle czesci",
- "drzwi_wejsciowe": ["and the standard entrance door in the middle of the front facade", "and the standard entrance door on the left side of the front facade", "and the standard entrance door on the right side of the front facade"],
- "styl_uzdatniony": {"opis": "wariant K: zamiana poczatku koncowki + materialy w opisie", "zamiana": ["Pixel art game sprite", "Semi-realistic pixel art game sprite"], "materialy": "realistic materials and proportions: <materialy>"},
- "zakazane_slowa": ["no", "not", "without", "never", "none", "nothing", "except", "instead", "only", "side door", "smoke", "steam", "car park", "parking"],
+ "drzwi_wejsciowe": [
+  "and the standard entrance door in the middle of the front facade",
+  "and the standard entrance door on the left side of the front facade",
+  "and the standard entrance door on the right side of the front facade"
+ ],
+ "styl_uzdatniony": {
+  "opis": "wariant K: zamiana poczatku koncowki + materialy w opisie",
+  "zamiana": [
+   "Pixel art game sprite",
+   "Semi-realistic pixel art game sprite"
+  ],
+  "materialy": "realistic materials and proportions: <materialy>"
+ },
+ "zakazane_slowa": [
+  "no",
+  "not",
+  "without",
+  "never",
+  "none",
+  "nothing",
+  "except",
+  "instead",
+  "only",
+  "side door",
+  "smoke",
+  "steam",
+  "car park",
+  "parking",
+  "platform",
+  "base slab"
+ ],
  "mapowanie_v1_v3": {
-  "enterable building": ["building", "enterable"],
-  "decorative building": ["building", "decorative"],
-  "decorative object": ["structure albo outdoor prop - recznie wg obiektu"]
- }
+  "enterable building": [
+   "building",
+   "enterable"
+  ],
+  "decorative building": [
+   "building",
+   "decorative"
+  ],
+  "decorative object": [
+   "structure albo outdoor prop - recznie wg obiektu"
+  ]
+ },
+ "bez_podloza": "obiekt bez podloza pod spodem i dookola (perony, plyty, chodniki, trawniki, tory) - podloze robi diorama osobno"
 }

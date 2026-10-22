@@ -18,7 +18,7 @@
 - Jeden schemat dla wszystkich tematów: `swiat2d style, <kategoria>, <podtyp>, <rozmiar>, <opis>. <końcówka>`.
 - Kategoria zawsze trzecim wyrazem, ze stałej listy: `building`, `structure`, `vehicle`, `outdoor prop`, `nature`, `interior object`, `product`, `character`, `terrain tile`, `overlay`. Podtypy i końcówki kamery przypisane do kategorii.
 - Szczegóły, lista podtypów, końcówki słowo w słowo: [`wspolne/SCHEMAT_OPISOW.md`](../wspolne/SCHEMAT_OPISOW.md). Każdy opis i prompt przechodzi przez walidator [`wspolne/narzedzia/sprawdz_opis.py`](../wspolne/narzedzia/sprawdz_opis.py).
-- Bez dymu i pary, bez parkingów i aut przed budynkami (robi to diorama), płaski dach w kamerze tylko przy płaskim dachu.
+- Bez dymu i pary, bez parkingów i aut przed budynkami, bez podłoża pod obiektem i dookoła (perony, płyty, chodniki, trawniki) – to robi diorama osobnymi assetami. Płaski dach w kamerze tylko przy płaskim dachu.
 - Zbiory v1–v3 zostają w starym zapisie (`enterable building` / `decorative building` / `decorative object`); przy budowie v4 przepisujemy je wg tabeli przejścia.
 
 ## Zbiory LoRA
