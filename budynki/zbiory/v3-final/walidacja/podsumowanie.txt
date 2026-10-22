@@ -1,0 +1,22 @@
+Walidacja zbioru v3-final (88 obiektow): PASS / FAIL / SKIP / brak
+P1  PASS  88  FAIL   0  SKIP   0  nie dotyczy   0
+P2  PASS  28  FAIL   2  SKIP  58  nie dotyczy   0
+P3  PASS  79  FAIL   9  SKIP   0  nie dotyczy   0
+P4  PASS  59  FAIL  29  SKIP   0  nie dotyczy   0
+P5  PASS  88  FAIL   0  SKIP   0  nie dotyczy   0
+P6  PASS  74  FAIL   0  SKIP  14  nie dotyczy   0
+K1  PASS  88  FAIL   0  SKIP   0  nie dotyczy   0
+K2  PASS  69  FAIL   5  SKIP  14  nie dotyczy   0
+K3  PASS  64  FAIL   1  SKIP  23  nie dotyczy   0
+K4  PASS  70  FAIL   4  SKIP  14  nie dotyczy   0
+D1  PASS  37  FAIL   5  SKIP   0  nie dotyczy  46
+D2  PASS  37  FAIL   0  SKIP   5  nie dotyczy  46
+D3  PASS  42  FAIL   0  SKIP   0  nie dotyczy  46
+D4  PASS   0  FAIL  37  SKIP   5  nie dotyczy  46
+D5  PASS  37  FAIL   0  SKIP   5  nie dotyczy  46
+D6  PASS  39  FAIL   3  SKIP   0  nie dotyczy  46
+D7  PASS  42  FAIL   0  SKIP   0  nie dotyczy  46
+D8  PASS   0  FAIL   0  SKIP  42  nie dotyczy  46
+D9  PASS   0  FAIL   0  SKIP   0  nie dotyczy  88
+B1  PASS  46  FAIL   0  SKIP   0  nie dotyczy  42
+M   PASS   0  FAIL  88  SKIP   0  nie dotyczy   0

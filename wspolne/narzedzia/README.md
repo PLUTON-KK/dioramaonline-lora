@@ -17,3 +17,5 @@ Skrypty do składania zestawień. Ścieżki w środku są lokalne (E:/ai/...) �
 | `arkusz_krea_latarnia_szklarnia.py` | wszystkie warianty latarni i szklarni z Krea 2 Turbo na jednym arkuszu |
 | `drzwi_krea.py` + `drzwi_krea_zoom.py` | dopasowanie kanonicznych drzwi we wszystkich budynkach wejściowych Krea 2 Turbo + powiększenia do ręcznej weryfikacji |
 | `sprawdz_opis.py` | walidator opisów i promptów wg `wspolne/schemat_opisow.json` (obowiązuje od v4) |
+| `sprawdz_grafike.py` | walidator grafik bez AI (numpy + OpenCV), kryteria wspólne ze stroną gry: P1–P6 piksele, K1–K4 kamera i dach (heurystyki, SKIP gdy niepewne), D1–D9 drzwi, B1 dekoracyjne, M metadane; wynik PASS / FAIL / SKIP |
+| `waliduj_zbior_v3.py` | uruchomienie walidatora na zbiorze budynki v3-final: CSV, podsumowanie, arkusz obiektów do obejrzenia |
