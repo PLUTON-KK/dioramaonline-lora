@@ -57,7 +57,7 @@ Pełne teksty: `schemat_opisow.json`. Dopiski:
 - `front facade` tylko w kategorii `building`.
 - Płaski dach w końcówce tylko przy płaskim prostokątnym dachu; przy kopułach, namiotach, szpicach, dachach spadzistych – końcówka `front`.
 - **Bez dymu i pary** (dym robi diorama), **bez parkingów i aut przed budynkami** (parking to osobne kafle i pojazdy).
-- **Bez podłoża pod obiektem i dookoła niego**: żadnych peronów, płyt, chodników, trawników, torów pod spodem. Obiekt stoi bezpośrednio na tle; podłoże to osobne assety dioramy (`terrain tile`, `overlay`). Dotyczy też promptów do generowania.
+- **Bez podłoża pod obiektem i dookoła niego**: żadnych peronów, płyt, chodników, trawników, torów ani wody terenu (jezioro, rzeka, morze, kanał – woda to też podłoże dioramy) pod spodem i obok. Woda będąca częścią obiektu (misa fontanny, niecka basenu) zostaje. Obiekt stoi bezpośrednio na tle; podłoże to osobne assety dioramy (`terrain tile`, `overlay`). Dotyczy też promptów do generowania.
 - Bez napisów w języku; szyldy jako piktogramy.
 - Rozmiar z gotowego sprite'a w skali gry (24 px = 1 m): szerokość × wysokość z widocznym dachem.
 

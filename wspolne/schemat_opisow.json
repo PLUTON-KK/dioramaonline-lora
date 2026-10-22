@@ -231,5 +231,5 @@
    "structure albo outdoor prop - recznie wg obiektu"
   ]
  },
- "bez_podloza": "obiekt bez podloza pod spodem i dookola (perony, plyty, chodniki, trawniki, tory) - podloze robi diorama osobno"
+ "bez_podloza": "obiekt bez podloza pod spodem i dookola (perony, plyty, chodniki, trawniki, tory, woda terenu: jezioro/rzeka/morze/kanal) - podloze i woda to assety dioramy; woda bedaca czescia obiektu (fontanna, basen) zostaje"
 }
