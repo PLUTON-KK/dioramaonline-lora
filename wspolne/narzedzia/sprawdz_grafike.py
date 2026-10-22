@@ -194,7 +194,10 @@ def drzwi(c, o, meta, typ):
             m = np.ones(c.shape[:2], bool); m[cr["y"]:cr["y"] + cr["h"], cr["x"]:cr["x"] + cr["w"]] = False
             w["D2"] = ("PASS", "") if (c[m] == o[m]).all() else ("FAIL", f"{int((c[m] != o[m]).any(-1).sum())} pikseli rozni sie poza changedRegion")
             ow = o[dw["y"]:dw["y"] + dw["h"], dw["x"]:dw["x"] + dw["w"], 3]; orr = o[cr["y"]:cr["y"] + cr["h"], cr["x"]:cr["x"] + cr["w"], 3]
-            w["D4"] = ("PASS", "") if (ow == 0).any() and (orr == 255).any() else ("FAIL", "open bez otworu albo bez ramy")
+            # D4 wg zasad dioramaonline-lora: changedRegion = sam otwor; rama i skrzydla drzwi zostaja POZA regionem (niezmienne),
+            # wiec w open: otwor ma piksele przezroczyste, a wokol regionu (rama) piksele pelne
+            ramka = c[max(0, cr["y"] - 2):cr["y"] + cr["h"], max(0, cr["x"] - 3):cr["x"] + cr["w"] + 3, 3].copy(); ramka[2:, 3:-3] = 255
+            w["D4"] = ("PASS", "") if (ow == 0).any() and (ramka == 255).mean() > 0.9 else ("FAIL", "open bez otworu albo bez ramy wokol otworu")
             cc = c[cr["y"]:cr["y"] + cr["h"], cr["x"]:cr["x"] + cr["w"], 3]
             w["D5"] = ("PASS", "") if not ((cc == 0) & (orr > 0)).any() else ("FAIL", "w open pojawiaja sie piksele niewidoczne w closed")
         else:
@@ -202,7 +205,8 @@ def drzwi(c, o, meta, typ):
         cw = c[dw["y"]:dw["y"] + dw["h"], dw["x"]:dw["x"] + dw["w"], 3]
         w["D3"] = ("PASS", "") if cw.size and (cw == 255).all() else ("FAIL", "otwor w closed nie jest pelny")
         dol = d["placement"]["y"] + MODUL.get(d["module"], (59, 58))[1]; h = c.shape[0]
-        w["D6"] = ("PASS", "") if 0 <= h - dol <= max(tol(h), 0.12 * h) else ("FAIL", f"dol drzwi {h - dol} px nad podstawa")
+        # D6: dol drzwi na linii frontu; schodki pod drzwiami dozwolone do ok. 1,25 m (30 px)
+        w["D6"] = ("PASS", "" if h - dol <= max(tol(h), 6) else f"schodki {h - dol} px") if 0 <= h - dol <= 30 else ("FAIL", f"dol drzwi {h - dol} px nad podstawa")
         md = MODUL.get(d["module"])
         w["D7"] = ("PASS", "") if md and dw["w"] == md[2] else ("FAIL", f"modul {d['module']}, otwor {dw['w']} px")
     if len(regs) > 1:
@@ -221,15 +225,32 @@ def metadane(meta, typ):
     return ("PASS", "") if not brak else ("FAIL", "brak: " + ", ".join(brak))
 
 
-def sprawdz(closed_png, open_png=None, meta=None, typ="wejsciowy", zrodlo=None):
+def profil(opis):
+    """typ bryly z opisu (caption/prompt) wg schematu: plaski = budynek z plaskim prostokatnym dachem (pelne K2-K4, P3);
+    reszta (obiekty, konstrukcje, kopuly, wieze) - reguly dachu nie dotycza, przeswity i skosy konstrukcyjne dozwolone"""
+    o = (opis or "").lower()
+    budynek = "building" in o.split(".")[0]
+    plaski = "flat rectangular roof visible from above" in o
+    return {"budynek": budynek, "plaski": plaski and budynek}
+
+
+def sprawdz(closed_png, open_png=None, meta=None, typ="wejsciowy", zrodlo=None, opis=None):
+    """opis: caption albo prompt obiektu - z niego profil bryly. Bez opisu: zachowanie jak dla budynku z plaskim dachem."""
+    pr = profil(opis) if opis else {"budynek": True, "plaski": True}
     c = wczytaj(closed_png) if isinstance(closed_png, str) else closed_png
     o = wczytaj(open_png) if isinstance(open_png, str) and os.path.exists(open_png) else None
     z = z_magenty(zrodlo) if isinstance(zrodlo, str) and os.path.exists(zrodlo) else None
     otw = None
     if meta and meta.get("doors"): d = meta["doors"][0]["doorway"]; otw = (d["x"], d["y"], d["w"], d["h"])
-    w = {"P1": p1(c), "P2": p2(z), "P3": p3(c), "P4": p4(c), "P5": p5(c), "P6": p6(c)}
-    w["K1"] = k1(c, meta, typ); w["K2"], yo = k2(c); w["K3"] = k3(c, yo); w["K4"] = k4(c)
-    if w["K4"][0] == "FAIL" and w["K2"][0] == "SKIP":   # bryla bez rozpoznanego prostokatnego wierzchu: skosy moga byc konstrukcyjne (lopaty, kopuly, namioty)
-        w["K4"] = ("SKIP", w["K4"][1] + " - bryla nietypowa, skosy moga byc konstrukcyjne")
+    w = {"P1": p1(c), "P2": p2(z), "P3": p3(c, otw), "P4": p4(c), "P5": p5(c), "P6": p6(c)}
+    w["K1"] = k1(c, meta, typ)
+    if pr["plaski"]:
+        w["K2"], yo = k2(c); w["K3"] = k3(c, yo); w["K4"] = k4(c)
+        if w["K4"][0] == "FAIL" and w["K2"][0] == "SKIP":
+            w["K4"] = ("SKIP", w["K4"][1] + " - nie rozpoznano wierzchu")
+    else:
+        w["K2"] = w["K3"] = ("ND", "nie dotyczy: bryla bez plaskiego prostokatnego dachu")
+        k = k4(c); w["K4"] = ("SKIP", k[1] + " - skosy moga byc konstrukcyjne") if k[0] == "FAIL" else k
+        if w["P3"][0] == "FAIL": w["P3"] = ("PASS", "przeswity dozwolone w obiektach/konstrukcjach: " + w["P3"][1])
     w.update(drzwi(c, o, meta, typ)); w["M"] = metadane(meta, typ)
     return w

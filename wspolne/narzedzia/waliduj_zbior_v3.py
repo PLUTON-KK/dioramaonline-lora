@@ -27,14 +27,14 @@ for l in open(f"{V3}/metadata.jsonl", encoding="utf-8"):
             meta["doors"] = [{"module": "std-external-2", "placement": {"x": d["x_px"], "y": d["y_px"]},
                               "doorway": {"x": d["x_px"] + dw["x"], "y": d["y_px"] + dw["y"], "w": dw["w"], "h": dw["h"]},
                               "changedRegion": {"x": d["x_px"] + dw["x"], "y": d["y_px"] + dw["y"], "w": dw["w"], "h": dw["h"]}}]
-    w = S.sprawdz(closed, op, meta, typ, zrodlo)
-    wyn.append({"nazwa": n, "zrodlo": "v2" if r["zrodlo"] == "v2-final" else "nowy", "typ": typ, "plik": closed, **{k: w.get(k, ("", ""))[0] for k in IDS},
+    w = S.sprawdz(closed, op, meta, typ, zrodlo, opis=r["caption"])
+    wyn.append({"nazwa": n, "zrodlo": "v2" if r["zrodlo"] == "v2-final" else "nowy", "typ": typ, "plik": closed, **{k: w.get(k, ("", ""))[0] for k in IDS}, "profil": "plaski dach" if S.profil(r["caption"])["plaski"] else ("budynek inny" if S.profil(r["caption"])["budynek"] else "obiekt"),
                 "uwagi": " | ".join(f"{k}: {v[1]}" for k, v in w.items() if v[0] != "PASS" and v[1])})
 with open(f"{OUT}/wyniki.csv", "w", newline="", encoding="utf-8") as f:
     c = csv.DictWriter(f, fieldnames=list(wyn[0])); c.writeheader(); c.writerows(wyn)
 lin = [f"Walidacja zbioru v3-final ({len(wyn)} obiektow): PASS / FAIL / SKIP / brak"]
 for k in IDS:
-    cnt = collections.Counter(r[k] or "-" for r in wyn); lin.append(f"{k:3} PASS {cnt['PASS']:3}  FAIL {cnt['FAIL']:3}  SKIP {cnt['SKIP']:3}  nie dotyczy {cnt['-']:3}")
+    cnt = collections.Counter(r[k] or "-" for r in wyn); lin.append(f"{k:3} PASS {cnt['PASS']:3}  FAIL {cnt['FAIL']:3}  SKIP {cnt['SKIP']:3}  nie dotyczy {cnt['-'] + cnt['ND']:3}")
 open(f"{OUT}/podsumowanie.txt", "w", encoding="utf-8").write("\n".join(lin)); print("\n".join(lin))
 # arkusz: obiekty z FAIL w K3/K4/P3/P6-podejrzenie
 zle = [r for r in wyn if r["K3"] == "FAIL" or r["K4"] == "FAIL" or r["K2"] == "FAIL" or "PODEJRZENIE" in r["uwagi"]]
