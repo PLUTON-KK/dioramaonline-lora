@@ -24,13 +24,15 @@ swiat2d style, <kategoria>, <podtyp>, <rozmiar>, <opis>. <końcówka>
 | `building` | budynek z dachem | `enterable`, `decorative` | `about W m wide and H m tall` | `front_plaski` (płaski prostokątny dach), `front` (kopuły, wieże, dachy spadziste) |
 | `structure` | konstrukcja, która nie jest budynkiem | `energy`, `industrial`, `infrastructure`, `agricultural`, `attraction` | `about W m wide and H m tall` | `front` |
 | `vehicle` | pojazd | `car`, `van`, `truck`, `bus`, `tram`, `train`, `emergency`, `motorcycle`, `bicycle`, `boat` | `about L m long and H m tall` | `bok_prawo`, `bok_lewo`, `przod`, `tyl` |
-| `outdoor prop` | element stojący na zewnątrz | `street furniture`, `sign`, `fence`, `lighting`, `playground`, `sports`, `market stall`, `garden`, `container` | `about W m wide and H m tall` | `front` |
+| `outdoor prop` | element stojący na zewnątrz | `street furniture`, `sign`, `fence`, `lighting`, `playground`, `sports`, `market stall`, `garden`, `container`, `monument` | `about W m wide and H m tall` | `front` |
 | `nature` | roślinność i natura | `tree`, `bush`, `flower bed`, `rock`, `water` | `about W m wide and H m tall` | `front` |
 | `interior object` | wyposażenie wnętrza (sklep, dom) | `shelf`, `counter`, `display case`, `table`, `seating`, `appliance`, `lighting`, `decoration`, `storage` | `about W m wide and H m tall` | `front` |
 | `product` | towar, przedmiot do ręki | `box`, `bottle`, `can`, `food`, `toy`, `tool`, `electronics`, `clothing`, `other` | `about W cm wide and H cm tall` | `front` |
 | `character` | postać, zwierzę (zarezerwowane) | `person`, `animal` | `about W m wide and H m tall` | `bok_prawo`, `bok_lewo`, `przod`, `tyl` |
 | `terrain tile` | bezszwowy kafel podłoża | `grass`, `pavement`, `road`, `dirt`, `gravel`, `sand`, `water`, `floor` | `one ground tile of W by W m` | `kafel` |
 | `overlay` | nakładka na podłoże | `path`, `puddle`, `crack`, `stain`, `tyre tracks`, `leaves`, `flowers`, `stones` | `about W m wide and D m deep` | `nakladka` |
+
+Dopisane 2026-10-22 (decyzja q3ok): `outdoor prop, monument` – pomniki, kapliczki, krzyże przydrożne.
 
 Nowa kategoria albo podtyp: tylko decyzją właściciela, dopisana tutaj i w JSON-ie, zanim pojawi się w zbiorze.
 
