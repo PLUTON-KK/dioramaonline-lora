@@ -1,0 +1,48 @@
+{
+ "std-external-2": {
+  "plik": "drzwi-2skrz",
+  "szer_px": 60,
+  "wys_px": 60,
+  "szer_m": 2.5,
+  "wys_m": 2.5,
+  "zrodlo": "gpt-image-2 (quality high, 2026-10-23) przerysowanie drzwi v6 w pelnym kolorze, prompt E:/ai/wyniki/drzwi_pelne/prompt_2.txt; doorway/changedRegion i maska otwarcia jak v6",
+  "doorway": [
+   10,
+   3,
+   42,
+   57
+  ],
+  "changedRegion": [
+   10,
+   3,
+   42,
+   57
+  ]
+ },
+ "std-external-1": {
+  "plik": "drzwi-1skrz",
+  "szer_px": 30,
+  "wys_px": 60,
+  "szer_m": 1.25,
+  "wys_m": 2.5,
+  "zrodlo": "gpt-image-2 (quality high, 2026-10-23) przerysowanie drzwi v6 w pelnym kolorze, prompt E:/ai/wyniki/drzwi_pelne/prompt_2.txt; doorway/changedRegion i maska otwarcia jak v6",
+  "doorway": [
+   4,
+   4,
+   22,
+   56
+  ],
+  "changedRegion": [
+   2,
+   2,
+   26,
+   58
+  ]
+ },
+ "pliki": {
+  "<typ>-<stan>_pelny.png": "rozmiar gry, pelny kolor (zrodlo do dowolnej palety)",
+  "<typ>-<stan>_p1024.png": "rozmiar gry, paleta 1024 (E:/ai/wyniki/paleta256/paleta1024.json)",
+  "<typ>-<stan>_master_pelny.png": "bez zmniejszenia (wycinek z GPT: 2-skrz 468x516, 1-skrz 221x516), pelny kolor",
+  "<typ>-<stan>_master_p1024.png": "bez zmniejszenia, paleta 1024"
+ }
+}

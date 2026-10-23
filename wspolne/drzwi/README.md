@@ -1,16 +1,18 @@
-# Drzwi kanoniczne (v6, od 2026-10-23)
+# Drzwi kanoniczne (v7, od 2026-10-23)
 
-Jedyne drzwi, których używamy w budynkach Świata 2D. Wszystkie wcześniejsze wersje (v4 59×57, v5 59×59) są nieużywane.
+Jedyne drzwi, których używamy w budynkach Świata 2D. Ten sam projekt co v6 (dwuskrzydłowe 60 × 60 px = 2,5 × 2,5 m, kwadrat; jednoskrzydłowe 30 × 60 px = 1,25 × 2,5 m), ale przerysowany w pełnym kolorze, żeby dało się go mapować na dowolną paletę. Wcześniejsze wersje (v4–v6) są nieużywane.
 
-| moduł | plik | rozmiar | wymiar | doorway / changedRegion (x, y, w, h) |
-|---|---|---|---|---|
-| `std-external-2` (dwuskrzydłowe) | `drzwi-2skrz-closed.png`, `drzwi-2skrz-open.png` | 60 × 60 px | 2,5 × 2,5 m, **kwadrat** | 10, 3, 42, 57 / 10, 3, 42, 57 |
-| `std-external-1` (jednoskrzydłowe) | `drzwi-1skrz-closed.png`, `drzwi-1skrz-open.png` | 30 × 60 px | 1,25 × 2,5 m | 4, 4, 22, 56 / 2, 2, 26, 58 |
+Pliki (`<typ>` = `2skrz` / `1skrz`, `<stan>` = `closed` / `open`):
 
-Skala gry 24 px/m, więc 2,5 m = dokładnie 60 px (bez zaokrągleń). Tło przezroczyste, otwarte = przezroczysty otwór w `changedRegion`. Dane maszynowe: [`drzwi_kanon_v6.json`](drzwi_kanon_v6.json).
+| plik | co to jest |
+|---|---|
+| `drzwi-<typ>-<stan>_pelny.png` | rozmiar gry (60×60 / 30×60), pełny kolor – źródło do dowolnej palety |
+| `drzwi-<typ>-<stan>_p1024.png` | rozmiar gry, paleta 1024 (128 + kolory pośrednie) |
+| `drzwi-<typ>-<stan>_master_pelny.png` | bez zmniejszenia: wycinek z gpt-image-2 (2-skrz 468×516, 1-skrz 221×516), pełny kolor |
+| `drzwi-<typ>-<stan>_master_p1024.png` | bez zmniejszenia, paleta 1024 |
 
-Pochodzenie: v4 (59 × 57) → v5 (zdublowane wiersze szyby 17 i 44 → kwadrat 59 × 59) → v6 (zdublowany środkowy słupek x 29 / szyba skrzydła x 10 oraz wiersz szyby y 50 → 60 × 60). Rama i klamki bez zmian.
+`doorway` / `changedRegion` i maska otwarcia bez zmian względem v6 (`drzwi_kanon_v7.json`). Master nie jest dokładnym kwadratem (GPT narysował drzwi ok. 10% wyższe), rozmiar gry jest skalowany do dokładnie 60×60 / 30×60.
 
-Wzór do generatorów (GPT itp.): tylko drzwi zamknięte, z informacją, że mają 2,5 × 2,5 m / 60 × 60 px i w obrazie też muszą być kwadratowe.
+Pochodzenie: gpt-image-2 (quality high) przerysował drzwi v6 ×8 w pełnym kolorze, prompt: zachowaj projekt, szare szkło z plamami, kwadrat 1:1.
 
-![v5 obok v6](podglad.png)
+![v7](podglad.png)
