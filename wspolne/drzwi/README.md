@@ -13,6 +13,6 @@ Pliki (`<typ>` = `2skrz` / `1skrz`, `<stan>` = `closed` / `open`):
 
 `doorway` / `changedRegion` i maska otwarcia bez zmian względem v6 (`drzwi_kanon_v7.json`). Master nie jest dokładnym kwadratem (GPT narysował drzwi ok. 10% wyższe), rozmiar gry jest skalowany do dokładnie 60×60 / 30×60.
 
-Pochodzenie: gpt-image-2 (quality high) przerysował drzwi v6 ×8 w pełnym kolorze, prompt: zachowaj projekt, szare szkło z plamami, kwadrat 1:1.
+Pochodzenie: gpt-image-2 (quality high) przerysował drzwi v6 ×8 w pełnym kolorze, prompt: zachowaj projekt, szare szkło z plamami, kwadrat 1:1. Uchylone skrzydło drzwi jednoskrzydłowych (`open`) to skrzydło v7 przekształcone perspektywicznie kodem (zawiasy po lewej), bez AI.
 
 ![v7](podglad.png)
