@@ -72,3 +72,76 @@ Ocena każdego obrazu: OK = poprawny rzut od razu, ~ = rzut dobry, ale perspekty
 | flux2-klein-4b | 0 | 5 | 8 | 2,5 | 2,5 |
 | gpt-image-2.5-sunburst | 0 | 5 | 8 | 2,5 | 4 |
 | zimage-turbo | 0 | 4 | 9 | 2 | 1,5 |
+
+## Część wspólna trzech najlepszych opisów
+
+Opisy z największą liczbą OK: claude-sonnet-5-5, gpt-6.1-sol, gpt-6-luna.
+
+### Propozycja 1: Claude Opus 5.5
+
+**Co się powtarza:**
+
+1. Budynek podzielony na dwie części, góra to dach, dół to front:
+   - Sonnet: „The upper half is a gray concrete-tiled roof… The lower half is a… storefront wall”
+   - sol: „gray tiled rooftop occupying the upper half and a storefront facade below”
+   - luna: „divided into an upper gray rooftop… and a lower cream-colored facade”
+2. Widok z przodu nazwany wprost: „front-on facade”, „shown straight on”, „front-facing”. Brak słów „isometric”, „3/4”, „oblique”, „perspective”.
+3. Short caption zaczyna się tak samo: „A pixel-art … building facade”; dach jest dodatkiem do fasady.
+4. Elementy w tym samym układzie i z położeniem:
+   - dach: dwa wentylatory w lewym górnym rogu, większa jednostka w środku, rura w prawo;
+   - fasada: pusty szyld → podwójne drzwi → kinkiety → drewniane panele po bokach → donice z krzewami → ciemny cokół.
+5. Tło: „vivid / bright / solid magenta”.
+
+**W opisach, które dały same ✗ albo prawie same:**
+
+- gpt-4o: „viewed from a top-down perspective” → widok 3/4;
+- grok-4.7 i grok-4.20: góra nazwana ścianą („industrial upper wall”, „upper mechanical floor”);
+- gemini-3.1-pro-preview: „split-view… two perspectives” → dwa osobne kawałki;
+- gemini-3-flash-preview: „tileset” → arkusz elementów.
+
+**Szkielet:**
+
+```
+A pixel-art [building] facade with [rooftop equipment] above [front elements], on a vivid magenta background.
+A [game asset] of a single building shown straight on: the upper half is a [flat roof seen from above: surface + equipment with positions], the lower half is the front facade [elements left to right]. [colours, outlines], isolated on a solid magenta background.
+```
+
+### Propozycja 2: Claude Sonnet 5.5
+
+Podagent dostał tylko ten README, bez innych informacji.
+
+**Co się powtarza:**
+
+- Początek: styl i rodzaj zasobu, zaraz potem rzut: luna „front-facing, game-style architectural asset”, sol „square, retro pixel-art building asset shown straight on”, sonnet „2D pixel-art game asset of a single building”.
+- Kolejność od góry do dołu: dach (gray tiled rooftop, jednostki wentylacyjne, rura) → fasada (pusty szyld, drzwi, lampy, drewniane panele, donice) → tło jako osobne zdanie o izolacji.
+- Słowa we wszystkich trzech: pixel-art, magenta, rooftop / ventilation / HVAC, „blank … sign” nad „double … doors”, „wall lights”, „green shrubs” / „hedges” w ciemnych donicach, „dark brick base”.
+- Konkret zamiast ogólników: liczby, pozycje i kolory („two small fan units at the upper left”, „a larger central ventilation unit connected to bent silver ductwork”).
+- Dach jako część jednego budynku: luna i sol nie używają „top-down”; piszą „straight-on”, „front elevation”, „visible rooftop”. Sonnet jako jedyny pisze „top-down rooftop view stacked above a front-on facade”.
+
+**W opisach, które wypadły najgorzej:**
+
+- rozbicie na dwa rzuty: gemini-3.1 „split-view”, „two perspectives”; gpt-4o „Top-down view of a stylized building exterior”;
+- dach opisany jako ściana lub piętro: grok-4.7 „industrial upper wall”, grok-4.20 „upper mechanical floor”, „gray tiled wall”;
+- brak zdania o izolacji na jednolitej magencie;
+- mało jednoznacznych słów kluczowych.
+
+**Szkielet:**
+
+```
+Pixel-art game asset of a [typ budynku, np. modern commercial building], shown straight-on
+in a single flat front elevation, isolated on a solid bright magenta (#FF00FF) background.
+
+Upper section: the building's flat gray tiled rooftop, drawn as part of the same flat image
+(not a separate view), with [liczba] [rodzaj urządzeń, np. air-conditioning units] at the
+[pozycja], a [duża jednostka] at the center connected to bent [kolor] metal pipes, [drobne elementy].
+
+Lower section: [kolor/materiał] facade with a wide blank rectangular sign in a dark frame
+centered above [kolor] double glass doors with metal handles; [liczba] black wall-mounted
+lights casting soft cones of warm light; [kolor] horizontal wood-slat panels on both sides;
+rectangular dark planters with dense green shrubs on either side, above a dark brick base.
+
+Style: clean dark outlines, soft stepped shading, muted palette with green and orange accents.
+Entire building fills the frame, centered, nothing else in the image.
+```
+
+Zasady: rzut raz, jako „straight-on front elevation”, bez „top-down” i „split”; dach nazwany wprost („rooftop”) w „upper section”; elementy od góry do dołu z liczbami, kolorami i pozycjami; tło jednym zdaniem z konkretnym kolorem; bez tagów typu tileset, sprite sheet, itch.io.
